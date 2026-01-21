@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_config.dart';
+import '../../constants/app_urls.dart';
 import '../../models/app_language.dart';
 import '../../services/preferences_service.dart';
 import '../../app.dart';
+import 'webview_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -104,6 +106,33 @@ class _SettingsScreenState extends State<SettingsScreen> {
           // ),
           // const Divider(),
 
+          // 약관 및 정책 섹션
+          _buildSectionHeader(context, l10n.termsAndPolicies),
+
+          ListTile(
+            leading: Icon(PhosphorIcons.fileText(PhosphorIconsStyle.regular)),
+            title: Text(l10n.termsOfService),
+            trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
+            onTap: () => _openWebView(context, l10n.termsOfService, AppUrls.termsUrl),
+          ),
+          const Divider(),
+
+          ListTile(
+            leading: Icon(PhosphorIcons.shieldCheck(PhosphorIconsStyle.regular)),
+            title: Text(l10n.privacyPolicy),
+            trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
+            onTap: () => _openWebView(context, l10n.privacyPolicy, AppUrls.privacyUrl),
+          ),
+          const Divider(),
+
+          ListTile(
+            leading: Icon(PhosphorIcons.headset(PhosphorIconsStyle.regular)),
+            title: Text(l10n.support),
+            trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
+            onTap: () => _openWebView(context, l10n.support, AppUrls.supportUrl),
+          ),
+          const Divider(),
+
           // 앱 정보
           ListTile(
             leading: Icon(PhosphorIcons.info(PhosphorIconsStyle.regular)),
@@ -111,6 +140,49 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: Text('${l10n.version} ${AppConfig.appVersion}'),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildSectionHeader(BuildContext context, String title) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 24, 16, 8),
+      child: Text(
+        title,
+        style: Theme.of(context).textTheme.titleSmall?.copyWith(
+              color: Theme.of(context).colorScheme.primary,
+              fontWeight: FontWeight.bold,
+            ),
+      ),
+    );
+  }
+
+  void _openWebView(BuildContext context, String title, String url) {
+    final currentLocale = SpeakEnglishApp.localeNotifier.value;
+    String htmlLangCode;
+
+    if (currentLocale != null) {
+      // zh_TW 특별 처리
+      if (currentLocale.countryCode == 'TW') {
+        htmlLangCode = 'zh-TW';
+      } else {
+        htmlLangCode = currentLocale.languageCode;
+      }
+    } else {
+      // 시스템 기본값일 경우 현재 locale 사용
+      final locale = Localizations.localeOf(context);
+      if (locale.countryCode == 'TW') {
+        htmlLangCode = 'zh-TW';
+      } else {
+        htmlLangCode = locale.languageCode;
+      }
+    }
+
+    final urlWithLang = '$url?lang=$htmlLangCode';
+
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => WebViewScreen(title: title, url: urlWithLang),
       ),
     );
   }

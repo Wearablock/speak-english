@@ -54,5 +54,7 @@
   "errorNetwork": "Lỗi mạng",
   "retry": "Thử lại",
   "cancel": "Hủy",
-  "ok": "OK"
+  "ok": "OK",
+  "termsAndPolicies": "Điều khoản và chính sách",
+  "support": "Hỗ trợ"
 }

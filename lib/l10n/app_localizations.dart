@@ -452,6 +452,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'OK'**
   String get ok;
+
+  /// No description provided for @termsAndPolicies.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms & Policies'**
+  String get termsAndPolicies;
+
+  /// No description provided for @support.
+  ///
+  /// In en, this message translates to:
+  /// **'Support'**
+  String get support;
 }
 
 class _AppLocalizationsDelegate

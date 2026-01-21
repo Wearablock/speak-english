@@ -54,5 +54,7 @@
   "errorNetwork": "网络错误",
   "retry": "重试",
   "cancel": "取消",
-  "ok": "确定"
+  "ok": "确定",
+  "termsAndPolicies": "条款与政策",
+  "support": "客服支持"
 }

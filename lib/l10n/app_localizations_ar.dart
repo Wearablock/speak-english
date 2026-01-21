@@ -173,4 +173,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get ok => 'موافق';
+
+  @override
+  String get termsAndPolicies => 'الشروط والسياسات';
+
+  @override
+  String get support => 'الدعم';
 }

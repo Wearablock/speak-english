@@ -173,4 +173,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get ok => 'OK';
+
+  @override
+  String get termsAndPolicies => 'Условия и политики';
+
+  @override
+  String get support => 'Поддержка';
 }

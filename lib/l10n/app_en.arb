@@ -54,5 +54,7 @@
   "errorNetwork": "Network error occurred",
   "retry": "Retry",
   "cancel": "Cancel",
-  "ok": "OK"
+  "ok": "OK",
+  "termsAndPolicies": "Terms & Policies",
+  "support": "Support"
 }

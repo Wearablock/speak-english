@@ -54,5 +54,7 @@
   "errorNetwork": "網路錯誤",
   "retry": "重試",
   "cancel": "取消",
-  "ok": "確定"
+  "ok": "確定",
+  "termsAndPolicies": "條款與政策",
+  "support": "客服支援"
 }

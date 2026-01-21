@@ -54,5 +54,7 @@
   "errorNetwork": "네트워크 오류가 발생했습니다",
   "retry": "재시도",
   "cancel": "취소",
-  "ok": "확인"
+  "ok": "확인",
+  "termsAndPolicies": "약관 및 정책",
+  "support": "고객지원"
 }

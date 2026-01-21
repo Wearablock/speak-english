@@ -54,5 +54,7 @@
   "errorNetwork": "Error de red",
   "retry": "Reintentar",
   "cancel": "Cancelar",
-  "ok": "Aceptar"
+  "ok": "Aceptar",
+  "termsAndPolicies": "Términos y políticas",
+  "support": "Soporte"
 }

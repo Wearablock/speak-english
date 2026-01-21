@@ -172,4 +172,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get ok => 'OK';
+
+  @override
+  String get termsAndPolicies => '利用規約とポリシー';
+
+  @override
+  String get support => 'サポート';
 }

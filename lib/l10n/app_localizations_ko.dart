@@ -172,4 +172,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get ok => '확인';
+
+  @override
+  String get termsAndPolicies => '약관 및 정책';
+
+  @override
+  String get support => '고객지원';
 }

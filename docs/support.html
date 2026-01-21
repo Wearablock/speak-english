@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Speak English</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Speak English">
+        <h1>Speak English</h1>
+      </div>
+      <div class="lang-selector">
+        <button class="lang-btn" onclick="toggleDropdown()">
+          <span id="currentLang">English</span>
+          <span>▼</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+          <div class="lang-option active" onclick="switchLang('en')">English</div>
+          <div class="lang-option" onclick="switchLang('ko')">한국어</div>
+          <div class="lang-option" onclick="switchLang('ja')">日本語</div>
+          <div class="lang-option" onclick="switchLang('zh')">简体中文</div>
+          <div class="lang-option" onclick="switchLang('zh-TW')">繁體中文</div>
+          <div class="lang-option" onclick="switchLang('de')">Deutsch</div>
+          <div class="lang-option" onclick="switchLang('fr')">Français</div>
+          <div class="lang-option" onclick="switchLang('es')">Español</div>
+          <div class="lang-option" onclick="switchLang('pt')">Português</div>
+          <div class="lang-option" onclick="switchLang('it')">Italiano</div>
+          <div class="lang-option" onclick="switchLang('ru')">Русский</div>
+          <div class="lang-option" onclick="switchLang('ar')">العربية</div>
+          <div class="lang-option" onclick="switchLang('th')">ภาษาไทย</div>
+          <div class="lang-option" onclick="switchLang('vi')">Tiếng Việt</div>
+          <div class="lang-option" onclick="switchLang('id')">Bahasa Indonesia</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- English -->
+    <main id="content-en" class="content-section active">
+      <h2>Support</h2>
+
+      <h3>Frequently Asked Questions</h3>
+
+      <div class="faq-item">
+        <h4>How does speech recognition work?</h4>
+        <p>The app uses your device's built-in speech recognition to analyze your pronunciation. Make sure you're in a quiet environment and speak clearly into the microphone.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Why isn't speech recognition working?</h4>
+        <p>Please check that you've granted microphone permissions to the app. Go to your device's Settings > Privacy > Microphone and ensure the app is enabled.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Can I use the app offline?</h4>
+        <p>Basic features work offline, but speech recognition requires an internet connection on most devices.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How do I remove ads?</h4>
+        <p>You can remove ads through an in-app purchase. Go to Settings and look for the "Remove Ads" option.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Is my data secure?</h4>
+        <p>Yes! All your learning progress and preferences are stored locally on your device. We don't collect or transmit any personal data.</p>
+      </div>
+
+      <h3>Contact Us</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Email Support</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>We typically respond within 24-48 hours.</p>
+        </div>
+      </div>
+
+      <h3>Company Information</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, Republic of Korea</p>
+    </main>
+
+    <!-- Korean -->
+    <main id="content-ko" class="content-section">
+      <h2>고객지원</h2>
+
+      <h3>자주 묻는 질문</h3>
+
+      <div class="faq-item">
+        <h4>음성 인식은 어떻게 작동하나요?</h4>
+        <p>앱은 기기의 내장 음성 인식을 사용하여 발음을 분석합니다. 조용한 환경에서 마이크에 또렷하게 말씀해 주세요.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>음성 인식이 작동하지 않아요</h4>
+        <p>앱에 마이크 권한을 부여했는지 확인해 주세요. 기기의 설정 > 개인정보 보호 > 마이크에서 앱이 활성화되어 있는지 확인하세요.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>오프라인에서 사용할 수 있나요?</h4>
+        <p>기본 기능은 오프라인에서 작동하지만, 음성 인식은 대부분의 기기에서 인터넷 연결이 필요합니다.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>광고를 제거하려면 어떻게 하나요?</h4>
+        <p>인앱 구매를 통해 광고를 제거할 수 있습니다. 설정으로 이동하여 "광고 제거" 옵션을 찾으세요.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>내 데이터는 안전한가요?</h4>
+        <p>네! 모든 학습 진도와 설정은 기기에 로컬로 저장됩니다. 개인 데이터를 수집하거나 전송하지 않습니다.</p>
+      </div>
+
+      <h3>문의하기</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>이메일 지원</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>보통 24-48시간 이내에 답변드립니다.</p>
+        </div>
+      </div>
+
+      <h3>회사 정보</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>경기도 김포시 김포한강11로 288-5</p>
+    </main>
+
+    <!-- Japanese -->
+    <main id="content-ja" class="content-section">
+      <h2>サポート</h2>
+
+      <h3>よくある質問</h3>
+
+      <div class="faq-item">
+        <h4>音声認識はどのように機能しますか？</h4>
+        <p>アプリはデバイスの内蔵音声認識を使用して発音を分析します。静かな環境で、マイクに向かってはっきりと話してください。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>音声認識が機能しないのはなぜですか？</h4>
+        <p>アプリにマイクの許可を与えているか確認してください。デバイスの設定 > プライバシー > マイクで、アプリが有効になっているか確認してください。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>オフラインで使用できますか？</h4>
+        <p>基本機能はオフラインで動作しますが、音声認識にはほとんどのデバイスでインターネット接続が必要です。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>広告を削除するにはどうすればいいですか？</h4>
+        <p>アプリ内購入で広告を削除できます。設定に移動して「広告を削除」オプションを探してください。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>私のデータは安全ですか？</h4>
+        <p>はい！すべての学習進捗と設定はデバイスにローカルに保存されます。個人データを収集または送信することはありません。</p>
+      </div>
+
+      <h3>お問い合わせ</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>メールサポート</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>通常24〜48時間以内に返信いたします。</p>
+        </div>
+      </div>
+
+      <h3>会社情報</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>大韓民国 京畿道 金浦市 金浦漢江11路 288-5</p>
+    </main>
+
+    <!-- Simplified Chinese -->
+    <main id="content-zh" class="content-section">
+      <h2>客服支持</h2>
+
+      <h3>常见问题</h3>
+
+      <div class="faq-item">
+        <h4>语音识别如何工作？</h4>
+        <p>应用使用设备的内置语音识别来分析您的发音。请确保在安静的环境中，并对着麦克风清晰地说话。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>为什么语音识别不工作？</h4>
+        <p>请检查您是否已授予应用麦克风权限。前往设备的设置 > 隐私 > 麦克风，确保应用已启用。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>可以离线使用吗？</h4>
+        <p>基本功能可以离线工作，但语音识别在大多数设备上需要互联网连接。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>如何移除广告？</h4>
+        <p>您可以通过应用内购买来移除广告。前往设置并查找"移除广告"选项。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>我的数据安全吗？</h4>
+        <p>是的！您所有的学习进度和偏好设置都存储在您设备的本地。我们不会收集或传输任何个人数据。</p>
+      </div>
+
+      <h3>联系我们</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>邮件支持</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>我们通常在24-48小时内回复。</p>
+        </div>
+      </div>
+
+      <h3>公司信息</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>韩国京畿道金浦市金浦汉江11路288-5</p>
+    </main>
+
+    <!-- Traditional Chinese -->
+    <main id="content-zh-TW" class="content-section">
+      <h2>客服支援</h2>
+
+      <h3>常見問題</h3>
+
+      <div class="faq-item">
+        <h4>語音辨識如何運作？</h4>
+        <p>應用程式使用裝置的內建語音辨識來分析您的發音。請確保在安靜的環境中，並對著麥克風清晰地說話。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>為什麼語音辨識不運作？</h4>
+        <p>請檢查您是否已授予應用程式麥克風權限。前往裝置的設定 > 隱私權 > 麥克風，確保應用程式已啟用。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>可以離線使用嗎？</h4>
+        <p>基本功能可以離線運作，但語音辨識在大多數裝置上需要網際網路連線。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>如何移除廣告？</h4>
+        <p>您可以透過應用程式內購買來移除廣告。前往設定並尋找「移除廣告」選項。</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>我的資料安全嗎？</h4>
+        <p>是的！您所有的學習進度和偏好設定都儲存在您裝置的本機。我們不會收集或傳輸任何個人資料。</p>
+      </div>
+
+      <h3>聯繫我們</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>電子郵件支援</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>我們通常在24-48小時內回覆。</p>
+        </div>
+      </div>
+
+      <h3>公司資訊</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>韓國京畿道金浦市金浦漢江11路288-5</p>
+    </main>
+
+    <!-- German -->
+    <main id="content-de" class="content-section">
+      <h2>Support</h2>
+
+      <h3>Häufig gestellte Fragen</h3>
+
+      <div class="faq-item">
+        <h4>Wie funktioniert die Spracherkennung?</h4>
+        <p>Die App verwendet die integrierte Spracherkennung Ihres Geräts, um Ihre Aussprache zu analysieren. Stellen Sie sicher, dass Sie sich in einer ruhigen Umgebung befinden und deutlich ins Mikrofon sprechen.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Warum funktioniert die Spracherkennung nicht?</h4>
+        <p>Bitte überprüfen Sie, ob Sie der App Mikrofonberechtigungen erteilt haben. Gehen Sie zu Einstellungen > Datenschutz > Mikrofon und stellen Sie sicher, dass die App aktiviert ist.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Kann ich die App offline nutzen?</h4>
+        <p>Grundfunktionen funktionieren offline, aber die Spracherkennung erfordert auf den meisten Geräten eine Internetverbindung.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Wie entferne ich Werbung?</h4>
+        <p>Sie können Werbung durch einen In-App-Kauf entfernen. Gehen Sie zu Einstellungen und suchen Sie die Option "Werbung entfernen".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Sind meine Daten sicher?</h4>
+        <p>Ja! Alle Ihre Lernfortschritte und Einstellungen werden lokal auf Ihrem Gerät gespeichert. Wir sammeln oder übertragen keine persönlichen Daten.</p>
+      </div>
+
+      <h3>Kontaktieren Sie uns</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>E-Mail-Support</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Wir antworten normalerweise innerhalb von 24-48 Stunden.</p>
+        </div>
+      </div>
+
+      <h3>Unternehmensinformationen</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, Republik Korea</p>
+    </main>
+
+    <!-- French -->
+    <main id="content-fr" class="content-section">
+      <h2>Assistance</h2>
+
+      <h3>Questions fréquemment posées</h3>
+
+      <div class="faq-item">
+        <h4>Comment fonctionne la reconnaissance vocale ?</h4>
+        <p>L'application utilise la reconnaissance vocale intégrée de votre appareil pour analyser votre prononciation. Assurez-vous d'être dans un environnement calme et parlez clairement dans le microphone.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Pourquoi la reconnaissance vocale ne fonctionne-t-elle pas ?</h4>
+        <p>Veuillez vérifier que vous avez accordé les autorisations de microphone à l'application. Allez dans Paramètres > Confidentialité > Microphone et assurez-vous que l'application est activée.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Puis-je utiliser l'application hors ligne ?</h4>
+        <p>Les fonctionnalités de base fonctionnent hors ligne, mais la reconnaissance vocale nécessite une connexion Internet sur la plupart des appareils.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Comment supprimer les publicités ?</h4>
+        <p>Vous pouvez supprimer les publicités via un achat intégré. Allez dans Paramètres et recherchez l'option "Supprimer les pubs".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Mes données sont-elles sécurisées ?</h4>
+        <p>Oui ! Toute votre progression d'apprentissage et vos préférences sont stockées localement sur votre appareil. Nous ne collectons ni ne transmettons aucune donnée personnelle.</p>
+      </div>
+
+      <h3>Nous contacter</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Support par e-mail</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Nous répondons généralement sous 24 à 48 heures.</p>
+        </div>
+      </div>
+
+      <h3>Informations sur l'entreprise</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, République de Corée</p>
+    </main>
+
+    <!-- Spanish -->
+    <main id="content-es" class="content-section">
+      <h2>Soporte</h2>
+
+      <h3>Preguntas frecuentes</h3>
+
+      <div class="faq-item">
+        <h4>¿Cómo funciona el reconocimiento de voz?</h4>
+        <p>La aplicación utiliza el reconocimiento de voz integrado de tu dispositivo para analizar tu pronunciación. Asegúrate de estar en un ambiente tranquilo y habla claramente al micrófono.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Por qué no funciona el reconocimiento de voz?</h4>
+        <p>Por favor, verifica que hayas otorgado permisos de micrófono a la aplicación. Ve a Ajustes > Privacidad > Micrófono y asegúrate de que la aplicación esté habilitada.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Puedo usar la aplicación sin conexión?</h4>
+        <p>Las funciones básicas funcionan sin conexión, pero el reconocimiento de voz requiere conexión a Internet en la mayoría de los dispositivos.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Cómo elimino los anuncios?</h4>
+        <p>Puedes eliminar los anuncios mediante una compra dentro de la aplicación. Ve a Ajustes y busca la opción "Eliminar anuncios".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>¿Mis datos están seguros?</h4>
+        <p>¡Sí! Todo tu progreso de aprendizaje y preferencias se almacenan localmente en tu dispositivo. No recopilamos ni transmitimos ningún dato personal.</p>
+      </div>
+
+      <h3>Contáctanos</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Soporte por correo electrónico</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Normalmente respondemos en 24-48 horas.</p>
+        </div>
+      </div>
+
+      <h3>Información de la empresa</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, República de Corea</p>
+    </main>
+
+    <!-- Portuguese -->
+    <main id="content-pt" class="content-section">
+      <h2>Suporte</h2>
+
+      <h3>Perguntas frequentes</h3>
+
+      <div class="faq-item">
+        <h4>Como funciona o reconhecimento de voz?</h4>
+        <p>O aplicativo usa o reconhecimento de voz integrado do seu dispositivo para analisar sua pronúncia. Certifique-se de estar em um ambiente silencioso e fale claramente no microfone.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Por que o reconhecimento de voz não está funcionando?</h4>
+        <p>Por favor, verifique se você concedeu permissões de microfone ao aplicativo. Vá para Configurações > Privacidade > Microfone e certifique-se de que o aplicativo está habilitado.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Posso usar o aplicativo offline?</h4>
+        <p>As funções básicas funcionam offline, mas o reconhecimento de voz requer conexão com a Internet na maioria dos dispositivos.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Como removo os anúncios?</h4>
+        <p>Você pode remover os anúncios através de uma compra no aplicativo. Vá para Configurações e procure a opção "Remover anúncios".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Meus dados estão seguros?</h4>
+        <p>Sim! Todo o seu progresso de aprendizado e preferências são armazenados localmente no seu dispositivo. Não coletamos nem transmitimos nenhum dado pessoal.</p>
+      </div>
+
+      <h3>Entre em contato</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Suporte por e-mail</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Normalmente respondemos em 24-48 horas.</p>
+        </div>
+      </div>
+
+      <h3>Informações da empresa</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, República da Coreia</p>
+    </main>
+
+    <!-- Italian -->
+    <main id="content-it" class="content-section">
+      <h2>Supporto</h2>
+
+      <h3>Domande frequenti</h3>
+
+      <div class="faq-item">
+        <h4>Come funziona il riconoscimento vocale?</h4>
+        <p>L'app utilizza il riconoscimento vocale integrato del tuo dispositivo per analizzare la tua pronuncia. Assicurati di essere in un ambiente silenzioso e parla chiaramente nel microfono.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Perché il riconoscimento vocale non funziona?</h4>
+        <p>Verifica di aver concesso le autorizzazioni per il microfono all'app. Vai su Impostazioni > Privacy > Microfono e assicurati che l'app sia abilitata.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Posso usare l'app offline?</h4>
+        <p>Le funzioni di base funzionano offline, ma il riconoscimento vocale richiede una connessione Internet sulla maggior parte dei dispositivi.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Come rimuovo gli annunci?</h4>
+        <p>Puoi rimuovere gli annunci tramite un acquisto in-app. Vai su Impostazioni e cerca l'opzione "Rimuovi pubblicità".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>I miei dati sono al sicuro?</h4>
+        <p>Sì! Tutti i tuoi progressi di apprendimento e le tue preferenze sono archiviati localmente sul tuo dispositivo. Non raccogliamo né trasmettiamo alcun dato personale.</p>
+      </div>
+
+      <h3>Contattaci</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Supporto via email</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Solitamente rispondiamo entro 24-48 ore.</p>
+        </div>
+      </div>
+
+      <h3>Informazioni aziendali</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, Repubblica di Corea</p>
+    </main>
+
+    <!-- Russian -->
+    <main id="content-ru" class="content-section">
+      <h2>Поддержка</h2>
+
+      <h3>Часто задаваемые вопросы</h3>
+
+      <div class="faq-item">
+        <h4>Как работает распознавание речи?</h4>
+        <p>Приложение использует встроенное распознавание речи вашего устройства для анализа произношения. Убедитесь, что вы находитесь в тихой обстановке, и говорите чётко в микрофон.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Почему распознавание речи не работает?</h4>
+        <p>Пожалуйста, проверьте, предоставили ли вы приложению разрешение на использование микрофона. Перейдите в Настройки > Конфиденциальность > Микрофон и убедитесь, что приложение включено.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Можно ли использовать приложение офлайн?</h4>
+        <p>Базовые функции работают офлайн, но для распознавания речи на большинстве устройств требуется подключение к Интернету.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Как убрать рекламу?</h4>
+        <p>Вы можете убрать рекламу через покупку в приложении. Перейдите в Настройки и найдите опцию «Убрать рекламу».</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Мои данные в безопасности?</h4>
+        <p>Да! Весь ваш прогресс обучения и настройки хранятся локально на вашем устройстве. Мы не собираем и не передаём никаких личных данных.</p>
+      </div>
+
+      <h3>Связаться с нами</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Поддержка по электронной почте</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Обычно мы отвечаем в течение 24-48 часов.</p>
+        </div>
+      </div>
+
+      <h3>Информация о компании</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, Республика Корея</p>
+    </main>
+
+    <!-- Arabic -->
+    <main id="content-ar" class="content-section" dir="rtl">
+      <h2>الدعم</h2>
+
+      <h3>الأسئلة الشائعة</h3>
+
+      <div class="faq-item">
+        <h4>كيف يعمل التعرف على الصوت؟</h4>
+        <p>يستخدم التطبيق التعرف على الصوت المدمج في جهازك لتحليل نطقك. تأكد من أنك في بيئة هادئة وتحدث بوضوح في الميكروفون.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>لماذا لا يعمل التعرف على الصوت؟</h4>
+        <p>يرجى التحقق من أنك منحت أذونات الميكروفون للتطبيق. انتقل إلى الإعدادات > الخصوصية > الميكروفون وتأكد من تمكين التطبيق.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>هل يمكنني استخدام التطبيق دون اتصال بالإنترنت؟</h4>
+        <p>تعمل الميزات الأساسية دون اتصال، لكن التعرف على الصوت يتطلب اتصالاً بالإنترنت على معظم الأجهزة.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>كيف أزيل الإعلانات؟</h4>
+        <p>يمكنك إزالة الإعلانات من خلال عملية شراء داخل التطبيق. انتقل إلى الإعدادات وابحث عن خيار "إزالة الإعلانات".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>هل بياناتي آمنة؟</h4>
+        <p>نعم! يتم تخزين جميع تقدمك في التعلم وتفضيلاتك محليًا على جهازك. نحن لا نجمع أو ننقل أي بيانات شخصية.</p>
+      </div>
+
+      <h3>اتصل بنا</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>دعم البريد الإلكتروني</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>عادة نرد خلال 24-48 ساعة.</p>
+        </div>
+      </div>
+
+      <h3>معلومات الشركة</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, جمهورية كوريا</p>
+    </main>
+
+    <!-- Thai -->
+    <main id="content-th" class="content-section">
+      <h2>ช่วยเหลือ</h2>
+
+      <h3>คำถามที่พบบ่อย</h3>
+
+      <div class="faq-item">
+        <h4>การรู้จำเสียงทำงานอย่างไร?</h4>
+        <p>แอปใช้การรู้จำเสียงที่ติดตั้งมาในอุปกรณ์ของคุณเพื่อวิเคราะห์การออกเสียง ตรวจสอบให้แน่ใจว่าคุณอยู่ในสภาพแวดล้อมที่เงียบและพูดชัดเจนใส่ไมโครโฟน</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>ทำไมการรู้จำเสียงไม่ทำงาน?</h4>
+        <p>กรุณาตรวจสอบว่าคุณได้อนุญาตสิทธิ์ไมโครโฟนให้แอปแล้ว ไปที่การตั้งค่า > ความเป็นส่วนตัว > ไมโครโฟน และตรวจสอบว่าแอปเปิดใช้งานอยู่</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>สามารถใช้แอปแบบออฟไลน์ได้ไหม?</h4>
+        <p>ฟีเจอร์พื้นฐานใช้งานได้แบบออฟไลน์ แต่การรู้จำเสียงต้องการการเชื่อมต่ออินเทอร์เน็ตในอุปกรณ์ส่วนใหญ่</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>จะลบโฆษณาได้อย่างไร?</h4>
+        <p>คุณสามารถลบโฆษณาได้ผ่านการซื้อในแอป ไปที่การตั้งค่าและมองหาตัวเลือก "ลบโฆษณา"</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>ข้อมูลของฉันปลอดภัยไหม?</h4>
+        <p>ใช่! ความก้าวหน้าในการเรียนรู้และการตั้งค่าทั้งหมดของคุณจะถูกจัดเก็บไว้ในอุปกรณ์ของคุณ เราไม่เก็บรวบรวมหรือส่งข้อมูลส่วนบุคคลใดๆ</p>
+      </div>
+
+      <h3>ติดต่อเรา</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>ฝ่ายสนับสนุนทางอีเมล</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>เรามักจะตอบกลับภายใน 24-48 ชั่วโมง</p>
+        </div>
+      </div>
+
+      <h3>ข้อมูลบริษัท</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, สาธารณรัฐเกาหลี</p>
+    </main>
+
+    <!-- Vietnamese -->
+    <main id="content-vi" class="content-section">
+      <h2>Hỗ trợ</h2>
+
+      <h3>Câu hỏi thường gặp</h3>
+
+      <div class="faq-item">
+        <h4>Nhận dạng giọng nói hoạt động như thế nào?</h4>
+        <p>Ứng dụng sử dụng nhận dạng giọng nói tích hợp của thiết bị để phân tích phát âm của bạn. Hãy đảm bảo bạn ở trong môi trường yên tĩnh và nói rõ ràng vào micro.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Tại sao nhận dạng giọng nói không hoạt động?</h4>
+        <p>Vui lòng kiểm tra xem bạn đã cấp quyền micro cho ứng dụng chưa. Đi tới Cài đặt > Quyền riêng tư > Micro và đảm bảo ứng dụng được bật.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Tôi có thể sử dụng ứng dụng ngoại tuyến không?</h4>
+        <p>Các tính năng cơ bản hoạt động ngoại tuyến, nhưng nhận dạng giọng nói yêu cầu kết nối Internet trên hầu hết các thiết bị.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Làm cách nào để xóa quảng cáo?</h4>
+        <p>Bạn có thể xóa quảng cáo thông qua mua hàng trong ứng dụng. Đi tới Cài đặt và tìm tùy chọn "Xóa quảng cáo".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Dữ liệu của tôi có an toàn không?</h4>
+        <p>Có! Tất cả tiến độ học tập và tùy chọn của bạn được lưu trữ cục bộ trên thiết bị. Chúng tôi không thu thập hoặc truyền bất kỳ dữ liệu cá nhân nào.</p>
+      </div>
+
+      <h3>Liên hệ</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Hỗ trợ qua email</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Chúng tôi thường phản hồi trong vòng 24-48 giờ.</p>
+        </div>
+      </div>
+
+      <h3>Thông tin công ty</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, Cộng hòa Hàn Quốc</p>
+    </main>
+
+    <!-- Indonesian -->
+    <main id="content-id" class="content-section">
+      <h2>Dukungan</h2>
+
+      <h3>Pertanyaan yang Sering Diajukan</h3>
+
+      <div class="faq-item">
+        <h4>Bagaimana cara kerja pengenalan suara?</h4>
+        <p>Aplikasi menggunakan pengenalan suara bawaan perangkat Anda untuk menganalisis pengucapan Anda. Pastikan Anda berada di lingkungan yang tenang dan berbicara dengan jelas ke mikrofon.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Mengapa pengenalan suara tidak berfungsi?</h4>
+        <p>Silakan periksa apakah Anda telah memberikan izin mikrofon ke aplikasi. Buka Pengaturan > Privasi > Mikrofon dan pastikan aplikasi diaktifkan.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Bisakah saya menggunakan aplikasi secara offline?</h4>
+        <p>Fitur dasar berfungsi secara offline, tetapi pengenalan suara memerlukan koneksi internet di sebagian besar perangkat.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Bagaimana cara menghapus iklan?</h4>
+        <p>Anda dapat menghapus iklan melalui pembelian dalam aplikasi. Buka Pengaturan dan cari opsi "Hapus iklan".</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Apakah data saya aman?</h4>
+        <p>Ya! Semua kemajuan belajar dan preferensi Anda disimpan secara lokal di perangkat Anda. Kami tidak mengumpulkan atau mengirimkan data pribadi apa pun.</p>
+      </div>
+
+      <h3>Hubungi Kami</h3>
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <div class="info">
+          <h4>Dukungan Email</h4>
+          <p><a href="mailto:admin@wearablock.com">admin@wearablock.com</a></p>
+          <p>Kami biasanya merespons dalam 24-48 jam.</p>
+        </div>
+      </div>
+
+      <h3>Informasi Perusahaan</h3>
+      <p><strong>Wearablock Inc.</strong></p>
+      <p>288-5, Gimpo Hangang 11-ro, Gimpo-si, Gyeonggi-do, Republik Korea</p>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Wearablock Inc. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const langNames = {
+      'en': 'English', 'ko': '한국어', 'ja': '日本語',
+      'zh': '简体中文', 'zh-TW': '繁體中文', 'de': 'Deutsch',
+      'fr': 'Français', 'es': 'Español', 'pt': 'Português',
+      'it': 'Italiano', 'ru': 'Русский', 'ar': 'العربية',
+      'th': 'ภาษาไทย', 'vi': 'Tiếng Việt', 'id': 'Bahasa Indonesia'
+    };
+
+    function toggleDropdown() {
+      document.getElementById('langDropdown').classList.toggle('show');
+    }
+
+    function switchLang(lang) {
+      document.querySelectorAll('.content-section').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.lang-option').forEach(el => el.classList.remove('active'));
+
+      const contentEl = document.getElementById('content-' + lang);
+      if (contentEl) {
+        contentEl.classList.add('active');
+      } else {
+        document.getElementById('content-en').classList.add('active');
+        lang = 'en';
+      }
+
+      document.getElementById('currentLang').textContent = langNames[lang] || 'English';
+
+      const options = document.querySelectorAll('.lang-option');
+      options.forEach(opt => {
+        if (opt.textContent === langNames[lang]) {
+          opt.classList.add('active');
+        }
+      });
+
+      document.getElementById('langDropdown').classList.remove('show');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang');
+      if (lang) {
+        switchLang(lang);
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.lang-selector')) {
+        document.getElementById('langDropdown').classList.remove('show');
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

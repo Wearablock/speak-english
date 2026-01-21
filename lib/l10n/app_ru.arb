@@ -54,5 +54,7 @@
   "errorNetwork": "Ошибка сети",
   "retry": "Повторить",
   "cancel": "Отмена",
-  "ok": "OK"
+  "ok": "OK",
+  "termsAndPolicies": "Условия и политики",
+  "support": "Поддержка"
 }

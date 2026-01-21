@@ -173,4 +173,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get ok => 'OK';
+
+  @override
+  String get termsAndPolicies => 'Syarat dan kebijakan';
+
+  @override
+  String get support => 'Dukungan';
 }

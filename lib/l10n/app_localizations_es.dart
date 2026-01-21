@@ -173,4 +173,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get ok => 'Aceptar';
+
+  @override
+  String get termsAndPolicies => 'Términos y políticas';
+
+  @override
+  String get support => 'Soporte';
 }

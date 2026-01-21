@@ -54,5 +54,7 @@
   "errorNetwork": "ネットワークエラーが発生しました",
   "retry": "再試行",
   "cancel": "キャンセル",
-  "ok": "OK"
+  "ok": "OK",
+  "termsAndPolicies": "利用規約とポリシー",
+  "support": "サポート"
 }

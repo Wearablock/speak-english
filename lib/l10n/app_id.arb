@@ -54,5 +54,7 @@
   "errorNetwork": "Kesalahan jaringan",
   "retry": "Coba lagi",
   "cancel": "Batal",
-  "ok": "OK"
+  "ok": "OK",
+  "termsAndPolicies": "Syarat dan kebijakan",
+  "support": "Dukungan"
 }

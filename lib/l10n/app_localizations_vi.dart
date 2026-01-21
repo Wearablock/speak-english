@@ -173,4 +173,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get ok => 'OK';
+
+  @override
+  String get termsAndPolicies => 'Điều khoản và chính sách';
+
+  @override
+  String get support => 'Hỗ trợ';
 }

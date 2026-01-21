@@ -172,6 +172,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get ok => '确定';
+
+  @override
+  String get termsAndPolicies => '条款与政策';
+
+  @override
+  String get support => '客服支持';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -342,4 +348,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get ok => '確定';
+
+  @override
+  String get termsAndPolicies => '條款與政策';
+
+  @override
+  String get support => '客服支援';
 }
