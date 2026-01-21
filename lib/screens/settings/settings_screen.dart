@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_config.dart';
+import '../../models/app_language.dart';
 import '../../services/preferences_service.dart';
 import '../../app.dart';
 
@@ -31,7 +32,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     await PreferencesService.setThemeMode(mode);
     setState(() => _themeMode = mode);
 
-    // 앱 테마 변경
     switch (mode) {
       case 'light':
         SpeakEnglishApp.themeNotifier.value = ThemeMode.light;
@@ -42,6 +42,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
       default:
         SpeakEnglishApp.themeNotifier.value = ThemeMode.system;
     }
+  }
+
+  String _getCurrentLanguageName() {
+    final currentLocale = SpeakEnglishApp.localeNotifier.value;
+    if (currentLocale == null) {
+      // System default
+      final systemLocale = WidgetsBinding.instance.platformDispatcher.locale;
+      final lang = AppLanguage.fromLocale(systemLocale);
+      return lang?.nativeName ?? 'System';
+    }
+
+    final lang = AppLanguage.fromLocale(currentLocale);
+    return lang?.nativeName ?? currentLocale.languageCode;
+  }
+
+  void _setLanguage(AppLanguage lang) async {
+    await PreferencesService.setLanguage(lang.code);
+    SpeakEnglishApp.localeNotifier.value = lang.locale;
+    setState(() {});
   }
 
   @override
@@ -64,15 +83,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const Divider(),
 
-          // 언어 설정 (Phase 4에서 구현)
+          // 언어 설정
           ListTile(
             leading: Icon(PhosphorIcons.globe(PhosphorIconsStyle.regular)),
             title: Text(l10n.language),
-            subtitle: const Text('English'),
+            subtitle: Text(_getCurrentLanguageName()),
             trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
-            onTap: () {
-              // TODO: Phase 4에서 구현
-            },
+            onTap: () => _showLanguageDialog(context, l10n),
           ),
           const Divider(),
 
@@ -139,6 +156,48 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return ListTile(
       leading: Radio<String>(value: value),
       title: Text(label),
+    );
+  }
+
+  void _showLanguageDialog(BuildContext context, AppLocalizations l10n) {
+    final currentLocale = SpeakEnglishApp.localeNotifier.value;
+
+    showDialog(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Text(l10n.language),
+        content: SizedBox(
+          width: double.maxFinite,
+          height: 400,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: AppLanguage.supportedLanguages.length,
+            itemBuilder: (context, index) {
+              final lang = AppLanguage.supportedLanguages[index];
+              final isSelected = currentLocale != null &&
+                  currentLocale.languageCode == lang.locale.languageCode &&
+                  (currentLocale.countryCode == lang.locale.countryCode ||
+                      (currentLocale.countryCode == null &&
+                          lang.locale.countryCode == null));
+
+              return ListTile(
+                leading: isSelected
+                    ? Icon(
+                        PhosphorIcons.check(PhosphorIconsStyle.bold),
+                        color: Theme.of(context).primaryColor,
+                      )
+                    : const SizedBox(width: 24),
+                title: Text(lang.nativeName),
+                subtitle: Text(lang.name),
+                onTap: () {
+                  _setLanguage(lang);
+                  Navigator.pop(dialogContext);
+                },
+              );
+            },
+          ),
+        ),
+      ),
     );
   }
 }

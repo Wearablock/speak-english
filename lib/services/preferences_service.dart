@@ -5,6 +5,7 @@ class PreferencesService {
 
   // 키 상수
   static const String _keyLocale = 'locale';
+  static const String _keyLanguage = 'app_language';
   static const String _keyThemeMode = 'theme_mode';
   static const String _keyOnboardingComplete = 'onboarding_complete';
   static const String _keyAdFree = 'ad_free';
@@ -18,6 +19,12 @@ class PreferencesService {
   static String? getLocale() => _prefs?.getString(_keyLocale);
   static Future<void> setLocale(String locale) async {
     await _prefs?.setString(_keyLocale, locale);
+  }
+
+  // Language
+  static String? getLanguage() => _prefs?.getString(_keyLanguage);
+  static Future<void> setLanguage(String languageCode) async {
+    await _prefs?.setString(_keyLanguage, languageCode);
   }
 
   // Theme
