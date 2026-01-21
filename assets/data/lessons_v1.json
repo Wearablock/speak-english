@@ -1,0 +1,172 @@
+{
+  "version": "1.0.0",
+  "categories": [
+    {
+      "id": 1,
+      "name_key": "category_greetings",
+      "icon": "handshake"
+    },
+    {
+      "id": 2,
+      "name_key": "category_daily",
+      "icon": "sun"
+    },
+    {
+      "id": 3,
+      "name_key": "category_business",
+      "icon": "briefcase"
+    },
+    {
+      "id": 4,
+      "name_key": "category_travel",
+      "icon": "airplane"
+    },
+    {
+      "id": 5,
+      "name_key": "category_shopping",
+      "icon": "shopping_cart"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "sentence": "Hello, how are you doing today?",
+      "translation": "안녕하세요, 오늘 어떻게 지내세요?",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "sentence": "Nice to meet you.",
+      "translation": "만나서 반갑습니다.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "sentence": "My name is John. What's your name?",
+      "translation": "제 이름은 John입니다. 당신의 이름은 무엇인가요?",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "sentence": "It's nice to see you again.",
+      "translation": "다시 만나서 반갑습니다.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "sentence": "How have you been?",
+      "translation": "어떻게 지내셨어요?",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "sentence": "What time is it now?",
+      "translation": "지금 몇 시예요?",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "sentence": "What's the weather like today?",
+      "translation": "오늘 날씨가 어때요?",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "sentence": "Could you please speak more slowly?",
+      "translation": "좀 더 천천히 말씀해 주시겠어요?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 9,
+      "sentence": "I don't understand. Could you repeat that?",
+      "translation": "이해하지 못했어요. 다시 말씀해 주시겠어요?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 10,
+      "sentence": "Where is the nearest subway station?",
+      "translation": "가장 가까운 지하철역이 어디예요?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 11,
+      "sentence": "I would like to schedule a meeting.",
+      "translation": "회의를 잡고 싶습니다.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 12,
+      "sentence": "Could you send me the report by tomorrow?",
+      "translation": "내일까지 보고서를 보내주시겠어요?",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 13,
+      "sentence": "Let me introduce our new product.",
+      "translation": "저희 신제품을 소개하겠습니다.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 14,
+      "sentence": "I have a reservation under the name Smith.",
+      "translation": "Smith 이름으로 예약했습니다.",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 15,
+      "sentence": "How much does this cost?",
+      "translation": "이거 얼마예요?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "sentence": "Can I try this on?",
+      "translation": "이거 입어봐도 될까요?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 17,
+      "sentence": "Do you have this in a different size?",
+      "translation": "이거 다른 사이즈 있나요?",
+      "category_id": 5,
+      "difficulty": 2
+    },
+    {
+      "id": 18,
+      "sentence": "I would like to return this item.",
+      "translation": "이 제품을 반품하고 싶습니다.",
+      "category_id": 5,
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "sentence": "Excuse me, where is the restroom?",
+      "translation": "실례합니다, 화장실이 어디예요?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 20,
+      "sentence": "Could I have the check, please?",
+      "translation": "계산서 주시겠어요?",
+      "category_id": 4,
+      "difficulty": 1
+    }
+  ]
+}
