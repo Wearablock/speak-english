@@ -15,6 +15,9 @@ dependencies:
   # 음성 인식
   speech_to_text: ^7.0.0
 
+  # 효과음
+  audioplayers: ^6.5.1
+
   # 로컬 저장소
   shared_preferences: ^2.5.4
 
@@ -51,3 +54,4 @@ flutter:
   assets:
     - assets/data/
     - assets/images/
+    - assets/sounds/

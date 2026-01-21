@@ -4,6 +4,7 @@ import '../../constants/app_spacing.dart';
 import '../../models/lesson.dart';
 import '../../services/speech_service.dart';
 import '../../services/progress_service.dart';
+import '../../services/sound_service.dart';
 import '../../utils/text_similarity.dart';
 import '../../widgets/speech/speech_button.dart';
 import '../../widgets/speech/speech_result_card.dart';
@@ -26,6 +27,7 @@ class PracticeScreen extends StatefulWidget {
 class _PracticeScreenState extends State<PracticeScreen> {
   final SpeechService _speechService = SpeechService();
   final ProgressService _progressService = ProgressService();
+  final SoundService _soundService = SoundService();
 
   int _currentIndex = 0;
   bool _isListening = false;
@@ -37,6 +39,8 @@ class _PracticeScreenState extends State<PracticeScreen> {
   bool get _hasNext => _currentIndex < widget.lessons.length - 1;
 
   void _startListening() async {
+    _soundService.playRecordStart();
+
     setState(() {
       _isListening = true;
       _recognizedText = '';
