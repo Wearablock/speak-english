@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'app.dart';
+import 'services/preferences_service.dart';
+import 'services/speech_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,9 +22,9 @@ void main() async {
     DeviceOrientation.portraitDown,
   ]);
 
-  // TODO: Phase 2에서 서비스 초기화 추가
-  // await PreferencesService.init();
-  // await SpeechService().initialize();
+  // 서비스 초기화
+  await PreferencesService.init();
+  await SpeechService().initialize();
 
   // TODO: Phase 5에서 광고 초기화 추가
   // await AdService.init();
