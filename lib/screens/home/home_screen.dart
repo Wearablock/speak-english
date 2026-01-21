@@ -1,10 +1,72 @@
 import 'package:flutter/material.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_colors.dart';
 import '../../constants/app_spacing.dart';
+import '../../services/progress_service.dart';
+import '../../services/lesson_service.dart';
+import '../../widgets/progress/streak_badge.dart';
+import '../practice/practice_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final ProgressService _progressService = ProgressService();
+  final LessonService _lessonService = LessonService();
+
+  int _streak = 0;
+  int _completedCount = 0;
+  int _todayCount = 0;
+  double _averageAccuracy = 0.0;
+  int _totalLessons = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadStats();
+    ProgressNotifier().addListener(_loadStats);
+  }
+
+  @override
+  void dispose() {
+    ProgressNotifier().removeListener(_loadStats);
+    super.dispose();
+  }
+
+  Future<void> _loadStats() async {
+    final streak = await _progressService.getDailyStreak();
+    final completed = await _progressService.getCompletedCount();
+    final today = await _progressService.getTodayPracticeCount();
+    final accuracy = await _progressService.getAverageAccuracy();
+    final lessons = await _lessonService.getLessons();
+
+    if (mounted) {
+      setState(() {
+        _streak = streak;
+        _completedCount = completed;
+        _todayCount = today;
+        _averageAccuracy = accuracy;
+        _totalLessons = lessons.length;
+      });
+    }
+  }
+
+  void _startPractice() async {
+    final lessons = await _lessonService.getLessons();
+    if (lessons.isEmpty || !mounted) return;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PracticeScreen(lessons: lessons),
+      ),
+    ).then((_) => _loadStats());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +75,16 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.appTitle),
+        actions: [
+          if (_streak > 0)
+            Padding(
+              padding: const EdgeInsets.only(right: AppSpacing.md),
+              child: StreakBadge(streak: _streak),
+            ),
+        ],
       ),
       body: SafeArea(
-        child: Padding(
+        child: SingleChildScrollView(
           padding: AppSpacing.screenPadding,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,31 +98,18 @@ class HomeScreen extends StatelessWidget {
 
               // 오늘의 진도 카드
               _buildProgressCard(context, l10n),
-              const SizedBox(height: AppSpacing.md),
-
-              // 연습 시작 버튼
-              ElevatedButton(
-                onPressed: () {
-                  // TODO: Phase 3에서 PracticeScreen으로 이동
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Phase 3에서 구현 예정')),
-                  );
-                },
-                child: Text(l10n.startPractice),
-              ),
               const SizedBox(height: AppSpacing.lg),
 
-              // 정보 텍스트
-              Text(
-                'Phase 1 프로젝트 셋업 완료!',
-                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: AppColors.textSecondary,
-                    ),
-              ),
-              const SizedBox(height: AppSpacing.sm),
-              Text(
-                '다음 단계: Phase 2 - 핵심 기능 구현',
-                style: Theme.of(context).textTheme.bodySmall,
+              // 연습 시작 버튼
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton.icon(
+                  onPressed: _startPractice,
+                  icon: Icon(PhosphorIcons.play(PhosphorIconsStyle.fill)),
+                  label: Text(
+                    _todayCount > 0 ? l10n.continuePractice : l10n.startPractice,
+                  ),
+                ),
               ),
             ],
           ),
@@ -79,22 +135,22 @@ class HomeScreen extends StatelessWidget {
               children: [
                 _buildStatItem(
                   context,
-                  icon: Icons.check_circle_outline,
-                  value: '0',
+                  icon: PhosphorIcons.checkCircle(PhosphorIconsStyle.fill),
+                  value: '$_completedCount/$_totalLessons',
                   label: l10n.completed,
                   color: AppColors.success,
                 ),
                 _buildStatItem(
                   context,
-                  icon: Icons.local_fire_department,
-                  value: '0',
+                  icon: PhosphorIcons.flame(PhosphorIconsStyle.fill),
+                  value: '$_streak ${l10n.days}',
                   label: l10n.streak,
                   color: AppColors.warning,
                 ),
                 _buildStatItem(
                   context,
-                  icon: Icons.percent,
-                  value: '0%',
+                  icon: PhosphorIcons.target(PhosphorIconsStyle.fill),
+                  value: '${(_averageAccuracy * 100).round()}%',
                   label: l10n.accuracy,
                   color: AppColors.primary,
                 ),
@@ -119,7 +175,7 @@ class HomeScreen extends StatelessWidget {
         const SizedBox(height: AppSpacing.xs),
         Text(
           value,
-          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
         ),
