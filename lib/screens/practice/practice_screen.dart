@@ -1,6 +1,8 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_spacing.dart';
+import '../../constants/app_colors.dart';
 import '../../models/lesson.dart';
 import '../../services/speech_service.dart';
 import '../../services/progress_service.dart';
@@ -11,6 +13,21 @@ import '../../widgets/speech/speech_result_card.dart';
 import '../../widgets/lesson/sentence_display.dart';
 import '../../widgets/lesson/accuracy_indicator.dart';
 import 'practice_result_screen.dart';
+
+/// 라운드별 결과
+class RoundResult {
+  final int round;
+  final double accuracy;
+  final int hintsUsed;
+
+  RoundResult({
+    required this.round,
+    required this.accuracy,
+    this.hintsUsed = 0,
+  });
+
+  bool get passed => accuracy >= 0.8;
+}
 
 class PracticeScreen extends StatefulWidget {
   final List<Lesson> lessons;
@@ -30,13 +47,25 @@ class _PracticeScreenState extends State<PracticeScreen> {
   final SoundService _soundService = SoundService();
 
   int _currentIndex = 0;
+  int _currentRound = 1; // 1, 2, 3
   bool _isListening = false;
   String _recognizedText = '';
   double? _accuracy;
+  int _hintsUsed = 0;
+
+  // 라운드별 결과 저장
+  final List<RoundResult> _currentLessonResults = [];
   final List<double> _sessionAccuracies = [];
 
   Lesson get _currentLesson => widget.lessons[_currentIndex];
   bool get _hasNext => _currentIndex < widget.lessons.length - 1;
+
+  LearningRound get _learningRound => switch (_currentRound) {
+        1 => LearningRound.fullView,
+        2 => LearningRound.wordBlur,
+        3 => LearningRound.translationOnly,
+        _ => LearningRound.fullView,
+      };
 
   void _startListening() async {
     _soundService.playRecordStart();
@@ -83,12 +112,58 @@ class _PracticeScreenState extends State<PracticeScreen> {
       _isListening = false;
     });
 
-    // 결과 저장
-    await _progressService.saveResult(_currentLesson.id, accuracy);
-    _sessionAccuracies.add(accuracy);
+    // 라운드 결과 저장
+    _currentLessonResults.add(RoundResult(
+      round: _currentRound,
+      accuracy: accuracy,
+      hintsUsed: _currentRound == 2 ? _hintsUsed : 0,
+    ));
   }
 
-  void _nextLesson() {
+  void _onHintUsed(int totalHints) {
+    setState(() {
+      _hintsUsed = totalHints;
+    });
+  }
+
+  void _nextRound() {
+    if (_accuracy == null) return;
+
+    final passed = _accuracy! >= 0.8;
+
+    if (passed && _currentRound < 3) {
+      // 성공: 다음 라운드로
+      setState(() {
+        _currentRound++;
+        _recognizedText = '';
+        _accuracy = null;
+        _hintsUsed = 0;
+      });
+    } else if (passed && _currentRound == 3) {
+      // Round 3 성공: 다음 레슨으로
+      _completeLessonAndNext();
+    } else {
+      // 실패: 같은 라운드 재시도
+      setState(() {
+        _recognizedText = '';
+        _accuracy = null;
+      });
+    }
+  }
+
+  void _skipToNextLesson() {
+    // 현재 레슨 스킵 (최종 정확도는 마지막 시도 기준)
+    _completeLessonAndNext();
+  }
+
+  void _completeLessonAndNext() {
+    // 최종 정확도 계산 (Round 3 정확도 - 힌트 페널티)
+    final finalAccuracy = _calculateFinalAccuracy();
+
+    // 결과 저장
+    _progressService.saveResult(_currentLesson.id, finalAccuracy);
+    _sessionAccuracies.add(finalAccuracy);
+
     if (!_hasNext) {
       // 세션 완료
       Navigator.pushReplacement(
@@ -103,14 +178,38 @@ class _PracticeScreenState extends State<PracticeScreen> {
       return;
     }
 
+    // 다음 레슨으로
     setState(() {
       _currentIndex++;
+      _currentRound = 1;
       _recognizedText = '';
       _accuracy = null;
+      _hintsUsed = 0;
+      _currentLessonResults.clear();
     });
   }
 
-  void _retryLesson() {
+  double _calculateFinalAccuracy() {
+    if (_currentLessonResults.isEmpty) return 0.0;
+
+    // Round 3 결과가 있으면 사용, 없으면 마지막 결과 사용
+    final round3Results =
+        _currentLessonResults.where((r) => r.round == 3).toList();
+    final baseAccuracy = round3Results.isNotEmpty
+        ? round3Results.last.accuracy
+        : _currentLessonResults.last.accuracy;
+
+    // 힌트 페널티 계산 (Round 2에서 사용한 힌트당 2% 감점)
+    final round2Results =
+        _currentLessonResults.where((r) => r.round == 2).toList();
+    final totalHints =
+        round2Results.fold(0, (sum, r) => sum + r.hintsUsed);
+    final hintPenalty = totalHints * 0.02;
+
+    return max(0.0, baseAccuracy - hintPenalty);
+  }
+
+  void _retryRound() {
     setState(() {
       _recognizedText = '';
       _accuracy = null;
@@ -136,11 +235,15 @@ class _PracticeScreenState extends State<PracticeScreen> {
               ),
               const SizedBox(height: AppSpacing.lg),
 
-              // 문장 표시
+              // 문장 표시 (Round에 따라 다르게)
               SentenceDisplay(
                 sentence: _currentLesson.sentence,
-                translation: _currentLesson.translation,
+                translation: _currentLesson.getTranslation(
+                  Localizations.localeOf(context).toString(),
+                ),
                 pronunciation: _currentLesson.pronunciation,
+                round: _learningRound,
+                onHintUsed: _onHintUsed,
               ),
               const SizedBox(height: AppSpacing.lg),
 
@@ -148,50 +251,27 @@ class _PracticeScreenState extends State<PracticeScreen> {
               Expanded(
                 child: _accuracy != null
                     ? Center(
-                        child: AccuracyIndicator(accuracy: _accuracy!),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            AccuracyIndicator(accuracy: _accuracy!),
+                            const SizedBox(height: AppSpacing.md),
+                            _buildResultMessage(context, l10n),
+                          ],
+                        ),
                       )
-                    : SpeechResultCard(
-                        recognizedText: _recognizedText,
-                        accuracy: null,
+                    : Center(
+                        child: SpeechResultCard(
+                          recognizedText: _recognizedText,
+                          accuracy: null,
+                        ),
                       ),
               ),
 
               const SizedBox(height: AppSpacing.lg),
 
               // 버튼 영역
-              if (_accuracy == null) ...[
-                // 음성 버튼
-                Center(
-                  child: SpeechButton(
-                    isListening: _isListening,
-                    onPressed: _isListening ? _stopListening : _startListening,
-                  ),
-                ),
-                const SizedBox(height: AppSpacing.sm),
-                Text(
-                  _isListening ? l10n.listening : l10n.tapToSpeak,
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-              ] else ...[
-                // 결과 후 버튼들
-                Row(
-                  children: [
-                    Expanded(
-                      child: OutlinedButton(
-                        onPressed: _retryLesson,
-                        child: Text(l10n.tryAgain),
-                      ),
-                    ),
-                    const SizedBox(width: AppSpacing.md),
-                    Expanded(
-                      child: ElevatedButton(
-                        onPressed: _nextLesson,
-                        child: Text(_hasNext ? l10n.next : l10n.finish),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
+              _buildButtons(context, l10n),
 
               const SizedBox(height: AppSpacing.lg),
             ],
@@ -199,5 +279,90 @@ class _PracticeScreenState extends State<PracticeScreen> {
         ),
       ),
     );
+  }
+
+  Widget _buildResultMessage(BuildContext context, AppLocalizations l10n) {
+    final passed = _accuracy! >= 0.8;
+
+    if (passed) {
+      if (_currentRound < 3) {
+        return Text(
+          'Round $_currentRound 성공! 다음 라운드로 이동합니다.',
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: AppColors.success,
+              ),
+        );
+      } else {
+        return Text(
+          '학습 완료!',
+          style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                color: AppColors.success,
+                fontWeight: FontWeight.bold,
+              ),
+        );
+      }
+    } else {
+      return Text(
+        '다시 시도해보세요.',
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: AppColors.warning,
+            ),
+      );
+    }
+  }
+
+  Widget _buildButtons(BuildContext context, AppLocalizations l10n) {
+    if (_accuracy == null) {
+      // 음성 입력 중
+      return Column(
+        children: [
+          Center(
+            child: SpeechButton(
+              isListening: _isListening,
+              onPressed: _isListening ? _stopListening : _startListening,
+            ),
+          ),
+          const SizedBox(height: AppSpacing.sm),
+          Text(
+            _isListening ? l10n.listening : l10n.tapToSpeak,
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+        ],
+      );
+    }
+
+    final passed = _accuracy! >= 0.8;
+
+    if (passed) {
+      // 성공 시
+      return SizedBox(
+        width: double.infinity,
+        child: ElevatedButton(
+          onPressed: _nextRound,
+          child: Text(_currentRound < 3
+              ? 'Round ${_currentRound + 1}로 이동'
+              : (_hasNext ? l10n.next : l10n.finish)),
+        ),
+      );
+    } else {
+      // 실패 시
+      return Row(
+        children: [
+          Expanded(
+            child: OutlinedButton(
+              onPressed: _skipToNextLesson,
+              child: const Text('건너뛰기'),
+            ),
+          ),
+          const SizedBox(width: AppSpacing.md),
+          Expanded(
+            child: ElevatedButton(
+              onPressed: _retryRound,
+              child: Text(l10n.tryAgain),
+            ),
+          ),
+        ],
+      );
+    }
   }
 }

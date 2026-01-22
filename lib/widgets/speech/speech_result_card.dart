@@ -19,6 +19,7 @@ class SpeechResultCard extends StatelessWidget {
       child: Padding(
         padding: AppSpacing.cardPadding,
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // 인식된 텍스트

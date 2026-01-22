@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "minAppVersion": "1.0.0",
   "releaseDate": "2026-01-22",
-  "changelog": "Initial release"
+  "changelog": "Multi-language translations support (15 languages)"
 }

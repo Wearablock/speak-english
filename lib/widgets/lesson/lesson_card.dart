@@ -63,7 +63,9 @@ class LessonCard extends StatelessWidget {
                     ),
                     const SizedBox(height: AppSpacing.xs),
                     Text(
-                      lesson.translation,
+                      lesson.getTranslation(
+                        Localizations.localeOf(context).toString(),
+                      ),
                       style: Theme.of(context).textTheme.bodySmall,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
