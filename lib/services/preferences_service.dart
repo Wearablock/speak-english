@@ -1,4 +1,6 @@
+import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/daily_goal.dart';
 
 class PreferencesService {
   static SharedPreferences? _prefs;
@@ -9,6 +11,7 @@ class PreferencesService {
   static const String _keyThemeMode = 'theme_mode';
   static const String _keyOnboardingComplete = 'onboarding_complete';
   static const String _keyAdFree = 'ad_free';
+  static const String _keyDailyGoal = 'daily_goal';
 
   /// 앱 시작 시 초기화
   static Future<void> init() async {
@@ -44,5 +47,20 @@ class PreferencesService {
   static bool isAdFree() => _prefs?.getBool(_keyAdFree) ?? false;
   static Future<void> setAdFree(bool value) async {
     await _prefs?.setBool(_keyAdFree, value);
+  }
+
+  // Daily Goal (일일 학습량)
+  static DailyGoal getDailyGoal() {
+    final data = _prefs?.getString(_keyDailyGoal);
+    if (data == null) return DailyGoal.normal;
+    try {
+      return DailyGoal.fromJson(jsonDecode(data));
+    } catch (_) {
+      return DailyGoal.normal;
+    }
+  }
+
+  static Future<void> setDailyGoal(DailyGoal goal) async {
+    await _prefs?.setString(_keyDailyGoal, jsonEncode(goal.toJson()));
   }
 }

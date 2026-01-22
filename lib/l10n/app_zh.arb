@@ -60,5 +60,22 @@
   "newLessonsAvailable": "有新课程！",
   "dataUpdated": "课程已更新至v{version}",
   "checkingForUpdates": "正在检查更新...",
-  "upToDate": "已是最新版本"
+  "upToDate": "已是最新版本",
+  "onboardingGoalTitle": "每天想学习多少？",
+  "onboardingGoalHint": "之后可以在设置中更改",
+  "dailyGoal": "每日学习量",
+  "setDailyGoal": "设置学习量",
+  "goalLight": "少量",
+  "goalNormal": "适中",
+  "goalIntense": "大量",
+  "goalCustom": "自定义",
+  "goalCustomDesc": "自由设置",
+  "recommended": "推荐",
+  "daily": "每天 ",
+  "sentences": "句",
+  "about": "约",
+  "minutes": "分钟",
+  "estimatedTime": "预计时间",
+  "start": "开始",
+  "confirm": "确认"
 }

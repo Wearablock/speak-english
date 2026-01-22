@@ -60,5 +60,22 @@
   "newLessonsAvailable": "Có bài học mới!",
   "dataUpdated": "Bài học đã cập nhật lên v{version}",
   "checkingForUpdates": "Đang kiểm tra cập nhật...",
-  "upToDate": "Đã là phiên bản mới nhất"
+  "upToDate": "Đã là phiên bản mới nhất",
+  "onboardingGoalTitle": "Bạn muốn học bao nhiêu mỗi ngày?",
+  "onboardingGoalHint": "Bạn có thể thay đổi trong cài đặt sau",
+  "dailyGoal": "Mục tiêu hàng ngày",
+  "setDailyGoal": "Đặt mục tiêu",
+  "goalLight": "Ít",
+  "goalNormal": "Bình thường",
+  "goalIntense": "Nhiều",
+  "goalCustom": "Tùy chỉnh",
+  "goalCustomDesc": "Tự do thiết lập",
+  "recommended": "Đề xuất",
+  "daily": "Hàng ngày ",
+  "sentences": " câu",
+  "about": "~",
+  "minutes": " phút",
+  "estimatedTime": "Thời gian dự kiến",
+  "start": "Bắt đầu",
+  "confirm": "Xác nhận"
 }

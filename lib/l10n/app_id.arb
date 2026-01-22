@@ -60,5 +60,22 @@
   "newLessonsAvailable": "Pelajaran baru tersedia!",
   "dataUpdated": "Pelajaran diperbarui ke v{version}",
   "checkingForUpdates": "Memeriksa pembaruan...",
-  "upToDate": "Sudah versi terbaru"
+  "upToDate": "Sudah versi terbaru",
+  "onboardingGoalTitle": "Berapa banyak yang ingin Anda pelajari setiap hari?",
+  "onboardingGoalHint": "Anda dapat mengubahnya di pengaturan nanti",
+  "dailyGoal": "Target harian",
+  "setDailyGoal": "Atur target",
+  "goalLight": "Sedikit",
+  "goalNormal": "Normal",
+  "goalIntense": "Banyak",
+  "goalCustom": "Kustom",
+  "goalCustomDesc": "Atur sendiri",
+  "recommended": "Disarankan",
+  "daily": "Harian ",
+  "sentences": " kalimat",
+  "about": "~",
+  "minutes": " menit",
+  "estimatedTime": "Perkiraan waktu",
+  "start": "Mulai",
+  "confirm": "Konfirmasi"
 }

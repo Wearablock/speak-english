@@ -132,7 +132,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get restorePurchase => 'Khôi phục mua hàng';
 
   @override
-  String get about => 'Giới thiệu';
+  String get about => '~';
 
   @override
   String get version => 'Phiên bản';
@@ -193,4 +193,52 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get upToDate => 'Đã là phiên bản mới nhất';
+
+  @override
+  String get onboardingGoalTitle => 'Bạn muốn học bao nhiêu mỗi ngày?';
+
+  @override
+  String get onboardingGoalHint => 'Bạn có thể thay đổi trong cài đặt sau';
+
+  @override
+  String get dailyGoal => 'Mục tiêu hàng ngày';
+
+  @override
+  String get setDailyGoal => 'Đặt mục tiêu';
+
+  @override
+  String get goalLight => 'Ít';
+
+  @override
+  String get goalNormal => 'Bình thường';
+
+  @override
+  String get goalIntense => 'Nhiều';
+
+  @override
+  String get goalCustom => 'Tùy chỉnh';
+
+  @override
+  String get goalCustomDesc => 'Tự do thiết lập';
+
+  @override
+  String get recommended => 'Đề xuất';
+
+  @override
+  String get daily => 'Hàng ngày ';
+
+  @override
+  String get sentences => ' câu';
+
+  @override
+  String get minutes => ' phút';
+
+  @override
+  String get estimatedTime => 'Thời gian dự kiến';
+
+  @override
+  String get start => 'Bắt đầu';
+
+  @override
+  String get confirm => 'Xác nhận';
 }

@@ -132,7 +132,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get restorePurchase => 'Pulihkan pembelian';
 
   @override
-  String get about => 'Tentang';
+  String get about => '~';
 
   @override
   String get version => 'Versi';
@@ -193,4 +193,53 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get upToDate => 'Sudah versi terbaru';
+
+  @override
+  String get onboardingGoalTitle =>
+      'Berapa banyak yang ingin Anda pelajari setiap hari?';
+
+  @override
+  String get onboardingGoalHint => 'Anda dapat mengubahnya di pengaturan nanti';
+
+  @override
+  String get dailyGoal => 'Target harian';
+
+  @override
+  String get setDailyGoal => 'Atur target';
+
+  @override
+  String get goalLight => 'Sedikit';
+
+  @override
+  String get goalNormal => 'Normal';
+
+  @override
+  String get goalIntense => 'Banyak';
+
+  @override
+  String get goalCustom => 'Kustom';
+
+  @override
+  String get goalCustomDesc => 'Atur sendiri';
+
+  @override
+  String get recommended => 'Disarankan';
+
+  @override
+  String get daily => 'Harian ';
+
+  @override
+  String get sentences => ' kalimat';
+
+  @override
+  String get minutes => ' menit';
+
+  @override
+  String get estimatedTime => 'Perkiraan waktu';
+
+  @override
+  String get start => 'Mulai';
+
+  @override
+  String get confirm => 'Konfirmasi';
 }

@@ -132,7 +132,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get restorePurchase => '구매 복원';
 
   @override
-  String get about => '정보';
+  String get about => '약 ';
 
   @override
   String get version => '버전';
@@ -192,4 +192,52 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get upToDate => '이미 최신 버전입니다';
+
+  @override
+  String get onboardingGoalTitle => '하루에 얼마나 학습하시겠어요?';
+
+  @override
+  String get onboardingGoalHint => '나중에 설정에서 변경할 수 있어요';
+
+  @override
+  String get dailyGoal => '일일 학습량';
+
+  @override
+  String get setDailyGoal => '학습량 설정';
+
+  @override
+  String get goalLight => '조금';
+
+  @override
+  String get goalNormal => '보통';
+
+  @override
+  String get goalIntense => '많이';
+
+  @override
+  String get goalCustom => '직접 설정';
+
+  @override
+  String get goalCustomDesc => '원하는 만큼 자유롭게';
+
+  @override
+  String get recommended => '추천';
+
+  @override
+  String get daily => '하루 ';
+
+  @override
+  String get sentences => '문장';
+
+  @override
+  String get minutes => '분';
+
+  @override
+  String get estimatedTime => '예상 소요 시간';
+
+  @override
+  String get start => '시작하기';
+
+  @override
+  String get confirm => '확인';
 }

@@ -4,7 +4,9 @@ import '../../l10n/app_localizations.dart';
 import '../../constants/app_config.dart';
 import '../../constants/app_urls.dart';
 import '../../models/app_language.dart';
+import '../../models/daily_goal.dart';
 import '../../services/preferences_service.dart';
+import '../../widgets/settings/daily_goal_bottom_sheet.dart';
 import '../../app.dart';
 import 'webview_screen.dart';
 
@@ -92,6 +94,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
             subtitle: Text(_getCurrentLanguageName()),
             trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
             onTap: () => _showLanguageDialog(context, l10n),
+          ),
+          const Divider(),
+
+          // 일일 학습량 설정
+          ListTile(
+            leading: Icon(PhosphorIcons.target(PhosphorIconsStyle.regular)),
+            title: Text(l10n.dailyGoal),
+            subtitle: Text(_getDailyGoalText(l10n)),
+            trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
+            onTap: () => _showDailyGoalSheet(context),
           ),
           const Divider(),
 
@@ -269,6 +281,35 @@ class _SettingsScreenState extends State<SettingsScreen> {
             },
           ),
         ),
+      ),
+    );
+  }
+
+  String _getDailyGoalText(AppLocalizations l10n) {
+    final goal = PreferencesService.getDailyGoal();
+    final typeName = switch (goal.type) {
+      DailyGoalType.light => l10n.goalLight,
+      DailyGoalType.normal => l10n.goalNormal,
+      DailyGoalType.intense => l10n.goalIntense,
+      DailyGoalType.custom => l10n.goalCustom,
+    };
+    return '$typeName (${goal.sentenceCount}${l10n.sentences})';
+  }
+
+  void _showDailyGoalSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (sheetContext) => DailyGoalBottomSheet(
+        currentGoal: PreferencesService.getDailyGoal(),
+        onChanged: (goal) async {
+          await PreferencesService.setDailyGoal(goal);
+          setState(() {});
+          if (sheetContext.mounted) Navigator.pop(sheetContext);
+        },
       ),
     );
   }

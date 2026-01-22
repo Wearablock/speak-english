@@ -132,7 +132,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get restorePurchase => 'Kauf wiederherstellen';
 
   @override
-  String get about => 'Über';
+  String get about => '~';
 
   @override
   String get version => 'Version';
@@ -193,4 +193,53 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get upToDate => 'Bereits auf dem neuesten Stand';
+
+  @override
+  String get onboardingGoalTitle => 'Wie viel möchten Sie täglich lernen?';
+
+  @override
+  String get onboardingGoalHint =>
+      'Sie können dies später in den Einstellungen ändern';
+
+  @override
+  String get dailyGoal => 'Tagesziel';
+
+  @override
+  String get setDailyGoal => 'Ziel festlegen';
+
+  @override
+  String get goalLight => 'Wenig';
+
+  @override
+  String get goalNormal => 'Normal';
+
+  @override
+  String get goalIntense => 'Viel';
+
+  @override
+  String get goalCustom => 'Benutzerdefiniert';
+
+  @override
+  String get goalCustomDesc => 'Eigenes Tempo festlegen';
+
+  @override
+  String get recommended => 'Empfohlen';
+
+  @override
+  String get daily => 'Täglich ';
+
+  @override
+  String get sentences => ' Sätze';
+
+  @override
+  String get minutes => ' Min';
+
+  @override
+  String get estimatedTime => 'Geschätzte Zeit';
+
+  @override
+  String get start => 'Starten';
+
+  @override
+  String get confirm => 'Bestätigen';
 }

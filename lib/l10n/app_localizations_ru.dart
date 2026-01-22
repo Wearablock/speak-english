@@ -132,7 +132,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get restorePurchase => 'Восстановить покупку';
 
   @override
-  String get about => 'О приложении';
+  String get about => '~';
 
   @override
   String get version => 'Версия';
@@ -193,4 +193,52 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get upToDate => 'Уже последняя версия';
+
+  @override
+  String get onboardingGoalTitle => 'Сколько вы хотите учиться каждый день?';
+
+  @override
+  String get onboardingGoalHint => 'Вы можете изменить это в настройках позже';
+
+  @override
+  String get dailyGoal => 'Ежедневная цель';
+
+  @override
+  String get setDailyGoal => 'Установить цель';
+
+  @override
+  String get goalLight => 'Мало';
+
+  @override
+  String get goalNormal => 'Обычно';
+
+  @override
+  String get goalIntense => 'Много';
+
+  @override
+  String get goalCustom => 'Свой вариант';
+
+  @override
+  String get goalCustomDesc => 'Настройте свой темп';
+
+  @override
+  String get recommended => 'Рекомендуется';
+
+  @override
+  String get daily => 'Ежедневно ';
+
+  @override
+  String get sentences => ' предложений';
+
+  @override
+  String get minutes => ' мин';
+
+  @override
+  String get estimatedTime => 'Примерное время';
+
+  @override
+  String get start => 'Начать';
+
+  @override
+  String get confirm => 'Подтвердить';
 }

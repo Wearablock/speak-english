@@ -60,5 +60,22 @@
   "newLessonsAvailable": "新しいレッスンがあります！",
   "dataUpdated": "レッスンがv{version}に更新されました",
   "checkingForUpdates": "更新を確認中...",
-  "upToDate": "最新バージョンです"
+  "upToDate": "最新バージョンです",
+  "onboardingGoalTitle": "1日にどれくらい学習しますか？",
+  "onboardingGoalHint": "後から設定で変更できます",
+  "dailyGoal": "1日の学習量",
+  "setDailyGoal": "学習量を設定",
+  "goalLight": "少し",
+  "goalNormal": "普通",
+  "goalIntense": "たくさん",
+  "goalCustom": "カスタム",
+  "goalCustomDesc": "自由に設定",
+  "recommended": "おすすめ",
+  "daily": "1日 ",
+  "sentences": "文",
+  "about": "約",
+  "minutes": "分",
+  "estimatedTime": "予想時間",
+  "start": "始める",
+  "confirm": "確認"
 }

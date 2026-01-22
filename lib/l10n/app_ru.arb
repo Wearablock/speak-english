@@ -60,5 +60,22 @@
   "newLessonsAvailable": "Доступны новые уроки!",
   "dataUpdated": "Уроки обновлены до v{version}",
   "checkingForUpdates": "Проверка обновлений...",
-  "upToDate": "Уже последняя версия"
+  "upToDate": "Уже последняя версия",
+  "onboardingGoalTitle": "Сколько вы хотите учиться каждый день?",
+  "onboardingGoalHint": "Вы можете изменить это в настройках позже",
+  "dailyGoal": "Ежедневная цель",
+  "setDailyGoal": "Установить цель",
+  "goalLight": "Мало",
+  "goalNormal": "Обычно",
+  "goalIntense": "Много",
+  "goalCustom": "Свой вариант",
+  "goalCustomDesc": "Настройте свой темп",
+  "recommended": "Рекомендуется",
+  "daily": "Ежедневно ",
+  "sentences": " предложений",
+  "about": "~",
+  "minutes": " мин",
+  "estimatedTime": "Примерное время",
+  "start": "Начать",
+  "confirm": "Подтвердить"
 }

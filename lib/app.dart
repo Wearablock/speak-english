@@ -4,6 +4,8 @@ import 'package:upgrader/upgrader.dart';
 import 'l10n/app_localizations.dart';
 import 'theme/app_theme.dart';
 import 'screens/main/main_screen.dart';
+import 'screens/onboarding/goal_onboarding_screen.dart';
+import 'services/preferences_service.dart';
 
 class SpeakEnglishApp extends StatefulWidget {
   const SpeakEnglishApp({super.key});
@@ -42,12 +44,59 @@ class _SpeakEnglishAppState extends State<SpeakEnglishApp> {
               ],
               supportedLocales: AppLocalizations.supportedLocales,
               home: UpgradeAlert(
-                child: const MainScreen(),
+                child: const _AppHome(),
               ),
             );
           },
         );
       },
     );
+  }
+}
+
+class _AppHome extends StatefulWidget {
+  const _AppHome();
+
+  @override
+  State<_AppHome> createState() => _AppHomeState();
+}
+
+class _AppHomeState extends State<_AppHome> {
+  bool _showOnboarding = false;
+  bool _initialized = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _checkOnboarding();
+  }
+
+  void _checkOnboarding() {
+    final isComplete = PreferencesService.isOnboardingComplete();
+    setState(() {
+      _showOnboarding = !isComplete;
+      _initialized = true;
+    });
+  }
+
+  void _onOnboardingComplete() {
+    setState(() {
+      _showOnboarding = false;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (!_initialized) {
+      return const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
+    }
+
+    if (_showOnboarding) {
+      return GoalOnboardingScreen(onComplete: _onOnboardingComplete);
+    }
+
+    return const MainScreen();
   }
 }

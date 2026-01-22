@@ -372,7 +372,7 @@ abstract class AppLocalizations {
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
-  /// **'About'**
+  /// **'~'**
   String get about;
 
   /// No description provided for @version.
@@ -488,6 +488,102 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Already up to date'**
   String get upToDate;
+
+  /// No description provided for @onboardingGoalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'How much would you like to study each day?'**
+  String get onboardingGoalTitle;
+
+  /// No description provided for @onboardingGoalHint.
+  ///
+  /// In en, this message translates to:
+  /// **'You can change this in settings later'**
+  String get onboardingGoalHint;
+
+  /// No description provided for @dailyGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Goal'**
+  String get dailyGoal;
+
+  /// No description provided for @setDailyGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Set Daily Goal'**
+  String get setDailyGoal;
+
+  /// No description provided for @goalLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get goalLight;
+
+  /// No description provided for @goalNormal.
+  ///
+  /// In en, this message translates to:
+  /// **'Normal'**
+  String get goalNormal;
+
+  /// No description provided for @goalIntense.
+  ///
+  /// In en, this message translates to:
+  /// **'Intense'**
+  String get goalIntense;
+
+  /// No description provided for @goalCustom.
+  ///
+  /// In en, this message translates to:
+  /// **'Custom'**
+  String get goalCustom;
+
+  /// No description provided for @goalCustomDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Set your own pace'**
+  String get goalCustomDesc;
+
+  /// No description provided for @recommended.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommended'**
+  String get recommended;
+
+  /// No description provided for @daily.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily '**
+  String get daily;
+
+  /// No description provided for @sentences.
+  ///
+  /// In en, this message translates to:
+  /// **' sentences'**
+  String get sentences;
+
+  /// No description provided for @minutes.
+  ///
+  /// In en, this message translates to:
+  /// **' min'**
+  String get minutes;
+
+  /// No description provided for @estimatedTime.
+  ///
+  /// In en, this message translates to:
+  /// **'Estimated time'**
+  String get estimatedTime;
+
+  /// No description provided for @start.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get start;
+
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
 }
 
 class _AppLocalizationsDelegate

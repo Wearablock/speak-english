@@ -132,7 +132,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get restorePurchase => '恢复购买';
 
   @override
-  String get about => '关于';
+  String get about => '约';
 
   @override
   String get version => '版本';
@@ -192,6 +192,54 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get upToDate => '已是最新版本';
+
+  @override
+  String get onboardingGoalTitle => '每天想学习多少？';
+
+  @override
+  String get onboardingGoalHint => '之后可以在设置中更改';
+
+  @override
+  String get dailyGoal => '每日学习量';
+
+  @override
+  String get setDailyGoal => '设置学习量';
+
+  @override
+  String get goalLight => '少量';
+
+  @override
+  String get goalNormal => '适中';
+
+  @override
+  String get goalIntense => '大量';
+
+  @override
+  String get goalCustom => '自定义';
+
+  @override
+  String get goalCustomDesc => '自由设置';
+
+  @override
+  String get recommended => '推荐';
+
+  @override
+  String get daily => '每天 ';
+
+  @override
+  String get sentences => '句';
+
+  @override
+  String get minutes => '分钟';
+
+  @override
+  String get estimatedTime => '预计时间';
+
+  @override
+  String get start => '开始';
+
+  @override
+  String get confirm => '确认';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -322,7 +370,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get restorePurchase => '恢復購買';
 
   @override
-  String get about => '關於';
+  String get about => '約';
 
   @override
   String get version => '版本';
@@ -382,4 +430,52 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get upToDate => '已是最新版本';
+
+  @override
+  String get onboardingGoalTitle => '每天想學習多少？';
+
+  @override
+  String get onboardingGoalHint => '之後可以在設定中更改';
+
+  @override
+  String get dailyGoal => '每日學習量';
+
+  @override
+  String get setDailyGoal => '設定學習量';
+
+  @override
+  String get goalLight => '少量';
+
+  @override
+  String get goalNormal => '適中';
+
+  @override
+  String get goalIntense => '大量';
+
+  @override
+  String get goalCustom => '自訂';
+
+  @override
+  String get goalCustomDesc => '自由設定';
+
+  @override
+  String get recommended => '推薦';
+
+  @override
+  String get daily => '每天 ';
+
+  @override
+  String get sentences => '句';
+
+  @override
+  String get minutes => '分鐘';
+
+  @override
+  String get estimatedTime => '預計時間';
+
+  @override
+  String get start => '開始';
+
+  @override
+  String get confirm => '確認';
 }

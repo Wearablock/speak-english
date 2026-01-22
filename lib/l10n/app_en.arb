@@ -67,5 +67,22 @@
     }
   },
   "checkingForUpdates": "Checking for updates...",
-  "upToDate": "Already up to date"
+  "upToDate": "Already up to date",
+  "onboardingGoalTitle": "How much would you like to study each day?",
+  "onboardingGoalHint": "You can change this in settings later",
+  "dailyGoal": "Daily Goal",
+  "setDailyGoal": "Set Daily Goal",
+  "goalLight": "Light",
+  "goalNormal": "Normal",
+  "goalIntense": "Intense",
+  "goalCustom": "Custom",
+  "goalCustomDesc": "Set your own pace",
+  "recommended": "Recommended",
+  "daily": "Daily ",
+  "sentences": " sentences",
+  "about": "~",
+  "minutes": " min",
+  "estimatedTime": "Estimated time",
+  "start": "Get Started",
+  "confirm": "Confirm"
 }

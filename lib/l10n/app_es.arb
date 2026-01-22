@@ -60,5 +60,22 @@
   "newLessonsAvailable": "¡Nuevas lecciones disponibles!",
   "dataUpdated": "Lecciones actualizadas a v{version}",
   "checkingForUpdates": "Buscando actualizaciones...",
-  "upToDate": "Ya está actualizado"
+  "upToDate": "Ya está actualizado",
+  "onboardingGoalTitle": "¿Cuánto quieres estudiar cada día?",
+  "onboardingGoalHint": "Puedes cambiarlo en ajustes más tarde",
+  "dailyGoal": "Meta diaria",
+  "setDailyGoal": "Establecer meta",
+  "goalLight": "Poco",
+  "goalNormal": "Normal",
+  "goalIntense": "Mucho",
+  "goalCustom": "Personalizado",
+  "goalCustomDesc": "Configura tu ritmo",
+  "recommended": "Recomendado",
+  "daily": "Diario ",
+  "sentences": " oraciones",
+  "about": "~",
+  "minutes": " min",
+  "estimatedTime": "Tiempo estimado",
+  "start": "Comenzar",
+  "confirm": "Confirmar"
 }

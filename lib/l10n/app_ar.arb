@@ -60,5 +60,22 @@
   "newLessonsAvailable": "تتوفر دروس جديدة!",
   "dataUpdated": "تم تحديث الدروس إلى v{version}",
   "checkingForUpdates": "جارٍ البحث عن تحديثات...",
-  "upToDate": "لديك أحدث إصدار"
+  "upToDate": "لديك أحدث إصدار",
+  "onboardingGoalTitle": "كم تريد أن تتعلم كل يوم؟",
+  "onboardingGoalHint": "يمكنك تغيير هذا في الإعدادات لاحقاً",
+  "dailyGoal": "الهدف اليومي",
+  "setDailyGoal": "تحديد الهدف",
+  "goalLight": "قليل",
+  "goalNormal": "عادي",
+  "goalIntense": "كثير",
+  "goalCustom": "مخصص",
+  "goalCustomDesc": "حدد وتيرتك الخاصة",
+  "recommended": "موصى به",
+  "daily": "يومياً ",
+  "sentences": " جمل",
+  "about": "~",
+  "minutes": " دقيقة",
+  "estimatedTime": "الوقت المقدر",
+  "start": "ابدأ",
+  "confirm": "تأكيد"
 }

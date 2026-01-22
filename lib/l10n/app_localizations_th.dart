@@ -132,7 +132,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get restorePurchase => 'กู้คืนการซื้อ';
 
   @override
-  String get about => 'เกี่ยวกับ';
+  String get about => '~';
 
   @override
   String get version => 'เวอร์ชัน';
@@ -193,4 +193,52 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get upToDate => 'เป็นเวอร์ชันล่าสุดแล้ว';
+
+  @override
+  String get onboardingGoalTitle => 'คุณต้องการเรียนมากแค่ไหนต่อวัน?';
+
+  @override
+  String get onboardingGoalHint => 'คุณสามารถเปลี่ยนได้ในการตั้งค่าภายหลัง';
+
+  @override
+  String get dailyGoal => 'เป้าหมายรายวัน';
+
+  @override
+  String get setDailyGoal => 'ตั้งเป้าหมาย';
+
+  @override
+  String get goalLight => 'น้อย';
+
+  @override
+  String get goalNormal => 'ปกติ';
+
+  @override
+  String get goalIntense => 'มาก';
+
+  @override
+  String get goalCustom => 'กำหนดเอง';
+
+  @override
+  String get goalCustomDesc => 'ตั้งค่าตามต้องการ';
+
+  @override
+  String get recommended => 'แนะนำ';
+
+  @override
+  String get daily => 'รายวัน ';
+
+  @override
+  String get sentences => ' ประโยค';
+
+  @override
+  String get minutes => ' นาที';
+
+  @override
+  String get estimatedTime => 'เวลาโดยประมาณ';
+
+  @override
+  String get start => 'เริ่ม';
+
+  @override
+  String get confirm => 'ยืนยัน';
 }

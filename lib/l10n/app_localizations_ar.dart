@@ -132,7 +132,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get restorePurchase => 'استعادة الشراء';
 
   @override
-  String get about => 'حول';
+  String get about => '~';
 
   @override
   String get version => 'الإصدار';
@@ -193,4 +193,52 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get upToDate => 'لديك أحدث إصدار';
+
+  @override
+  String get onboardingGoalTitle => 'كم تريد أن تتعلم كل يوم؟';
+
+  @override
+  String get onboardingGoalHint => 'يمكنك تغيير هذا في الإعدادات لاحقاً';
+
+  @override
+  String get dailyGoal => 'الهدف اليومي';
+
+  @override
+  String get setDailyGoal => 'تحديد الهدف';
+
+  @override
+  String get goalLight => 'قليل';
+
+  @override
+  String get goalNormal => 'عادي';
+
+  @override
+  String get goalIntense => 'كثير';
+
+  @override
+  String get goalCustom => 'مخصص';
+
+  @override
+  String get goalCustomDesc => 'حدد وتيرتك الخاصة';
+
+  @override
+  String get recommended => 'موصى به';
+
+  @override
+  String get daily => 'يومياً ';
+
+  @override
+  String get sentences => ' جمل';
+
+  @override
+  String get minutes => ' دقيقة';
+
+  @override
+  String get estimatedTime => 'الوقت المقدر';
+
+  @override
+  String get start => 'ابدأ';
+
+  @override
+  String get confirm => 'تأكيد';
 }

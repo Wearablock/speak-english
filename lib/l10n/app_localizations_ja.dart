@@ -132,7 +132,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get restorePurchase => '購入を復元';
 
   @override
-  String get about => 'アプリについて';
+  String get about => '約';
 
   @override
   String get version => 'バージョン';
@@ -192,4 +192,52 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get upToDate => '最新バージョンです';
+
+  @override
+  String get onboardingGoalTitle => '1日にどれくらい学習しますか？';
+
+  @override
+  String get onboardingGoalHint => '後から設定で変更できます';
+
+  @override
+  String get dailyGoal => '1日の学習量';
+
+  @override
+  String get setDailyGoal => '学習量を設定';
+
+  @override
+  String get goalLight => '少し';
+
+  @override
+  String get goalNormal => '普通';
+
+  @override
+  String get goalIntense => 'たくさん';
+
+  @override
+  String get goalCustom => 'カスタム';
+
+  @override
+  String get goalCustomDesc => '自由に設定';
+
+  @override
+  String get recommended => 'おすすめ';
+
+  @override
+  String get daily => '1日 ';
+
+  @override
+  String get sentences => '文';
+
+  @override
+  String get minutes => '分';
+
+  @override
+  String get estimatedTime => '予想時間';
+
+  @override
+  String get start => '始める';
+
+  @override
+  String get confirm => '確認';
 }

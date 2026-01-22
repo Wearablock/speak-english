@@ -60,5 +60,22 @@
   "newLessonsAvailable": "มีบทเรียนใหม่!",
   "dataUpdated": "บทเรียนอัปเดตเป็น v{version}",
   "checkingForUpdates": "กำลังตรวจสอบการอัปเดต...",
-  "upToDate": "เป็นเวอร์ชันล่าสุดแล้ว"
+  "upToDate": "เป็นเวอร์ชันล่าสุดแล้ว",
+  "onboardingGoalTitle": "คุณต้องการเรียนมากแค่ไหนต่อวัน?",
+  "onboardingGoalHint": "คุณสามารถเปลี่ยนได้ในการตั้งค่าภายหลัง",
+  "dailyGoal": "เป้าหมายรายวัน",
+  "setDailyGoal": "ตั้งเป้าหมาย",
+  "goalLight": "น้อย",
+  "goalNormal": "ปกติ",
+  "goalIntense": "มาก",
+  "goalCustom": "กำหนดเอง",
+  "goalCustomDesc": "ตั้งค่าตามต้องการ",
+  "recommended": "แนะนำ",
+  "daily": "รายวัน ",
+  "sentences": " ประโยค",
+  "about": "~",
+  "minutes": " นาที",
+  "estimatedTime": "เวลาโดยประมาณ",
+  "start": "เริ่ม",
+  "confirm": "ยืนยัน"
 }

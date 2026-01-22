@@ -67,5 +67,22 @@
     }
   },
   "checkingForUpdates": "업데이트 확인 중...",
-  "upToDate": "이미 최신 버전입니다"
+  "upToDate": "이미 최신 버전입니다",
+  "onboardingGoalTitle": "하루에 얼마나 학습하시겠어요?",
+  "onboardingGoalHint": "나중에 설정에서 변경할 수 있어요",
+  "dailyGoal": "일일 학습량",
+  "setDailyGoal": "학습량 설정",
+  "goalLight": "조금",
+  "goalNormal": "보통",
+  "goalIntense": "많이",
+  "goalCustom": "직접 설정",
+  "goalCustomDesc": "원하는 만큼 자유롭게",
+  "recommended": "추천",
+  "daily": "하루 ",
+  "sentences": "문장",
+  "about": "약 ",
+  "minutes": "분",
+  "estimatedTime": "예상 소요 시간",
+  "start": "시작하기",
+  "confirm": "확인"
 }
