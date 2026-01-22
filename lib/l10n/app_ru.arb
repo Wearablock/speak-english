@@ -73,9 +73,12 @@
   "recommended": "Рекомендуется",
   "daily": "Ежедневно ",
   "sentences": " предложений",
-  "about": "~",
+  "approximately": "~",
   "minutes": " мин",
   "estimatedTime": "Примерное время",
   "start": "Начать",
-  "confirm": "Подтвердить"
+  "confirm": "Подтвердить",
+  "todayGoal": "Сегодня",
+  "goalCompleted": "Цель достигнута!",
+  "goalCompletedMessage": "Вы достигли сегодняшней цели. Хотите продолжить практику?"
 }

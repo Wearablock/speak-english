@@ -132,7 +132,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get restorePurchase => 'Restaurar compra';
 
   @override
-  String get about => '~';
+  String get about => 'Acerca de';
 
   @override
   String get version => 'Versión';
@@ -231,6 +231,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get sentences => ' oraciones';
 
   @override
+  String get approximately => '~';
+
+  @override
   String get minutes => ' min';
 
   @override
@@ -241,4 +244,14 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get confirm => 'Confirmar';
+
+  @override
+  String get todayGoal => 'Hoy';
+
+  @override
+  String get goalCompleted => '¡Meta cumplida!';
+
+  @override
+  String get goalCompletedMessage =>
+      'Has alcanzado tu meta de hoy. ¿Quieres seguir practicando?';
 }

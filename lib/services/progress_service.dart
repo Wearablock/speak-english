@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user_progress.dart';
-import '../constants/app_config.dart';
 
 class ProgressService {
   // 싱글톤 패턴
@@ -44,24 +43,21 @@ class ProgressService {
     return all[lessonId];
   }
 
-  /// 연습 결과 저장
+  /// 연습 결과 저장 (SRS 로직 적용)
   Future<void> saveResult(int lessonId, double accuracy) async {
     final prefs = await SharedPreferences.getInstance();
     final all = await getAllProgress();
 
     final existing = all[lessonId];
-    final now = DateTime.now();
+    UserProgress updated;
 
-    final updated = UserProgress(
-      lessonId: lessonId,
-      bestAccuracy: existing != null
-          ? (accuracy > existing.bestAccuracy ? accuracy : existing.bestAccuracy)
-          : accuracy,
-      attemptCount: (existing?.attemptCount ?? 0) + 1,
-      lastPracticed: now,
-      isCompleted: accuracy >= AppConfig.completionThreshold ||
-          (existing?.isCompleted ?? false),
-    );
+    if (existing != null) {
+      // 기존 진도 업데이트 (SRS 로직 적용)
+      updated = existing.updateWithResult(accuracy);
+    } else {
+      // 새 진도 생성
+      updated = UserProgress.fromFirstAttempt(lessonId, accuracy);
+    }
 
     all[lessonId] = updated;
     _cachedProgress = all;

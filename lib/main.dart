@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'app.dart';
 import 'models/app_language.dart';
+import 'services/ad_service.dart';
 import 'services/lesson_service.dart';
 import 'services/preferences_service.dart';
 import 'services/speech_service.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   // 상태바 스타일 설정
   SystemChrome.setSystemUIOverlayStyle(
@@ -50,8 +53,11 @@ void main() async {
       SpeakEnglishApp.themeNotifier.value = ThemeMode.system;
   }
 
-  // TODO: Phase 5에서 광고 초기화 추가
-  // await AdService.init();
+  // AdMob 초기화
+  await AdService().initialize();
+
+  // 스플래시 화면 제거
+  FlutterNativeSplash.remove();
 
   // 백그라운드에서 레슨 데이터 동기화
   _syncLessonData();

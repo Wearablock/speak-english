@@ -4,6 +4,7 @@ import '../../l10n/app_localizations.dart';
 import '../../constants/app_spacing.dart';
 import '../../constants/app_colors.dart';
 import '../../models/lesson.dart';
+import '../../services/ad_service.dart';
 import '../../services/speech_service.dart';
 import '../../services/progress_service.dart';
 import '../../services/sound_service.dart';
@@ -45,6 +46,14 @@ class _PracticeScreenState extends State<PracticeScreen> {
   final SpeechService _speechService = SpeechService();
   final ProgressService _progressService = ProgressService();
   final SoundService _soundService = SoundService();
+  final AdService _adService = AdService();
+
+  @override
+  void initState() {
+    super.initState();
+    // 세션 시작 시 광고 카운터 리셋
+    _adService.resetLessonCounter();
+  }
 
   int _currentIndex = 0;
   int _currentRound = 1; // 1, 2, 3
@@ -156,7 +165,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
     _completeLessonAndNext();
   }
 
-  void _completeLessonAndNext() {
+  void _completeLessonAndNext() async {
     // 최종 정확도 계산 (Round 3 정확도 - 힌트 페널티)
     final finalAccuracy = _calculateFinalAccuracy();
 
@@ -165,7 +174,12 @@ class _PracticeScreenState extends State<PracticeScreen> {
     _sessionAccuracies.add(finalAccuracy);
 
     if (!_hasNext) {
-      // 세션 완료
+      // 세션 완료 시 전면 광고 표시
+      await _adService.showInterstitialAd();
+
+      if (!mounted) return;
+
+      // 결과 화면으로 이동
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -177,6 +191,11 @@ class _PracticeScreenState extends State<PracticeScreen> {
       );
       return;
     }
+
+    // 레슨 완료 시 광고 트리거 (3개마다 전면 광고)
+    await _adService.onLessonCompleted();
+
+    if (!mounted) return;
 
     // 다음 레슨으로
     setState(() {
@@ -244,6 +263,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
                 pronunciation: _currentLesson.pronunciation,
                 round: _learningRound,
                 onHintUsed: _onHintUsed,
+                dismissHint: _isListening,
               ),
               const SizedBox(height: AppSpacing.lg),
 

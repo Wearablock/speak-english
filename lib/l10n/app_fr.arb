@@ -73,9 +73,12 @@
   "recommended": "Recommandé",
   "daily": "Quotidien ",
   "sentences": " phrases",
-  "about": "~",
+  "approximately": "~",
   "minutes": " min",
   "estimatedTime": "Temps estimé",
   "start": "Commencer",
-  "confirm": "Confirmer"
+  "confirm": "Confirmer",
+  "todayGoal": "Aujourd'hui",
+  "goalCompleted": "Objectif atteint !",
+  "goalCompletedMessage": "Vous avez atteint votre objectif du jour. Voulez-vous continuer à pratiquer ?"
 }

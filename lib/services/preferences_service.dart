@@ -12,6 +12,7 @@ class PreferencesService {
   static const String _keyOnboardingComplete = 'onboarding_complete';
   static const String _keyAdFree = 'ad_free';
   static const String _keyDailyGoal = 'daily_goal';
+  static const String _keyRound2HintShown = 'round2_hint_shown';
 
   /// 앱 시작 시 초기화
   static Future<void> init() async {
@@ -62,5 +63,12 @@ class PreferencesService {
 
   static Future<void> setDailyGoal(DailyGoal goal) async {
     await _prefs?.setString(_keyDailyGoal, jsonEncode(goal.toJson()));
+  }
+
+  // Round 2 Hint (온보딩 힌트 표시 여부)
+  static bool isRound2HintShown() =>
+      _prefs?.getBool(_keyRound2HintShown) ?? false;
+  static Future<void> setRound2HintShown(bool value) async {
+    await _prefs?.setBool(_keyRound2HintShown, value);
   }
 }

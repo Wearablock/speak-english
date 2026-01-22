@@ -65,3 +65,6 @@ lib/constants/secrets.dart
 
 # Development guides (local only)
 /guides/
+
+# Store automation tools
+/store-automation/

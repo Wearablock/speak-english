@@ -73,9 +73,12 @@
   "recommended": "موصى به",
   "daily": "يومياً ",
   "sentences": " جمل",
-  "about": "~",
+  "approximately": "~",
   "minutes": " دقيقة",
   "estimatedTime": "الوقت المقدر",
   "start": "ابدأ",
-  "confirm": "تأكيد"
+  "confirm": "تأكيد",
+  "todayGoal": "اليوم",
+  "goalCompleted": "تم تحقيق الهدف!",
+  "goalCompletedMessage": "لقد حققت هدف اليوم. هل تريد الاستمرار في التدريب؟"
 }

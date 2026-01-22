@@ -73,9 +73,12 @@
   "recommended": "推薦",
   "daily": "每天 ",
   "sentences": "句",
-  "about": "約",
+  "approximately": "約",
   "minutes": "分鐘",
   "estimatedTime": "預計時間",
   "start": "開始",
-  "confirm": "確認"
+  "confirm": "確認",
+  "todayGoal": "今日",
+  "goalCompleted": "目標完成！",
+  "goalCompletedMessage": "您已完成今日目標。要繼續練習嗎？"
 }

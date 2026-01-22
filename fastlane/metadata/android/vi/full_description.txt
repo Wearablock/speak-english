@@ -1,0 +1,27 @@
+Nói tiếng Anh - Ứng dụng luyện phát âm tiếng Anh với AI
+
+Cải thiện tiếng Anh từng chút mỗi ngày! Học phát âm chính xác với phản hồi AI và nâng cao kỹ năng hội thoại với các bài học có hệ thống.
+
+Tính năng chính:
+
+📚 Bài học có hệ thống
+• Học từng bước từ cơ bản đến nâng cao
+• Nhiều chủ đề: hội thoại hàng ngày, tiếng Anh thương mại, v.v.
+• Cụm từ thực tế sử dụng ngay
+
+🎤 Phản hồi phát âm AI
+• Phân tích phát âm theo thời gian thực
+• Hướng dẫn phát âm chính xác
+• Phát âm tự nhiên qua luyện tập lặp lại
+
+📊 Thống kê học tập
+• Ghi chép học tập hàng ngày/tuần/tháng
+• Theo dõi chuỗi ngày học
+• Biểu đồ tiến độ
+
+🎯 Mục tiêu hàng ngày
+• Đặt mục tiêu học tập của riêng bạn
+• Xây dựng thói quen học tập đều đặn với nhắc nhở
+• Hệ thống phần thưởng tạo động lực
+
+Bắt đầu ngay! Chỉ 10 phút mỗi ngày có thể thay đổi tiếng Anh của bạn.

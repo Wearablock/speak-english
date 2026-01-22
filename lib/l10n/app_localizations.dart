@@ -372,7 +372,7 @@ abstract class AppLocalizations {
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
-  /// **'~'**
+  /// **'About'**
   String get about;
 
   /// No description provided for @version.
@@ -561,6 +561,12 @@ abstract class AppLocalizations {
   /// **' sentences'**
   String get sentences;
 
+  /// No description provided for @approximately.
+  ///
+  /// In en, this message translates to:
+  /// **'~'**
+  String get approximately;
+
   /// No description provided for @minutes.
   ///
   /// In en, this message translates to:
@@ -584,6 +590,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Confirm'**
   String get confirm;
+
+  /// No description provided for @todayGoal.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get todayGoal;
+
+  /// No description provided for @goalCompleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Goal Completed!'**
+  String get goalCompleted;
+
+  /// No description provided for @goalCompletedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'You\'ve achieved today\'s goal. Would you like to continue practicing?'**
+  String get goalCompletedMessage;
 }
 
 class _AppLocalizationsDelegate

@@ -73,9 +73,12 @@
   "recommended": "おすすめ",
   "daily": "1日 ",
   "sentences": "文",
-  "about": "約",
+  "approximately": "約",
   "minutes": "分",
   "estimatedTime": "予想時間",
   "start": "始める",
-  "confirm": "確認"
+  "confirm": "確認",
+  "todayGoal": "今日",
+  "goalCompleted": "目標達成！",
+  "goalCompletedMessage": "今日の目標を達成しました。もっと練習しますか？"
 }

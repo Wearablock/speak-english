@@ -132,7 +132,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get restorePurchase => '구매 복원';
 
   @override
-  String get about => '약 ';
+  String get about => '정보';
 
   @override
   String get version => '버전';
@@ -230,6 +230,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get sentences => '문장';
 
   @override
+  String get approximately => '약 ';
+
+  @override
   String get minutes => '분';
 
   @override
@@ -240,4 +243,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get confirm => '확인';
+
+  @override
+  String get todayGoal => '오늘';
+
+  @override
+  String get goalCompleted => '목표 달성!';
+
+  @override
+  String get goalCompletedMessage => '오늘의 목표를 달성했어요. 추가로 연습하시겠어요?';
 }

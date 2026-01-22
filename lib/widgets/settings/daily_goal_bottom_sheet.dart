@@ -120,7 +120,7 @@ class _DailyGoalBottomSheetState extends State<DailyGoalBottomSheet> {
         ],
       ),
       subtitle: Text(
-        '${goal.sentenceCount}${l10n.sentences} · ${l10n.about}${goal.estimatedMinutes}${l10n.minutes}',
+        '${goal.sentenceCount}${l10n.sentences} · ${l10n.approximately}${goal.estimatedMinutes}${l10n.minutes}',
       ),
       trailing: isSelected
           ? Icon(Icons.check_circle, color: AppColors.primary)
@@ -161,7 +161,7 @@ class _DailyGoalBottomSheetState extends State<DailyGoalBottomSheet> {
                   },
                 ),
                 Text(
-                  '${l10n.estimatedTime}: ${l10n.about}${(_customCount * 0.5).ceil()}${l10n.minutes}',
+                  '${l10n.estimatedTime}: ${l10n.approximately}${(_customCount * 0.5).ceil()}${l10n.minutes}',
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
                         color: AppColors.textSecondary,
                       ),

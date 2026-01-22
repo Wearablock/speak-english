@@ -24,7 +24,7 @@ class AppTheme {
         foregroundColor: AppColors.textPrimary,
         elevation: 0,
         centerTitle: true,
-        titleTextStyle: GoogleFonts.notoSans(
+        titleTextStyle: GoogleFonts.roboto(
           fontSize: 18,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimary,
@@ -45,7 +45,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSpacing.borderRadius),
           ),
-          textStyle: GoogleFonts.notoSans(
+          textStyle: GoogleFonts.roboto(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -59,7 +59,7 @@ class AppTheme {
             borderRadius: BorderRadius.circular(AppSpacing.borderRadius),
           ),
           side: BorderSide(color: AppColors.primary),
-          textStyle: GoogleFonts.notoSans(
+          textStyle: GoogleFonts.roboto(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -68,7 +68,7 @@ class AppTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.primary,
-          textStyle: GoogleFonts.notoSans(
+          textStyle: GoogleFonts.roboto(
             fontSize: 14,
             fontWeight: FontWeight.w500,
           ),
@@ -122,7 +122,7 @@ class AppTheme {
         foregroundColor: AppColors.textPrimaryDark,
         elevation: 0,
         centerTitle: true,
-        titleTextStyle: GoogleFonts.notoSans(
+        titleTextStyle: GoogleFonts.roboto(
           fontSize: 18,
           fontWeight: FontWeight.w600,
           color: AppColors.textPrimaryDark,
@@ -143,7 +143,7 @@ class AppTheme {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSpacing.borderRadius),
           ),
-          textStyle: GoogleFonts.notoSans(
+          textStyle: GoogleFonts.roboto(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -157,7 +157,7 @@ class AppTheme {
             borderRadius: BorderRadius.circular(AppSpacing.borderRadius),
           ),
           side: BorderSide(color: AppColors.primaryLight),
-          textStyle: GoogleFonts.notoSans(
+          textStyle: GoogleFonts.roboto(
             fontSize: 16,
             fontWeight: FontWeight.w600,
           ),
@@ -166,7 +166,7 @@ class AppTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: AppColors.primaryLight,
-          textStyle: GoogleFonts.notoSans(
+          textStyle: GoogleFonts.roboto(
             fontSize: 14,
             fontWeight: FontWeight.w500,
           ),
@@ -204,63 +204,63 @@ class AppTheme {
 
   // 텍스트 테마 - 라이트
   static TextTheme get _textTheme {
-    return GoogleFonts.notoSansTextTheme().copyWith(
-      headlineLarge: GoogleFonts.notoSans(
+    return GoogleFonts.robotoTextTheme().copyWith(
+      headlineLarge: GoogleFonts.roboto(
         fontSize: 32,
         fontWeight: FontWeight.bold,
         color: AppColors.textPrimary,
       ),
-      headlineMedium: GoogleFonts.notoSans(
+      headlineMedium: GoogleFonts.roboto(
         fontSize: 24,
         fontWeight: FontWeight.bold,
         color: AppColors.textPrimary,
       ),
-      headlineSmall: GoogleFonts.notoSans(
+      headlineSmall: GoogleFonts.roboto(
         fontSize: 20,
         fontWeight: FontWeight.w600,
         color: AppColors.textPrimary,
       ),
-      titleLarge: GoogleFonts.notoSans(
+      titleLarge: GoogleFonts.roboto(
         fontSize: 18,
         fontWeight: FontWeight.w600,
         color: AppColors.textPrimary,
       ),
-      titleMedium: GoogleFonts.notoSans(
+      titleMedium: GoogleFonts.roboto(
         fontSize: 16,
         fontWeight: FontWeight.w500,
         color: AppColors.textPrimary,
       ),
-      titleSmall: GoogleFonts.notoSans(
+      titleSmall: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: AppColors.textPrimary,
       ),
-      bodyLarge: GoogleFonts.notoSans(
+      bodyLarge: GoogleFonts.roboto(
         fontSize: 16,
         fontWeight: FontWeight.normal,
         color: AppColors.textPrimary,
       ),
-      bodyMedium: GoogleFonts.notoSans(
+      bodyMedium: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.normal,
         color: AppColors.textPrimary,
       ),
-      bodySmall: GoogleFonts.notoSans(
+      bodySmall: GoogleFonts.roboto(
         fontSize: 12,
         fontWeight: FontWeight.normal,
         color: AppColors.textSecondary,
       ),
-      labelLarge: GoogleFonts.notoSans(
+      labelLarge: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: AppColors.textPrimary,
       ),
-      labelMedium: GoogleFonts.notoSans(
+      labelMedium: GoogleFonts.roboto(
         fontSize: 12,
         fontWeight: FontWeight.w500,
         color: AppColors.textSecondary,
       ),
-      labelSmall: GoogleFonts.notoSans(
+      labelSmall: GoogleFonts.roboto(
         fontSize: 10,
         fontWeight: FontWeight.w500,
         color: AppColors.textSecondary,
@@ -270,63 +270,63 @@ class AppTheme {
 
   // 텍스트 테마 - 다크
   static TextTheme get _textThemeDark {
-    return GoogleFonts.notoSansTextTheme().copyWith(
-      headlineLarge: GoogleFonts.notoSans(
+    return GoogleFonts.robotoTextTheme().copyWith(
+      headlineLarge: GoogleFonts.roboto(
         fontSize: 32,
         fontWeight: FontWeight.bold,
         color: AppColors.textPrimaryDark,
       ),
-      headlineMedium: GoogleFonts.notoSans(
+      headlineMedium: GoogleFonts.roboto(
         fontSize: 24,
         fontWeight: FontWeight.bold,
         color: AppColors.textPrimaryDark,
       ),
-      headlineSmall: GoogleFonts.notoSans(
+      headlineSmall: GoogleFonts.roboto(
         fontSize: 20,
         fontWeight: FontWeight.w600,
         color: AppColors.textPrimaryDark,
       ),
-      titleLarge: GoogleFonts.notoSans(
+      titleLarge: GoogleFonts.roboto(
         fontSize: 18,
         fontWeight: FontWeight.w600,
         color: AppColors.textPrimaryDark,
       ),
-      titleMedium: GoogleFonts.notoSans(
+      titleMedium: GoogleFonts.roboto(
         fontSize: 16,
         fontWeight: FontWeight.w500,
         color: AppColors.textPrimaryDark,
       ),
-      titleSmall: GoogleFonts.notoSans(
+      titleSmall: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: AppColors.textPrimaryDark,
       ),
-      bodyLarge: GoogleFonts.notoSans(
+      bodyLarge: GoogleFonts.roboto(
         fontSize: 16,
         fontWeight: FontWeight.normal,
         color: AppColors.textPrimaryDark,
       ),
-      bodyMedium: GoogleFonts.notoSans(
+      bodyMedium: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.normal,
         color: AppColors.textPrimaryDark,
       ),
-      bodySmall: GoogleFonts.notoSans(
+      bodySmall: GoogleFonts.roboto(
         fontSize: 12,
         fontWeight: FontWeight.normal,
         color: AppColors.textSecondaryDark,
       ),
-      labelLarge: GoogleFonts.notoSans(
+      labelLarge: GoogleFonts.roboto(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         color: AppColors.textPrimaryDark,
       ),
-      labelMedium: GoogleFonts.notoSans(
+      labelMedium: GoogleFonts.roboto(
         fontSize: 12,
         fontWeight: FontWeight.w500,
         color: AppColors.textSecondaryDark,
       ),
-      labelSmall: GoogleFonts.notoSans(
+      labelSmall: GoogleFonts.roboto(
         fontSize: 10,
         fontWeight: FontWeight.w500,
         color: AppColors.textSecondaryDark,

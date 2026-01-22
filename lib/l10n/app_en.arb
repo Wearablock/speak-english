@@ -80,9 +80,12 @@
   "recommended": "Recommended",
   "daily": "Daily ",
   "sentences": " sentences",
-  "about": "~",
+  "approximately": "~",
   "minutes": " min",
   "estimatedTime": "Estimated time",
   "start": "Get Started",
-  "confirm": "Confirm"
+  "confirm": "Confirm",
+  "todayGoal": "Today",
+  "goalCompleted": "Goal Completed!",
+  "goalCompletedMessage": "You've achieved today's goal. Would you like to continue practicing?"
 }

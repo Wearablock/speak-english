@@ -132,7 +132,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get restorePurchase => 'Khôi phục mua hàng';
 
   @override
-  String get about => '~';
+  String get about => 'Giới thiệu';
 
   @override
   String get version => 'Phiên bản';
@@ -231,6 +231,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sentences => ' câu';
 
   @override
+  String get approximately => '~';
+
+  @override
   String get minutes => ' phút';
 
   @override
@@ -241,4 +244,14 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get confirm => 'Xác nhận';
+
+  @override
+  String get todayGoal => 'Hôm nay';
+
+  @override
+  String get goalCompleted => 'Đạt mục tiêu!';
+
+  @override
+  String get goalCompletedMessage =>
+      'Bạn đã hoàn thành mục tiêu hôm nay. Bạn có muốn tiếp tục luyện tập?';
 }

@@ -73,9 +73,12 @@
   "recommended": "Empfohlen",
   "daily": "Täglich ",
   "sentences": " Sätze",
-  "about": "~",
+  "approximately": "~",
   "minutes": " Min",
   "estimatedTime": "Geschätzte Zeit",
   "start": "Starten",
-  "confirm": "Bestätigen"
+  "confirm": "Bestätigen",
+  "todayGoal": "Heute",
+  "goalCompleted": "Ziel erreicht!",
+  "goalCompletedMessage": "Sie haben Ihr heutiges Ziel erreicht. Möchten Sie weiter üben?"
 }

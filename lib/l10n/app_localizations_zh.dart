@@ -132,7 +132,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get restorePurchase => '恢复购买';
 
   @override
-  String get about => '约';
+  String get about => '关于';
 
   @override
   String get version => '版本';
@@ -230,6 +230,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get sentences => '句';
 
   @override
+  String get approximately => '约';
+
+  @override
   String get minutes => '分钟';
 
   @override
@@ -240,6 +243,15 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get confirm => '确认';
+
+  @override
+  String get todayGoal => '今日';
+
+  @override
+  String get goalCompleted => '目标完成！';
+
+  @override
+  String get goalCompletedMessage => '您已完成今日目标。要继续练习吗？';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -370,7 +382,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get restorePurchase => '恢復購買';
 
   @override
-  String get about => '約';
+  String get about => '關於';
 
   @override
   String get version => '版本';
@@ -468,6 +480,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get sentences => '句';
 
   @override
+  String get approximately => '約';
+
+  @override
   String get minutes => '分鐘';
 
   @override
@@ -478,4 +493,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get confirm => '確認';
+
+  @override
+  String get todayGoal => '今日';
+
+  @override
+  String get goalCompleted => '目標完成！';
+
+  @override
+  String get goalCompletedMessage => '您已完成今日目標。要繼續練習嗎？';
 }

@@ -80,9 +80,12 @@
   "recommended": "추천",
   "daily": "하루 ",
   "sentences": "문장",
-  "about": "약 ",
+  "approximately": "약 ",
   "minutes": "분",
   "estimatedTime": "예상 소요 시간",
   "start": "시작하기",
-  "confirm": "확인"
+  "confirm": "확인",
+  "todayGoal": "오늘",
+  "goalCompleted": "목표 달성!",
+  "goalCompletedMessage": "오늘의 목표를 달성했어요. 추가로 연습하시겠어요?"
 }

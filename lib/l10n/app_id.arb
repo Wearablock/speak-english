@@ -73,9 +73,12 @@
   "recommended": "Disarankan",
   "daily": "Harian ",
   "sentences": " kalimat",
-  "about": "~",
+  "approximately": "~",
   "minutes": " menit",
   "estimatedTime": "Perkiraan waktu",
   "start": "Mulai",
-  "confirm": "Konfirmasi"
+  "confirm": "Konfirmasi",
+  "todayGoal": "Hari ini",
+  "goalCompleted": "Target tercapai!",
+  "goalCompletedMessage": "Anda telah mencapai target hari ini. Ingin lanjut berlatih?"
 }

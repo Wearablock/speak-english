@@ -132,7 +132,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get restorePurchase => '購入を復元';
 
   @override
-  String get about => '約';
+  String get about => 'アプリについて';
 
   @override
   String get version => 'バージョン';
@@ -230,6 +230,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get sentences => '文';
 
   @override
+  String get approximately => '約';
+
+  @override
   String get minutes => '分';
 
   @override
@@ -240,4 +243,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get confirm => '確認';
+
+  @override
+  String get todayGoal => '今日';
+
+  @override
+  String get goalCompleted => '目標達成！';
+
+  @override
+  String get goalCompletedMessage => '今日の目標を達成しました。もっと練習しますか？';
 }

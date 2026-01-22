@@ -1,0 +1,27 @@
+Parler anglais - Application de pratique de prononciation anglaise avec IA
+
+Améliorez votre anglais petit à petit chaque jour ! Apprenez la prononciation exacte grâce aux retours de l'IA et améliorez vos compétences en conversation avec des leçons structurées.
+
+Fonctionnalités principales :
+
+📚 Leçons structurées
+• Apprentissage progressif du débutant à l'avancé
+• Divers sujets : conversation quotidienne, anglais des affaires, etc.
+• Expressions pratiques à utiliser immédiatement
+
+🎤 Retour IA sur la prononciation
+• Analyse de prononciation en temps réel
+• Guide de prononciation précis
+• Prononciation naturelle par la pratique répétée
+
+📊 Statistiques d'apprentissage
+• Enregistrements quotidiens/hebdomadaires/mensuels
+• Suivi des séries consécutives
+• Graphiques de progression
+
+🎯 Objectifs quotidiens
+• Définissez vos propres objectifs d'apprentissage
+• Créez des habitudes d'étude régulières avec des rappels
+• Système de récompenses motivant
+
+Commencez maintenant ! 10 minutes par jour peuvent transformer votre anglais.

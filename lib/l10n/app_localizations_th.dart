@@ -132,7 +132,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get restorePurchase => 'กู้คืนการซื้อ';
 
   @override
-  String get about => '~';
+  String get about => 'เกี่ยวกับ';
 
   @override
   String get version => 'เวอร์ชัน';
@@ -231,6 +231,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get sentences => ' ประโยค';
 
   @override
+  String get approximately => '~';
+
+  @override
   String get minutes => ' นาที';
 
   @override
@@ -241,4 +244,14 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get confirm => 'ยืนยัน';
+
+  @override
+  String get todayGoal => 'วันนี้';
+
+  @override
+  String get goalCompleted => 'บรรลุเป้าหมาย!';
+
+  @override
+  String get goalCompletedMessage =>
+      'คุณบรรลุเป้าหมายวันนี้แล้ว ต้องการฝึกต่อไหม?';
 }

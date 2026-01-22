@@ -73,9 +73,12 @@
   "recommended": "推荐",
   "daily": "每天 ",
   "sentences": "句",
-  "about": "约",
+  "approximately": "约",
   "minutes": "分钟",
   "estimatedTime": "预计时间",
   "start": "开始",
-  "confirm": "确认"
+  "confirm": "确认",
+  "todayGoal": "今日",
+  "goalCompleted": "目标完成！",
+  "goalCompletedMessage": "您已完成今日目标。要继续练习吗？"
 }

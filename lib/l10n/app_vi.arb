@@ -73,9 +73,12 @@
   "recommended": "Đề xuất",
   "daily": "Hàng ngày ",
   "sentences": " câu",
-  "about": "~",
+  "approximately": "~",
   "minutes": " phút",
   "estimatedTime": "Thời gian dự kiến",
   "start": "Bắt đầu",
-  "confirm": "Xác nhận"
+  "confirm": "Xác nhận",
+  "todayGoal": "Hôm nay",
+  "goalCompleted": "Đạt mục tiêu!",
+  "goalCompletedMessage": "Bạn đã hoàn thành mục tiêu hôm nay. Bạn có muốn tiếp tục luyện tập?"
 }

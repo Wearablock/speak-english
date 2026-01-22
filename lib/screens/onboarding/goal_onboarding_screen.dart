@@ -257,7 +257,7 @@ class _GoalOnboardingScreenState extends State<GoalOnboardingScreen> {
                 },
               ),
               Text(
-                '${l10n.estimatedTime}: ${l10n.about}${(tempCount * 0.5).ceil()}${l10n.minutes}',
+                '${l10n.estimatedTime}: ${l10n.approximately}${(tempCount * 0.5).ceil()}${l10n.minutes}',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: AppColors.textSecondary,
                     ),
@@ -304,7 +304,7 @@ class _GoalOnboardingScreenState extends State<GoalOnboardingScreen> {
   }
 
   String _getGoalDescription(AppLocalizations l10n, DailyGoal goal) {
-    return '${l10n.daily} ${goal.sentenceCount}${l10n.sentences} · ${l10n.about}${goal.estimatedMinutes}${l10n.minutes}';
+    return '${l10n.daily} ${goal.sentenceCount}${l10n.sentences} · ${l10n.approximately}${goal.estimatedMinutes}${l10n.minutes}';
   }
 
   void _onStart() async {

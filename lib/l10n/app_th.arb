@@ -73,9 +73,12 @@
   "recommended": "แนะนำ",
   "daily": "รายวัน ",
   "sentences": " ประโยค",
-  "about": "~",
+  "approximately": "~",
   "minutes": " นาที",
   "estimatedTime": "เวลาโดยประมาณ",
   "start": "เริ่ม",
-  "confirm": "ยืนยัน"
+  "confirm": "ยืนยัน",
+  "todayGoal": "วันนี้",
+  "goalCompleted": "บรรลุเป้าหมาย!",
+  "goalCompletedMessage": "คุณบรรลุเป้าหมายวันนี้แล้ว ต้องการฝึกต่อไหม?"
 }
