@@ -56,5 +56,16 @@
   "cancel": "취소",
   "ok": "확인",
   "termsAndPolicies": "약관 및 정책",
-  "support": "고객지원"
+  "support": "고객지원",
+  "newLessonsAvailable": "새로운 레슨이 있습니다!",
+  "dataUpdated": "레슨이 v{version}으로 업데이트되었습니다",
+  "@dataUpdated": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "checkingForUpdates": "업데이트 확인 중...",
+  "upToDate": "이미 최신 버전입니다"
 }

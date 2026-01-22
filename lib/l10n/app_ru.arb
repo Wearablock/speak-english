@@ -56,5 +56,9 @@
   "cancel": "Отмена",
   "ok": "OK",
   "termsAndPolicies": "Условия и политики",
-  "support": "Поддержка"
+  "support": "Поддержка",
+  "newLessonsAvailable": "Доступны новые уроки!",
+  "dataUpdated": "Уроки обновлены до v{version}",
+  "checkingForUpdates": "Проверка обновлений...",
+  "upToDate": "Уже последняя версия"
 }

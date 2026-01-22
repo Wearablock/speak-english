@@ -178,6 +178,20 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get support => '客服支持';
+
+  @override
+  String get newLessonsAvailable => '有新课程！';
+
+  @override
+  String dataUpdated(String version) {
+    return '课程已更新至v$version';
+  }
+
+  @override
+  String get checkingForUpdates => '正在检查更新...';
+
+  @override
+  String get upToDate => '已是最新版本';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -354,4 +368,18 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get support => '客服支援';
+
+  @override
+  String get newLessonsAvailable => '有新課程！';
+
+  @override
+  String dataUpdated(String version) {
+    return '課程已更新至v$version';
+  }
+
+  @override
+  String get checkingForUpdates => '正在檢查更新...';
+
+  @override
+  String get upToDate => '已是最新版本';
 }

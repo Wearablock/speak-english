@@ -179,4 +179,18 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get support => 'Hỗ trợ';
+
+  @override
+  String get newLessonsAvailable => 'Có bài học mới!';
+
+  @override
+  String dataUpdated(String version) {
+    return 'Bài học đã cập nhật lên v$version';
+  }
+
+  @override
+  String get checkingForUpdates => 'Đang kiểm tra cập nhật...';
+
+  @override
+  String get upToDate => 'Đã là phiên bản mới nhất';
 }

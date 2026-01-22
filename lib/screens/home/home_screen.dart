@@ -29,7 +29,32 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _loadStats();
+    _checkForUpdates();
     ProgressNotifier().addListener(_loadStats);
+  }
+
+  Future<void> _checkForUpdates() async {
+    final result = await _lessonService.syncFromRemote();
+
+    if (!mounted) return;
+
+    if (result.status == SyncStatus.completed) {
+      // 데이터가 업데이트됨 - 통계 새로고침
+      await _loadStats();
+
+      if (!mounted) return;
+
+      final l10n = AppLocalizations.of(context);
+      if (l10n != null) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(l10n.dataUpdated(result.newVersion ?? '')),
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      }
+    }
   }
 
   @override

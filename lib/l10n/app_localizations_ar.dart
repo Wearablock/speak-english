@@ -179,4 +179,18 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get support => 'الدعم';
+
+  @override
+  String get newLessonsAvailable => 'تتوفر دروس جديدة!';
+
+  @override
+  String dataUpdated(String version) {
+    return 'تم تحديث الدروس إلى v$version';
+  }
+
+  @override
+  String get checkingForUpdates => 'جارٍ البحث عن تحديثات...';
+
+  @override
+  String get upToDate => 'لديك أحدث إصدار';
 }

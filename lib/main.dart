@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'app.dart';
 import 'models/app_language.dart';
+import 'services/lesson_service.dart';
 import 'services/preferences_service.dart';
 import 'services/speech_service.dart';
 
@@ -52,5 +53,21 @@ void main() async {
   // TODO: Phase 5에서 광고 초기화 추가
   // await AdService.init();
 
+  // 백그라운드에서 레슨 데이터 동기화
+  _syncLessonData();
+
   runApp(const SpeakEnglishApp());
+}
+
+/// 백그라운드에서 레슨 데이터 동기화
+void _syncLessonData() {
+  Future.microtask(() async {
+    final result = await LessonService().syncFromRemote();
+    debugPrint('Lesson sync: ${result.status.name}');
+    if (result.status == SyncStatus.completed) {
+      debugPrint('Updated to v${result.newVersion} (${result.newLessonCount} lessons)');
+    } else if (result.status == SyncStatus.failed) {
+      debugPrint('Sync error: ${result.errorMessage}');
+    }
+  });
 }

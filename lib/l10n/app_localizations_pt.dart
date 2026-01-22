@@ -179,4 +179,18 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get support => 'Suporte';
+
+  @override
+  String get newLessonsAvailable => 'Novas lições disponíveis!';
+
+  @override
+  String dataUpdated(String version) {
+    return 'Lições atualizadas para v$version';
+  }
+
+  @override
+  String get checkingForUpdates => 'Verificando atualizações...';
+
+  @override
+  String get upToDate => 'Já está atualizado';
 }

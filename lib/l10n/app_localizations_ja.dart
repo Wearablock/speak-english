@@ -178,4 +178,18 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get support => 'サポート';
+
+  @override
+  String get newLessonsAvailable => '新しいレッスンがあります！';
+
+  @override
+  String dataUpdated(String version) {
+    return 'レッスンがv$versionに更新されました';
+  }
+
+  @override
+  String get checkingForUpdates => '更新を確認中...';
+
+  @override
+  String get upToDate => '最新バージョンです';
 }

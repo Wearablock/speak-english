@@ -56,5 +56,9 @@
   "cancel": "取消",
   "ok": "确定",
   "termsAndPolicies": "条款与政策",
-  "support": "客服支持"
+  "support": "客服支持",
+  "newLessonsAvailable": "有新课程！",
+  "dataUpdated": "课程已更新至v{version}",
+  "checkingForUpdates": "正在检查更新...",
+  "upToDate": "已是最新版本"
 }

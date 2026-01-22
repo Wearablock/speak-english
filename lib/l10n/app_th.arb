@@ -56,5 +56,9 @@
   "cancel": "ยกเลิก",
   "ok": "ตกลง",
   "termsAndPolicies": "ข้อกำหนดและนโยบาย",
-  "support": "ช่วยเหลือ"
+  "support": "ช่วยเหลือ",
+  "newLessonsAvailable": "มีบทเรียนใหม่!",
+  "dataUpdated": "บทเรียนอัปเดตเป็น v{version}",
+  "checkingForUpdates": "กำลังตรวจสอบการอัปเดต...",
+  "upToDate": "เป็นเวอร์ชันล่าสุดแล้ว"
 }

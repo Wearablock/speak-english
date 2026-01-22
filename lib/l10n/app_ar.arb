@@ -56,5 +56,9 @@
   "cancel": "إلغاء",
   "ok": "موافق",
   "termsAndPolicies": "الشروط والسياسات",
-  "support": "الدعم"
+  "support": "الدعم",
+  "newLessonsAvailable": "تتوفر دروس جديدة!",
+  "dataUpdated": "تم تحديث الدروس إلى v{version}",
+  "checkingForUpdates": "جارٍ البحث عن تحديثات...",
+  "upToDate": "لديك أحدث إصدار"
 }

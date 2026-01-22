@@ -56,5 +56,9 @@
   "cancel": "取消",
   "ok": "確定",
   "termsAndPolicies": "條款與政策",
-  "support": "客服支援"
+  "support": "客服支援",
+  "newLessonsAvailable": "有新課程！",
+  "dataUpdated": "課程已更新至v{version}",
+  "checkingForUpdates": "正在檢查更新...",
+  "upToDate": "已是最新版本"
 }

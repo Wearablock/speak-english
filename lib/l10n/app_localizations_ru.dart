@@ -179,4 +179,18 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get support => 'Поддержка';
+
+  @override
+  String get newLessonsAvailable => 'Доступны новые уроки!';
+
+  @override
+  String dataUpdated(String version) {
+    return 'Уроки обновлены до v$version';
+  }
+
+  @override
+  String get checkingForUpdates => 'Проверка обновлений...';
+
+  @override
+  String get upToDate => 'Уже последняя версия';
 }

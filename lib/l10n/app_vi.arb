@@ -56,5 +56,9 @@
   "cancel": "Hủy",
   "ok": "OK",
   "termsAndPolicies": "Điều khoản và chính sách",
-  "support": "Hỗ trợ"
+  "support": "Hỗ trợ",
+  "newLessonsAvailable": "Có bài học mới!",
+  "dataUpdated": "Bài học đã cập nhật lên v{version}",
+  "checkingForUpdates": "Đang kiểm tra cập nhật...",
+  "upToDate": "Đã là phiên bản mới nhất"
 }

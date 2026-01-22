@@ -179,4 +179,18 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get support => 'ช่วยเหลือ';
+
+  @override
+  String get newLessonsAvailable => 'มีบทเรียนใหม่!';
+
+  @override
+  String dataUpdated(String version) {
+    return 'บทเรียนอัปเดตเป็น v$version';
+  }
+
+  @override
+  String get checkingForUpdates => 'กำลังตรวจสอบการอัปเดต...';
+
+  @override
+  String get upToDate => 'เป็นเวอร์ชันล่าสุดแล้ว';
 }

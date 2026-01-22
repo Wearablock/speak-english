@@ -464,6 +464,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Support'**
   String get support;
+
+  /// No description provided for @newLessonsAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'New lessons available!'**
+  String get newLessonsAvailable;
+
+  /// No description provided for @dataUpdated.
+  ///
+  /// In en, this message translates to:
+  /// **'Lessons updated to v{version}'**
+  String dataUpdated(String version);
+
+  /// No description provided for @checkingForUpdates.
+  ///
+  /// In en, this message translates to:
+  /// **'Checking for updates...'**
+  String get checkingForUpdates;
+
+  /// No description provided for @upToDate.
+  ///
+  /// In en, this message translates to:
+  /// **'Already up to date'**
+  String get upToDate;
 }
 
 class _AppLocalizationsDelegate

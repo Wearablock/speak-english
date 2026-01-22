@@ -56,5 +56,16 @@
   "cancel": "Cancel",
   "ok": "OK",
   "termsAndPolicies": "Terms & Policies",
-  "support": "Support"
+  "support": "Support",
+  "newLessonsAvailable": "New lessons available!",
+  "dataUpdated": "Lessons updated to v{version}",
+  "@dataUpdated": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "checkingForUpdates": "Checking for updates...",
+  "upToDate": "Already up to date"
 }

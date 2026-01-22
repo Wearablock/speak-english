@@ -179,4 +179,18 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get support => 'Dukungan';
+
+  @override
+  String get newLessonsAvailable => 'Pelajaran baru tersedia!';
+
+  @override
+  String dataUpdated(String version) {
+    return 'Pelajaran diperbarui ke v$version';
+  }
+
+  @override
+  String get checkingForUpdates => 'Memeriksa pembaruan...';
+
+  @override
+  String get upToDate => 'Sudah versi terbaru';
 }

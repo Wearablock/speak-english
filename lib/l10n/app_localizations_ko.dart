@@ -178,4 +178,18 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get support => '고객지원';
+
+  @override
+  String get newLessonsAvailable => '새로운 레슨이 있습니다!';
+
+  @override
+  String dataUpdated(String version) {
+    return '레슨이 v$version으로 업데이트되었습니다';
+  }
+
+  @override
+  String get checkingForUpdates => '업데이트 확인 중...';
+
+  @override
+  String get upToDate => '이미 최신 버전입니다';
 }

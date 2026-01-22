@@ -56,5 +56,9 @@
   "cancel": "Cancelar",
   "ok": "OK",
   "termsAndPolicies": "Termos e políticas",
-  "support": "Suporte"
+  "support": "Suporte",
+  "newLessonsAvailable": "Novas lições disponíveis!",
+  "dataUpdated": "Lições atualizadas para v{version}",
+  "checkingForUpdates": "Verificando atualizações...",
+  "upToDate": "Já está atualizado"
 }

@@ -56,5 +56,9 @@
   "cancel": "Batal",
   "ok": "OK",
   "termsAndPolicies": "Syarat dan kebijakan",
-  "support": "Dukungan"
+  "support": "Dukungan",
+  "newLessonsAvailable": "Pelajaran baru tersedia!",
+  "dataUpdated": "Pelajaran diperbarui ke v{version}",
+  "checkingForUpdates": "Memeriksa pembaruan...",
+  "upToDate": "Sudah versi terbaru"
 }

@@ -56,5 +56,9 @@
   "cancel": "キャンセル",
   "ok": "OK",
   "termsAndPolicies": "利用規約とポリシー",
-  "support": "サポート"
+  "support": "サポート",
+  "newLessonsAvailable": "新しいレッスンがあります！",
+  "dataUpdated": "レッスンがv{version}に更新されました",
+  "checkingForUpdates": "更新を確認中...",
+  "upToDate": "最新バージョンです"
 }
