@@ -10,7 +10,7 @@ class AppConfig {
 
   // GitHub 데이터 저장소 (레슨 데이터 동기화용)
   static const String githubDataBaseUrl =
-      'https://raw.githubusercontent.com/Wearablock/speak-english-data/main';
+      'https://raw.githubusercontent.com/Wearablock/speak-english/main/github-data';
 
   // AdMob 앱 ID (테스트 ID - 배포 전 실제 ID로 교체)
   static String get adMobAppId {
