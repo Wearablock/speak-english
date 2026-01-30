@@ -68,3 +68,9 @@ lib/constants/secrets.dart
 
 # Store automation tools
 /store-automation/
+
+# Fastlane generated files
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/

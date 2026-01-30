@@ -41,6 +41,10 @@
   "themeSystem": "Hệ thống",
   "removeAds": "Xóa quảng cáo",
   "restorePurchase": "Khôi phục mua hàng",
+  "premiumActivated": "Đã kích hoạt",
+  "loadingProduct": "Đang tải...",
+  "purchaseFailed": "Mua hàng thất bại",
+  "purchasesRestored": "Đã khôi phục mua hàng",
   "about": "Giới thiệu",
   "version": "Phiên bản",
   "privacyPolicy": "Chính sách bảo mật",
@@ -80,5 +84,12 @@
   "confirm": "Xác nhận",
   "todayGoal": "Hôm nay",
   "goalCompleted": "Đạt mục tiêu!",
-  "goalCompletedMessage": "Bạn đã hoàn thành mục tiêu hôm nay. Bạn có muốn tiếp tục luyện tập?"
+  "goalCompletedMessage": "Bạn đã hoàn thành mục tiêu hôm nay. Bạn có muốn tiếp tục luyện tập?",
+  "microphonePermissionRequired": "Cần quyền truy cập micrô",
+  "microphonePermissionMessage": "Vui lòng cho phép truy cập micrô trong Cài đặt để sử dụng nhận dạng giọng nói.",
+  "speechNotAvailable": "Nhận dạng giọng nói không khả dụng",
+  "speechNotAvailableMessage": "Nhận dạng giọng nói không khả dụng trên thiết bị này.",
+  "error": "Lỗi",
+  "speechErrorMessage": "Đã xảy ra lỗi khi khởi tạo nhận dạng giọng nói.",
+  "openSettings": "Mở Cài đặt"
 }

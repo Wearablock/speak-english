@@ -1,0 +1,5 @@
+/* Japanese */
+"NSMicrophoneUsageDescription" = "音声認識のためにマイクへのアクセスが必要です。";
+"NSSpeechRecognitionUsageDescription" = "発音練習のために音声認識が必要です。";
+"NSUserTrackingUsageDescription" = "この識別子はパーソナライズされた広告を配信するために使用されます。";
+"CFBundleDisplayName" = "英語スピーキング";

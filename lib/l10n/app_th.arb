@@ -41,6 +41,10 @@
   "themeSystem": "ระบบ",
   "removeAds": "ลบโฆษณา",
   "restorePurchase": "กู้คืนการซื้อ",
+  "premiumActivated": "เปิดใช้งานแล้ว",
+  "loadingProduct": "กำลังโหลด...",
+  "purchaseFailed": "การซื้อล้มเหลว",
+  "purchasesRestored": "กู้คืนการซื้อสำเร็จ",
   "about": "เกี่ยวกับ",
   "version": "เวอร์ชัน",
   "privacyPolicy": "นโยบายความเป็นส่วนตัว",
@@ -80,5 +84,12 @@
   "confirm": "ยืนยัน",
   "todayGoal": "วันนี้",
   "goalCompleted": "บรรลุเป้าหมาย!",
-  "goalCompletedMessage": "คุณบรรลุเป้าหมายวันนี้แล้ว ต้องการฝึกต่อไหม?"
+  "goalCompletedMessage": "คุณบรรลุเป้าหมายวันนี้แล้ว ต้องการฝึกต่อไหม?",
+  "microphonePermissionRequired": "ต้องการสิทธิ์ไมโครโฟน",
+  "microphonePermissionMessage": "กรุณาอนุญาตการเข้าถึงไมโครโฟนในการตั้งค่าเพื่อใช้การรู้จำเสียง",
+  "speechNotAvailable": "การรู้จำเสียงไม่พร้อมใช้งาน",
+  "speechNotAvailableMessage": "การรู้จำเสียงไม่พร้อมใช้งานบนอุปกรณ์นี้",
+  "error": "ข้อผิดพลาด",
+  "speechErrorMessage": "เกิดข้อผิดพลาดขณะเริ่มต้นการรู้จำเสียง",
+  "openSettings": "เปิดการตั้งค่า"
 }

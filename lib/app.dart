@@ -43,8 +43,16 @@ class _SpeakEnglishAppState extends State<SpeakEnglishApp> {
                 GlobalCupertinoLocalizations.delegate,
               ],
               supportedLocales: AppLocalizations.supportedLocales,
-              home: UpgradeAlert(
-                child: const _AppHome(),
+              home: Builder(
+                builder: (context) {
+                  final languageCode = Localizations.localeOf(context).languageCode;
+                  return UpgradeAlert(
+                    upgrader: Upgrader(
+                      languageCode: languageCode,
+                    ),
+                    child: const _AppHome(),
+                  );
+                },
               ),
             );
           },

@@ -41,6 +41,10 @@
   "themeSystem": "النظام",
   "removeAds": "إزالة الإعلانات",
   "restorePurchase": "استعادة الشراء",
+  "premiumActivated": "مفعل",
+  "loadingProduct": "جارٍ التحميل...",
+  "purchaseFailed": "فشل الشراء",
+  "purchasesRestored": "تم استعادة المشتريات",
   "about": "حول",
   "version": "الإصدار",
   "privacyPolicy": "سياسة الخصوصية",
@@ -80,5 +84,12 @@
   "confirm": "تأكيد",
   "todayGoal": "اليوم",
   "goalCompleted": "تم تحقيق الهدف!",
-  "goalCompletedMessage": "لقد حققت هدف اليوم. هل تريد الاستمرار في التدريب؟"
+  "goalCompletedMessage": "لقد حققت هدف اليوم. هل تريد الاستمرار في التدريب؟",
+  "microphonePermissionRequired": "مطلوب إذن الميكروفون",
+  "microphonePermissionMessage": "يرجى السماح بالوصول إلى الميكروفون في الإعدادات لاستخدام التعرف على الكلام.",
+  "speechNotAvailable": "التعرف على الكلام غير متاح",
+  "speechNotAvailableMessage": "التعرف على الكلام غير متاح على هذا الجهاز.",
+  "error": "خطأ",
+  "speechErrorMessage": "حدث خطأ أثناء تهيئة التعرف على الكلام.",
+  "openSettings": "فتح الإعدادات"
 }

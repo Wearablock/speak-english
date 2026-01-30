@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../constants/ad_config.dart';
+import 'iap_service.dart';
 
 class AdService {
   // 싱글톤 패턴
@@ -105,6 +106,13 @@ class AdService {
   /// 전면 광고 표시 (최소 간격 체크 포함)
   Future<bool> showInterstitialAd() async {
     if (!AdConfig.adsEnabled) return false;
+
+    // 프리미엄 사용자는 광고 표시 안함
+    if (IAPService().isPremium) {
+      debugPrint('[AdService] 프리미엄 사용자 - 전면 광고 스킵');
+      return false;
+    }
+
     if (!_isInterstitialAdReady || _interstitialAd == null) {
       debugPrint('[AdService] 전면 광고 준비되지 않음');
       return false;

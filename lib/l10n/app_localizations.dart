@@ -369,6 +369,30 @@ abstract class AppLocalizations {
   /// **'Restore Purchase'**
   String get restorePurchase;
 
+  /// No description provided for @premiumActivated.
+  ///
+  /// In en, this message translates to:
+  /// **'Activated'**
+  String get premiumActivated;
+
+  /// No description provided for @loadingProduct.
+  ///
+  /// In en, this message translates to:
+  /// **'Loading...'**
+  String get loadingProduct;
+
+  /// No description provided for @purchaseFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchase failed'**
+  String get purchaseFailed;
+
+  /// No description provided for @purchasesRestored.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchases restored'**
+  String get purchasesRestored;
+
   /// No description provided for @about.
   ///
   /// In en, this message translates to:
@@ -608,6 +632,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'You\'ve achieved today\'s goal. Would you like to continue practicing?'**
   String get goalCompletedMessage;
+
+  /// No description provided for @microphonePermissionRequired.
+  ///
+  /// In en, this message translates to:
+  /// **'Microphone Permission Required'**
+  String get microphonePermissionRequired;
+
+  /// No description provided for @microphonePermissionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please allow microphone access in Settings to use speech recognition.'**
+  String get microphonePermissionMessage;
+
+  /// No description provided for @speechNotAvailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Speech Recognition Unavailable'**
+  String get speechNotAvailable;
+
+  /// No description provided for @speechNotAvailableMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Speech recognition is not available on this device.'**
+  String get speechNotAvailableMessage;
+
+  /// No description provided for @error.
+  ///
+  /// In en, this message translates to:
+  /// **'Error'**
+  String get error;
+
+  /// No description provided for @speechErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred while initializing speech recognition.'**
+  String get speechErrorMessage;
+
+  /// No description provided for @openSettings.
+  ///
+  /// In en, this message translates to:
+  /// **'Open Settings'**
+  String get openSettings;
 }
 
 class _AppLocalizationsDelegate

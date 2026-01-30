@@ -41,6 +41,10 @@
   "themeSystem": "跟隨系統",
   "removeAds": "移除廣告",
   "restorePurchase": "恢復購買",
+  "premiumActivated": "已啟用",
+  "loadingProduct": "載入中...",
+  "purchaseFailed": "購買失敗",
+  "purchasesRestored": "購買已恢復",
   "about": "關於",
   "version": "版本",
   "privacyPolicy": "隱私權政策",
@@ -80,5 +84,12 @@
   "confirm": "確認",
   "todayGoal": "今日",
   "goalCompleted": "目標完成！",
-  "goalCompletedMessage": "您已完成今日目標。要繼續練習嗎？"
+  "goalCompletedMessage": "您已完成今日目標。要繼續練習嗎？",
+  "microphonePermissionRequired": "需要麥克風權限",
+  "microphonePermissionMessage": "請在設定中允許麥克風存取以使用語音辨識。",
+  "speechNotAvailable": "語音辨識不可用",
+  "speechNotAvailableMessage": "此裝置不支援語音辨識。",
+  "error": "錯誤",
+  "speechErrorMessage": "初始化語音辨識時發生錯誤。",
+  "openSettings": "開啟設定"
 }

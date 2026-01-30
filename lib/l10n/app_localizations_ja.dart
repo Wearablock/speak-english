@@ -132,6 +132,18 @@ class AppLocalizationsJa extends AppLocalizations {
   String get restorePurchase => '購入を復元';
 
   @override
+  String get premiumActivated => '有効';
+
+  @override
+  String get loadingProduct => '読み込み中...';
+
+  @override
+  String get purchaseFailed => '購入に失敗しました';
+
+  @override
+  String get purchasesRestored => '購入が復元されました';
+
+  @override
   String get about => 'アプリについて';
 
   @override
@@ -252,4 +264,26 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get goalCompletedMessage => '今日の目標を達成しました。もっと練習しますか？';
+
+  @override
+  String get microphonePermissionRequired => 'マイクの許可が必要です';
+
+  @override
+  String get microphonePermissionMessage =>
+      '音声認識を使用するには、設定でマイクへのアクセスを許可してください。';
+
+  @override
+  String get speechNotAvailable => '音声認識が利用できません';
+
+  @override
+  String get speechNotAvailableMessage => 'このデバイスでは音声認識を使用できません。';
+
+  @override
+  String get error => 'エラー';
+
+  @override
+  String get speechErrorMessage => '音声認識の初期化中にエラーが発生しました。';
+
+  @override
+  String get openSettings => '設定を開く';
 }

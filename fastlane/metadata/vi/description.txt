@@ -4,22 +4,22 @@ Cải thiện tiếng Anh từng chút mỗi ngày! Học phát âm chính xác 
 
 Tính năng chính:
 
-📚 Bài học có hệ thống
+[Bài học có hệ thống]
 • Học từng bước từ cơ bản đến nâng cao
 • Nhiều chủ đề: hội thoại hàng ngày, tiếng Anh thương mại, v.v.
 • Cụm từ thực tế sử dụng ngay
 
-🎤 Phản hồi phát âm AI
+[Phản hồi phát âm AI]
 • Phân tích phát âm theo thời gian thực
 • Hướng dẫn phát âm chính xác
 • Phát âm tự nhiên qua luyện tập lặp lại
 
-📊 Thống kê học tập
+[Thống kê học tập]
 • Ghi chép học tập hàng ngày/tuần/tháng
 • Theo dõi chuỗi ngày học
 • Biểu đồ tiến độ
 
-🎯 Mục tiêu hàng ngày
+[Mục tiêu hàng ngày]
 • Đặt mục tiêu học tập của riêng bạn
 • Xây dựng thói quen học tập đều đặn với nhắc nhở
 • Hệ thống phần thưởng tạo động lực

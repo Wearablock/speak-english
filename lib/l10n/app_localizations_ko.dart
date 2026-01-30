@@ -132,6 +132,18 @@ class AppLocalizationsKo extends AppLocalizations {
   String get restorePurchase => '구매 복원';
 
   @override
+  String get premiumActivated => '활성화됨';
+
+  @override
+  String get loadingProduct => '로딩 중...';
+
+  @override
+  String get purchaseFailed => '구매에 실패했습니다';
+
+  @override
+  String get purchasesRestored => '구매가 복원되었습니다';
+
+  @override
   String get about => '정보';
 
   @override
@@ -252,4 +264,26 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get goalCompletedMessage => '오늘의 목표를 달성했어요. 추가로 연습하시겠어요?';
+
+  @override
+  String get microphonePermissionRequired => '마이크 권한 필요';
+
+  @override
+  String get microphonePermissionMessage =>
+      '음성 인식을 사용하려면 설정에서 마이크 접근을 허용해 주세요.';
+
+  @override
+  String get speechNotAvailable => '음성 인식 사용 불가';
+
+  @override
+  String get speechNotAvailableMessage => '이 기기에서는 음성 인식을 사용할 수 없습니다.';
+
+  @override
+  String get error => '오류';
+
+  @override
+  String get speechErrorMessage => '음성 인식 초기화 중 오류가 발생했습니다.';
+
+  @override
+  String get openSettings => '설정 열기';
 }

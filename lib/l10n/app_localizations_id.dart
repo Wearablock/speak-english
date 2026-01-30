@@ -132,6 +132,18 @@ class AppLocalizationsId extends AppLocalizations {
   String get restorePurchase => 'Pulihkan pembelian';
 
   @override
+  String get premiumActivated => 'Diaktifkan';
+
+  @override
+  String get loadingProduct => 'Memuat...';
+
+  @override
+  String get purchaseFailed => 'Pembelian gagal';
+
+  @override
+  String get purchasesRestored => 'Pembelian dipulihkan';
+
+  @override
   String get about => 'Tentang';
 
   @override
@@ -255,4 +267,28 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'Anda telah mencapai target hari ini. Ingin lanjut berlatih?';
+
+  @override
+  String get microphonePermissionRequired => 'Izin mikrofon diperlukan';
+
+  @override
+  String get microphonePermissionMessage =>
+      'Harap izinkan akses mikrofon di Pengaturan untuk menggunakan pengenalan suara.';
+
+  @override
+  String get speechNotAvailable => 'Pengenalan suara tidak tersedia';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'Pengenalan suara tidak tersedia di perangkat ini.';
+
+  @override
+  String get error => 'Kesalahan';
+
+  @override
+  String get speechErrorMessage =>
+      'Terjadi kesalahan saat menginisialisasi pengenalan suara.';
+
+  @override
+  String get openSettings => 'Buka Pengaturan';
 }

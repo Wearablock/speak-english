@@ -132,6 +132,18 @@ class AppLocalizationsIt extends AppLocalizations {
   String get restorePurchase => 'Ripristina acquisto';
 
   @override
+  String get premiumActivated => 'Attivato';
+
+  @override
+  String get loadingProduct => 'Caricamento...';
+
+  @override
+  String get purchaseFailed => 'Acquisto fallito';
+
+  @override
+  String get purchasesRestored => 'Acquisti ripristinati';
+
+  @override
   String get about => 'Info';
 
   @override
@@ -255,4 +267,29 @@ class AppLocalizationsIt extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'Hai raggiunto l\'obiettivo di oggi. Vuoi continuare a praticare?';
+
+  @override
+  String get microphonePermissionRequired =>
+      'Autorizzazione microfono richiesta';
+
+  @override
+  String get microphonePermissionMessage =>
+      'Consenti l\'accesso al microfono nelle Impostazioni per usare il riconoscimento vocale.';
+
+  @override
+  String get speechNotAvailable => 'Riconoscimento vocale non disponibile';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'Il riconoscimento vocale non è disponibile su questo dispositivo.';
+
+  @override
+  String get error => 'Errore';
+
+  @override
+  String get speechErrorMessage =>
+      'Si è verificato un errore durante l\'inizializzazione del riconoscimento vocale.';
+
+  @override
+  String get openSettings => 'Apri Impostazioni';
 }

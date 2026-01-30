@@ -4,22 +4,22 @@ Hablar inglés - App de práctica de pronunciación en inglés con IA
 
 Características principales:
 
-📚 Lecciones estructuradas
+[Lecciones estructuradas]
 • Aprendizaje paso a paso desde principiante hasta avanzado
 • Varios temas: conversación diaria, inglés de negocios, etc.
 • Expresiones prácticas para usar de inmediato
 
-🎤 Retroalimentación de pronunciación con IA
+[Retroalimentación de pronunciación con IA]
 • Análisis de pronunciación en tiempo real
 • Guía de pronunciación precisa
 • Pronunciación natural mediante práctica repetida
 
-📊 Estadísticas de aprendizaje
+[Estadísticas de aprendizaje]
 • Registros de aprendizaje diarios/semanales/mensuales
 • Seguimiento de rachas
 • Gráficos de progreso
 
-🎯 Metas diarias
+[Metas diarias]
 • Establece tus propios objetivos de aprendizaje
 • Crea hábitos de estudio constantes con recordatorios
 • Sistema de recompensas motivador

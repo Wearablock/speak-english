@@ -132,6 +132,18 @@ class AppLocalizationsRu extends AppLocalizations {
   String get restorePurchase => 'Восстановить покупку';
 
   @override
+  String get premiumActivated => 'Активировано';
+
+  @override
+  String get loadingProduct => 'Загрузка...';
+
+  @override
+  String get purchaseFailed => 'Ошибка покупки';
+
+  @override
+  String get purchasesRestored => 'Покупки восстановлены';
+
+  @override
   String get about => 'О приложении';
 
   @override
@@ -254,4 +266,28 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'Вы достигли сегодняшней цели. Хотите продолжить практику?';
+
+  @override
+  String get microphonePermissionRequired => 'Требуется разрешение на микрофон';
+
+  @override
+  String get microphonePermissionMessage =>
+      'Пожалуйста, разрешите доступ к микрофону в Настройках для использования распознавания речи.';
+
+  @override
+  String get speechNotAvailable => 'Распознавание речи недоступно';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'Распознавание речи недоступно на этом устройстве.';
+
+  @override
+  String get error => 'Ошибка';
+
+  @override
+  String get speechErrorMessage =>
+      'Произошла ошибка при инициализации распознавания речи.';
+
+  @override
+  String get openSettings => 'Открыть Настройки';
 }

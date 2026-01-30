@@ -1,0 +1,5 @@
+/* Russian */
+"NSMicrophoneUsageDescription" = "Для распознавания речи требуется доступ к микрофону.";
+"NSSpeechRecognitionUsageDescription" = "Для практики произношения требуется распознавание речи.";
+"NSUserTrackingUsageDescription" = "Этот идентификатор будет использоваться для показа персонализированной рекламы.";
+"CFBundleDisplayName" = "Говори по-английски";

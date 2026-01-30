@@ -41,6 +41,10 @@
   "themeSystem": "시스템",
   "removeAds": "광고 제거",
   "restorePurchase": "구매 복원",
+  "premiumActivated": "활성화됨",
+  "loadingProduct": "로딩 중...",
+  "purchaseFailed": "구매에 실패했습니다",
+  "purchasesRestored": "구매가 복원되었습니다",
   "about": "정보",
   "version": "버전",
   "privacyPolicy": "개인정보 처리방침",
@@ -87,5 +91,12 @@
   "confirm": "확인",
   "todayGoal": "오늘",
   "goalCompleted": "목표 달성!",
-  "goalCompletedMessage": "오늘의 목표를 달성했어요. 추가로 연습하시겠어요?"
+  "goalCompletedMessage": "오늘의 목표를 달성했어요. 추가로 연습하시겠어요?",
+  "microphonePermissionRequired": "마이크 권한 필요",
+  "microphonePermissionMessage": "음성 인식을 사용하려면 설정에서 마이크 접근을 허용해 주세요.",
+  "speechNotAvailable": "음성 인식 사용 불가",
+  "speechNotAvailableMessage": "이 기기에서는 음성 인식을 사용할 수 없습니다.",
+  "error": "오류",
+  "speechErrorMessage": "음성 인식 초기화 중 오류가 발생했습니다.",
+  "openSettings": "설정 열기"
 }

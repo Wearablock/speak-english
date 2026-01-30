@@ -6,6 +6,7 @@ import '../../constants/app_urls.dart';
 import '../../models/app_language.dart';
 import '../../models/daily_goal.dart';
 import '../../services/preferences_service.dart';
+import '../../services/iap_service.dart';
 import '../../widgets/settings/daily_goal_bottom_sheet.dart';
 import '../../app.dart';
 import 'webview_screen.dart';
@@ -107,16 +108,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
           ),
           const Divider(),
 
-          // TODO: v1.0.1에서 광고 제거 IAP 추가
-          // ListTile(
-          //   leading: Icon(PhosphorIcons.crown(PhosphorIconsStyle.regular)),
-          //   title: Text(l10n.removeAds),
-          //   trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
-          //   onTap: () {
-          //     // IAP 구현
-          //   },
-          // ),
-          // const Divider(),
+          // 광고 제거 (IAP)
+          _buildRemoveAdsTile(context, l10n),
+          const Divider(),
+
+          // 구매 복원
+          ListTile(
+            leading: Icon(PhosphorIcons.arrowCounterClockwise(PhosphorIconsStyle.regular)),
+            title: Text(l10n.restorePurchase),
+            trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
+            onTap: () => _restorePurchases(context, l10n),
+          ),
+          const Divider(),
 
           // 약관 및 정책 섹션
           _buildSectionHeader(context, l10n.termsAndPolicies),
@@ -312,5 +315,67 @@ class _SettingsScreenState extends State<SettingsScreen> {
         },
       ),
     );
+  }
+
+  // ============================================================
+  // IAP 관련
+  // ============================================================
+
+  Widget _buildRemoveAdsTile(BuildContext context, AppLocalizations l10n) {
+    return ValueListenableBuilder<bool>(
+      valueListenable: IAPService().isPremiumNotifier,
+      builder: (context, isPremium, child) {
+        if (isPremium) {
+          // 이미 프리미엄 사용자
+          return ListTile(
+            leading: Icon(
+              PhosphorIcons.crown(PhosphorIconsStyle.fill),
+              color: Colors.amber,
+            ),
+            title: Text(l10n.removeAds),
+            subtitle: Text(
+              l10n.premiumActivated,
+              style: TextStyle(color: Colors.green[600]),
+            ),
+          );
+        }
+
+        // 일반 사용자 - 구매 버튼 표시
+        final product = IAPService().removeAdsProduct;
+        final isAvailable = IAPService().isAvailable;
+
+        return ListTile(
+          leading: Icon(PhosphorIcons.crown(PhosphorIconsStyle.regular)),
+          title: Text(l10n.removeAds),
+          subtitle: Text(
+            isAvailable && product != null
+                ? product.price
+                : l10n.loadingProduct,
+          ),
+          trailing: Icon(PhosphorIcons.caretRight(PhosphorIconsStyle.bold)),
+          onTap: isAvailable && product != null
+              ? () => _purchaseRemoveAds(context, l10n)
+              : null,
+        );
+      },
+    );
+  }
+
+  Future<void> _purchaseRemoveAds(BuildContext context, AppLocalizations l10n) async {
+    final success = await IAPService().purchaseRemoveAds();
+    if (!success && context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.purchaseFailed)),
+      );
+    }
+  }
+
+  Future<void> _restorePurchases(BuildContext context, AppLocalizations l10n) async {
+    await IAPService().restorePurchases();
+    if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(l10n.purchasesRestored)),
+      );
+    }
   }
 }

@@ -132,6 +132,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get restorePurchase => '恢复购买';
 
   @override
+  String get premiumActivated => '已激活';
+
+  @override
+  String get loadingProduct => '加载中...';
+
+  @override
+  String get purchaseFailed => '购买失败';
+
+  @override
+  String get purchasesRestored => '购买已恢复';
+
+  @override
   String get about => '关于';
 
   @override
@@ -252,6 +264,27 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get goalCompletedMessage => '您已完成今日目标。要继续练习吗？';
+
+  @override
+  String get microphonePermissionRequired => '需要麦克风权限';
+
+  @override
+  String get microphonePermissionMessage => '请在设置中允许麦克风访问以使用语音识别。';
+
+  @override
+  String get speechNotAvailable => '语音识别不可用';
+
+  @override
+  String get speechNotAvailableMessage => '此设备不支持语音识别。';
+
+  @override
+  String get error => '错误';
+
+  @override
+  String get speechErrorMessage => '初始化语音识别时出错。';
+
+  @override
+  String get openSettings => '打开设置';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -382,6 +415,18 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get restorePurchase => '恢復購買';
 
   @override
+  String get premiumActivated => '已啟用';
+
+  @override
+  String get loadingProduct => '載入中...';
+
+  @override
+  String get purchaseFailed => '購買失敗';
+
+  @override
+  String get purchasesRestored => '購買已恢復';
+
+  @override
   String get about => '關於';
 
   @override
@@ -502,4 +547,25 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get goalCompletedMessage => '您已完成今日目標。要繼續練習嗎？';
+
+  @override
+  String get microphonePermissionRequired => '需要麥克風權限';
+
+  @override
+  String get microphonePermissionMessage => '請在設定中允許麥克風存取以使用語音辨識。';
+
+  @override
+  String get speechNotAvailable => '語音辨識不可用';
+
+  @override
+  String get speechNotAvailableMessage => '此裝置不支援語音辨識。';
+
+  @override
+  String get error => '錯誤';
+
+  @override
+  String get speechErrorMessage => '初始化語音辨識時發生錯誤。';
+
+  @override
+  String get openSettings => '開啟設定';
 }

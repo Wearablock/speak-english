@@ -41,6 +41,10 @@
   "themeSystem": "Sistem",
   "removeAds": "Hapus iklan",
   "restorePurchase": "Pulihkan pembelian",
+  "premiumActivated": "Diaktifkan",
+  "loadingProduct": "Memuat...",
+  "purchaseFailed": "Pembelian gagal",
+  "purchasesRestored": "Pembelian dipulihkan",
   "about": "Tentang",
   "version": "Versi",
   "privacyPolicy": "Kebijakan privasi",
@@ -80,5 +84,12 @@
   "confirm": "Konfirmasi",
   "todayGoal": "Hari ini",
   "goalCompleted": "Target tercapai!",
-  "goalCompletedMessage": "Anda telah mencapai target hari ini. Ingin lanjut berlatih?"
+  "goalCompletedMessage": "Anda telah mencapai target hari ini. Ingin lanjut berlatih?",
+  "microphonePermissionRequired": "Izin mikrofon diperlukan",
+  "microphonePermissionMessage": "Harap izinkan akses mikrofon di Pengaturan untuk menggunakan pengenalan suara.",
+  "speechNotAvailable": "Pengenalan suara tidak tersedia",
+  "speechNotAvailableMessage": "Pengenalan suara tidak tersedia di perangkat ini.",
+  "error": "Kesalahan",
+  "speechErrorMessage": "Terjadi kesalahan saat menginisialisasi pengenalan suara.",
+  "openSettings": "Buka Pengaturan"
 }

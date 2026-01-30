@@ -1,0 +1,5 @@
+/* Arabic */
+"NSMicrophoneUsageDescription" = "مطلوب الوصول إلى الميكروفون للتعرف على الكلام.";
+"NSSpeechRecognitionUsageDescription" = "مطلوب التعرف على الكلام لممارسة النطق.";
+"NSUserTrackingUsageDescription" = "سيتم استخدام هذا المعرف لعرض إعلانات مخصصة لك.";
+"CFBundleDisplayName" = "تحدث الإنجليزية";

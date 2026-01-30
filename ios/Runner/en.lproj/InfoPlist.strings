@@ -1,0 +1,5 @@
+/* English - Default */
+"NSMicrophoneUsageDescription" = "Microphone access is required for speech recognition.";
+"NSSpeechRecognitionUsageDescription" = "Speech recognition is required for pronunciation practice.";
+"NSUserTrackingUsageDescription" = "This identifier will be used to deliver personalized ads to you.";
+"CFBundleDisplayName" = "Speak English";

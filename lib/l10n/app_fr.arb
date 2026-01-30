@@ -41,6 +41,10 @@
   "themeSystem": "Système",
   "removeAds": "Supprimer les pubs",
   "restorePurchase": "Restaurer l'achat",
+  "premiumActivated": "Activé",
+  "loadingProduct": "Chargement...",
+  "purchaseFailed": "Échec de l'achat",
+  "purchasesRestored": "Achats restaurés",
   "about": "À propos",
   "version": "Version",
   "privacyPolicy": "Politique de confidentialité",
@@ -80,5 +84,12 @@
   "confirm": "Confirmer",
   "todayGoal": "Aujourd'hui",
   "goalCompleted": "Objectif atteint !",
-  "goalCompletedMessage": "Vous avez atteint votre objectif du jour. Voulez-vous continuer à pratiquer ?"
+  "goalCompletedMessage": "Vous avez atteint votre objectif du jour. Voulez-vous continuer à pratiquer ?",
+  "microphonePermissionRequired": "Autorisation du microphone requise",
+  "microphonePermissionMessage": "Veuillez autoriser l'accès au microphone dans les Réglages pour utiliser la reconnaissance vocale.",
+  "speechNotAvailable": "Reconnaissance vocale indisponible",
+  "speechNotAvailableMessage": "La reconnaissance vocale n'est pas disponible sur cet appareil.",
+  "error": "Erreur",
+  "speechErrorMessage": "Une erreur s'est produite lors de l'initialisation de la reconnaissance vocale.",
+  "openSettings": "Ouvrir les Réglages"
 }

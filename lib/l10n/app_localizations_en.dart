@@ -132,6 +132,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get restorePurchase => 'Restore Purchase';
 
   @override
+  String get premiumActivated => 'Activated';
+
+  @override
+  String get loadingProduct => 'Loading...';
+
+  @override
+  String get purchaseFailed => 'Purchase failed';
+
+  @override
+  String get purchasesRestored => 'Purchases restored';
+
+  @override
   String get about => 'About';
 
   @override
@@ -255,4 +267,28 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'You\'ve achieved today\'s goal. Would you like to continue practicing?';
+
+  @override
+  String get microphonePermissionRequired => 'Microphone Permission Required';
+
+  @override
+  String get microphonePermissionMessage =>
+      'Please allow microphone access in Settings to use speech recognition.';
+
+  @override
+  String get speechNotAvailable => 'Speech Recognition Unavailable';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'Speech recognition is not available on this device.';
+
+  @override
+  String get error => 'Error';
+
+  @override
+  String get speechErrorMessage =>
+      'An error occurred while initializing speech recognition.';
+
+  @override
+  String get openSettings => 'Open Settings';
 }

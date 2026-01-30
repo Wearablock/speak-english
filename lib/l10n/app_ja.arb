@@ -41,6 +41,10 @@
   "themeSystem": "システム",
   "removeAds": "広告を削除",
   "restorePurchase": "購入を復元",
+  "premiumActivated": "有効",
+  "loadingProduct": "読み込み中...",
+  "purchaseFailed": "購入に失敗しました",
+  "purchasesRestored": "購入が復元されました",
   "about": "アプリについて",
   "version": "バージョン",
   "privacyPolicy": "プライバシーポリシー",
@@ -80,5 +84,12 @@
   "confirm": "確認",
   "todayGoal": "今日",
   "goalCompleted": "目標達成！",
-  "goalCompletedMessage": "今日の目標を達成しました。もっと練習しますか？"
+  "goalCompletedMessage": "今日の目標を達成しました。もっと練習しますか？",
+  "microphonePermissionRequired": "マイクの許可が必要です",
+  "microphonePermissionMessage": "音声認識を使用するには、設定でマイクへのアクセスを許可してください。",
+  "speechNotAvailable": "音声認識が利用できません",
+  "speechNotAvailableMessage": "このデバイスでは音声認識を使用できません。",
+  "error": "エラー",
+  "speechErrorMessage": "音声認識の初期化中にエラーが発生しました。",
+  "openSettings": "設定を開く"
 }

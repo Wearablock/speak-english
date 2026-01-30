@@ -132,6 +132,18 @@ class AppLocalizationsAr extends AppLocalizations {
   String get restorePurchase => 'استعادة الشراء';
 
   @override
+  String get premiumActivated => 'مفعل';
+
+  @override
+  String get loadingProduct => 'جارٍ التحميل...';
+
+  @override
+  String get purchaseFailed => 'فشل الشراء';
+
+  @override
+  String get purchasesRestored => 'تم استعادة المشتريات';
+
+  @override
   String get about => 'حول';
 
   @override
@@ -254,4 +266,27 @@ class AppLocalizationsAr extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'لقد حققت هدف اليوم. هل تريد الاستمرار في التدريب؟';
+
+  @override
+  String get microphonePermissionRequired => 'مطلوب إذن الميكروفون';
+
+  @override
+  String get microphonePermissionMessage =>
+      'يرجى السماح بالوصول إلى الميكروفون في الإعدادات لاستخدام التعرف على الكلام.';
+
+  @override
+  String get speechNotAvailable => 'التعرف على الكلام غير متاح';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'التعرف على الكلام غير متاح على هذا الجهاز.';
+
+  @override
+  String get error => 'خطأ';
+
+  @override
+  String get speechErrorMessage => 'حدث خطأ أثناء تهيئة التعرف على الكلام.';
+
+  @override
+  String get openSettings => 'فتح الإعدادات';
 }

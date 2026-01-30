@@ -1,0 +1,5 @@
+/* French */
+"NSMicrophoneUsageDescription" = "L'accès au microphone est nécessaire pour la reconnaissance vocale.";
+"NSSpeechRecognitionUsageDescription" = "La reconnaissance vocale est nécessaire pour la pratique de la prononciation.";
+"NSUserTrackingUsageDescription" = "Cet identifiant sera utilisé pour vous proposer des publicités personnalisées.";
+"CFBundleDisplayName" = "Parler Anglais";

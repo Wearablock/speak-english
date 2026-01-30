@@ -4,22 +4,22 @@ Verbessere deine Englischkenntnisse jeden Tag ein bisschen! Lerne mit KI-Feedbac
 
 Hauptfunktionen:
 
-📚 Strukturierte Lektionen
+[Strukturierte Lektionen]
 • Schrittweises Lernen von Anfänger bis Fortgeschritten
 • Verschiedene Themen wie Alltagsgespräche und Business-Englisch
 • Praktische Ausdrücke für den sofortigen Gebrauch
 
-🎤 KI-Aussprache-Feedback
+[KI-Aussprache-Feedback]
 • Echtzeit-Ausspracheanalyse
 • Präzise Ausspracheanleitung
 • Natürliche Aussprache durch wiederholtes Üben
 
-📊 Lernstatistiken
+[Lernstatistiken]
 • Tägliche/wöchentliche/monatliche Lernaufzeichnungen
 • Streak-Tracking
 • Fortschrittsdiagramme
 
-🎯 Tägliche Zielsetzung
+[Tägliche Zielsetzung]
 • Eigene Lernziele setzen
 • Konsequente Lerngewohnheiten mit Erinnerungen aufbauen
 • Belohnendes Erfolgssystem

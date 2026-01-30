@@ -41,6 +41,10 @@
   "themeSystem": "System",
   "removeAds": "Remove Ads",
   "restorePurchase": "Restore Purchase",
+  "premiumActivated": "Activated",
+  "loadingProduct": "Loading...",
+  "purchaseFailed": "Purchase failed",
+  "purchasesRestored": "Purchases restored",
   "about": "About",
   "version": "Version",
   "privacyPolicy": "Privacy Policy",
@@ -87,5 +91,12 @@
   "confirm": "Confirm",
   "todayGoal": "Today",
   "goalCompleted": "Goal Completed!",
-  "goalCompletedMessage": "You've achieved today's goal. Would you like to continue practicing?"
+  "goalCompletedMessage": "You've achieved today's goal. Would you like to continue practicing?",
+  "microphonePermissionRequired": "Microphone Permission Required",
+  "microphonePermissionMessage": "Please allow microphone access in Settings to use speech recognition.",
+  "speechNotAvailable": "Speech Recognition Unavailable",
+  "speechNotAvailableMessage": "Speech recognition is not available on this device.",
+  "error": "Error",
+  "speechErrorMessage": "An error occurred while initializing speech recognition.",
+  "openSettings": "Open Settings"
 }

@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../l10n/app_localizations.dart';
 import '../../constants/app_spacing.dart';
 import '../../constants/app_colors.dart';
@@ -77,15 +78,12 @@ class _PracticeScreenState extends State<PracticeScreen> {
       };
 
   void _startListening() async {
-    _soundService.playRecordStart();
-
     setState(() {
-      _isListening = true;
       _recognizedText = '';
       _accuracy = null;
     });
 
-    await _speechService.startListening(
+    final success = await _speechService.startListening(
       onResult: (text, isFinal) {
         setState(() {
           _recognizedText = text;
@@ -95,10 +93,72 @@ class _PracticeScreenState extends State<PracticeScreen> {
           _evaluateResult(text);
         }
       },
+      onPermissionError: (result) {
+        _showPermissionDialog(result);
+      },
       onError: (error) {
+        debugPrint('Speech error: $error');
         setState(() => _isListening = false);
       },
     );
+
+    if (success) {
+      _soundService.playRecordStart();
+      setState(() {
+        _isListening = true;
+      });
+    }
+  }
+
+  void _showPermissionDialog(SpeechInitResult result) {
+    final l10n = AppLocalizations.of(context)!;
+
+    String title;
+    String message;
+
+    switch (result) {
+      case SpeechInitResult.permissionDenied:
+        title = l10n.microphonePermissionRequired;
+        message = l10n.microphonePermissionMessage;
+        break;
+      case SpeechInitResult.notAvailable:
+        title = l10n.speechNotAvailable;
+        message = l10n.speechNotAvailableMessage;
+        break;
+      default:
+        title = l10n.error;
+        message = l10n.speechErrorMessage;
+    }
+
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(title),
+        content: Text(message),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(l10n.cancel),
+          ),
+          if (result == SpeechInitResult.permissionDenied)
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+                _openAppSettings();
+              },
+              child: Text(l10n.openSettings),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _openAppSettings() async {
+    // iOS 설정 앱 열기
+    final uri = Uri.parse('app-settings:');
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
   }
 
   void _stopListening() async {

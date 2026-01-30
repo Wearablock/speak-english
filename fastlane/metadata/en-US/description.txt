@@ -4,22 +4,22 @@ Improve your English skills little by little every day! Learn accurate pronuncia
 
 Key Features:
 
-📚 Structured Lessons
+[Structured Lessons]
 • Step-by-step learning from beginner to advanced
 • Various topics including daily conversation and business English
 • Practical expressions you can use right away
 
-🎤 AI Pronunciation Feedback
+[AI Pronunciation Feedback]
 • Real-time pronunciation analysis
 • Accurate pronunciation guidance
 • Natural pronunciation through repeated practice
 
-📊 Learning Statistics
+[Learning Statistics]
 • Daily/weekly/monthly learning records
 • Streak tracking
 • Progress improvement graphs
 
-🎯 Daily Goal Setting
+[Daily Goal Setting]
 • Set your own learning goals
 • Build consistent study habits with reminders
 • Rewarding achievement system

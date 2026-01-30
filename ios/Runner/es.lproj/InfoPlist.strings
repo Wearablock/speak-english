@@ -1,0 +1,5 @@
+/* Spanish */
+"NSMicrophoneUsageDescription" = "Se requiere acceso al micrófono para el reconocimiento de voz.";
+"NSSpeechRecognitionUsageDescription" = "Se requiere reconocimiento de voz para la práctica de pronunciación.";
+"NSUserTrackingUsageDescription" = "Este identificador se utilizará para mostrarle anuncios personalizados.";
+"CFBundleDisplayName" = "Habla Inglés";

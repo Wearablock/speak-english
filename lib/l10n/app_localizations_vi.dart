@@ -132,6 +132,18 @@ class AppLocalizationsVi extends AppLocalizations {
   String get restorePurchase => 'Khôi phục mua hàng';
 
   @override
+  String get premiumActivated => 'Đã kích hoạt';
+
+  @override
+  String get loadingProduct => 'Đang tải...';
+
+  @override
+  String get purchaseFailed => 'Mua hàng thất bại';
+
+  @override
+  String get purchasesRestored => 'Đã khôi phục mua hàng';
+
+  @override
   String get about => 'Giới thiệu';
 
   @override
@@ -254,4 +266,28 @@ class AppLocalizationsVi extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'Bạn đã hoàn thành mục tiêu hôm nay. Bạn có muốn tiếp tục luyện tập?';
+
+  @override
+  String get microphonePermissionRequired => 'Cần quyền truy cập micrô';
+
+  @override
+  String get microphonePermissionMessage =>
+      'Vui lòng cho phép truy cập micrô trong Cài đặt để sử dụng nhận dạng giọng nói.';
+
+  @override
+  String get speechNotAvailable => 'Nhận dạng giọng nói không khả dụng';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'Nhận dạng giọng nói không khả dụng trên thiết bị này.';
+
+  @override
+  String get error => 'Lỗi';
+
+  @override
+  String get speechErrorMessage =>
+      'Đã xảy ra lỗi khi khởi tạo nhận dạng giọng nói.';
+
+  @override
+  String get openSettings => 'Mở Cài đặt';
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import '../../constants/ad_config.dart';
+import '../../services/iap_service.dart';
 
 class BannerAdWidget extends StatefulWidget {
   const BannerAdWidget({super.key});
@@ -68,17 +69,27 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
       return const SizedBox.shrink();
     }
 
-    // 로딩 중 placeholder
-    if (!_isLoaded || _bannerAd == null) {
-      return const SizedBox(height: 50);
-    }
+    // 프리미엄 사용자는 광고 표시 안함
+    return ValueListenableBuilder<bool>(
+      valueListenable: IAPService().isPremiumNotifier,
+      builder: (context, isPremium, child) {
+        if (isPremium) {
+          return const SizedBox.shrink();
+        }
 
-    // 광고 표시
-    return Container(
-      alignment: Alignment.center,
-      width: double.infinity,
-      height: _bannerAd!.size.height.toDouble(),
-      child: AdWidget(ad: _bannerAd!),
+        // 로딩 중 placeholder
+        if (!_isLoaded || _bannerAd == null) {
+          return const SizedBox(height: 50);
+        }
+
+        // 광고 표시
+        return Container(
+          alignment: Alignment.center,
+          width: double.infinity,
+          height: _bannerAd!.size.height.toDouble(),
+          child: AdWidget(ad: _bannerAd!),
+        );
+      },
     );
   }
 }

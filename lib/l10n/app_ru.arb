@@ -41,6 +41,10 @@
   "themeSystem": "Системная",
   "removeAds": "Убрать рекламу",
   "restorePurchase": "Восстановить покупку",
+  "premiumActivated": "Активировано",
+  "loadingProduct": "Загрузка...",
+  "purchaseFailed": "Ошибка покупки",
+  "purchasesRestored": "Покупки восстановлены",
   "about": "О приложении",
   "version": "Версия",
   "privacyPolicy": "Политика конфиденциальности",
@@ -80,5 +84,12 @@
   "confirm": "Подтвердить",
   "todayGoal": "Сегодня",
   "goalCompleted": "Цель достигнута!",
-  "goalCompletedMessage": "Вы достигли сегодняшней цели. Хотите продолжить практику?"
+  "goalCompletedMessage": "Вы достигли сегодняшней цели. Хотите продолжить практику?",
+  "microphonePermissionRequired": "Требуется разрешение на микрофон",
+  "microphonePermissionMessage": "Пожалуйста, разрешите доступ к микрофону в Настройках для использования распознавания речи.",
+  "speechNotAvailable": "Распознавание речи недоступно",
+  "speechNotAvailableMessage": "Распознавание речи недоступно на этом устройстве.",
+  "error": "Ошибка",
+  "speechErrorMessage": "Произошла ошибка при инициализации распознавания речи.",
+  "openSettings": "Открыть Настройки"
 }

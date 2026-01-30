@@ -1,0 +1,5 @@
+/* Portuguese (Brazil) */
+"NSMicrophoneUsageDescription" = "O acesso ao microfone é necessário para o reconhecimento de voz.";
+"NSSpeechRecognitionUsageDescription" = "O reconhecimento de voz é necessário para a prática de pronúncia.";
+"NSUserTrackingUsageDescription" = "Este identificador será usado para exibir anúncios personalizados para você.";
+"CFBundleDisplayName" = "Falar Inglês";

@@ -4,9 +4,9 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'app.dart';
 import 'models/app_language.dart';
 import 'services/ad_service.dart';
+import 'services/iap_service.dart';
 import 'services/lesson_service.dart';
 import 'services/preferences_service.dart';
-import 'services/speech_service.dart';
 
 void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,8 @@ void main() async {
 
   // 서비스 초기화
   await PreferencesService.init();
-  await SpeechService().initialize();
+  // SpeechService 초기화는 실제 사용 시점(PracticeScreen)으로 지연
+  // 스플래시 화면 중 권한 팝업이 가려지는 문제 방지
 
   // 저장된 언어 설정 로드
   final savedLanguage = PreferencesService.getLanguage();
@@ -55,6 +56,9 @@ void main() async {
 
   // AdMob 초기화
   await AdService().initialize();
+
+  // IAP 초기화
+  await IAPService().initialize();
 
   // 스플래시 화면 제거
   FlutterNativeSplash.remove();

@@ -1,0 +1,18 @@
+# ==============================================
+# Appfile - Speak English
+# ==============================================
+
+# iOS Configuration
+app_identifier("com.wearablock.speakEnglish")
+apple_id("wearablock@gmail.com")
+team_id("52WXM3TBJ4")
+
+# App Store Connect API Key
+# 키 파일은 ~/.appstoreconnect/private_keys/ 에 저장됨
+
+# Android Configuration
+json_key_file(File.expand_path("~/.google-play/play-store-key.json"))
+
+for_platform :android do
+  package_name("com.cellithia.speak_english")
+end

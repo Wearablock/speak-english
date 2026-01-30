@@ -1,0 +1,5 @@
+/* Simplified Chinese */
+"NSMicrophoneUsageDescription" = "语音识别需要访问麦克风。";
+"NSSpeechRecognitionUsageDescription" = "发音练习需要语音识别功能。";
+"NSUserTrackingUsageDescription" = "此标识符将用于向您投放个性化广告。";
+"CFBundleDisplayName" = "英语口语";

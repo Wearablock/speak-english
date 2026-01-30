@@ -1,0 +1,194 @@
+# ==============================================
+# Fastfile - Store Automation
+# ==============================================
+#
+# iOS Commands:
+#   fastlane ios upload_screenshots    - Upload screenshots only
+#   fastlane ios upload_metadata       - Upload metadata only
+#   fastlane ios upload_testflight     - Upload IPA to TestFlight
+#   fastlane ios upload_appstore       - Upload IPA to App Store
+#   fastlane ios release_testflight    - Build + Upload to TestFlight
+#   fastlane ios release_appstore      - Build + Upload to App Store
+#
+# Android Commands:
+#   fastlane android upload_screenshots - Upload screenshots only
+#   fastlane android upload_metadata    - Upload metadata only
+#   fastlane android upload_internal    - Upload AAB to Internal Testing
+#   fastlane android upload_production  - Upload AAB to Production
+#   fastlane android release_internal   - Build + Upload to Internal
+#   fastlane android release_production - Build + Upload to Production
+#
+# ==============================================
+
+# ============================================
+# iOS Platform
+# ============================================
+platform :ios do
+
+  # App Store Connect API Key
+  def api_key
+    app_store_connect_api_key(
+      key_id: "H9Z8PM46JZ",
+      issuer_id: "61771d9b-ea3e-409d-9d3b-c4ee05e77ae8",
+      key_filepath: File.expand_path("~/.appstoreconnect/private_keys/AuthKey_H9Z8PM46JZ.p8")
+    )
+  end
+
+  desc "Upload screenshots to App Store Connect"
+  lane :upload_screenshots do
+    deliver(
+      skip_binary_upload: true,
+      skip_metadata: true,
+      skip_screenshots: false,
+      overwrite_screenshots: true,
+      screenshots_path: "store-automation/output/appstore",
+      precheck_include_in_app_purchases: false,
+      force: true
+    )
+  end
+
+  desc "Upload metadata to App Store Connect"
+  lane :upload_metadata do
+    deliver(
+      skip_binary_upload: true,
+      skip_metadata: false,
+      skip_screenshots: true,
+      skip_app_version_update: true,
+      precheck_include_in_app_purchases: false,
+      force: true,
+      run_precheck_before_submit: false
+    )
+  end
+
+  desc "Upload IPA to TestFlight"
+  lane :upload_testflight do
+    upload_to_testflight(
+      api_key: api_key,
+      ipa: File.expand_path("../build/ios/ipa/speak_english.ipa", __dir__),
+      skip_waiting_for_build_processing: true
+    )
+  end
+
+  desc "Upload IPA to App Store"
+  lane :upload_appstore do
+    deliver(
+      ipa: "build/ios/ipa/*.ipa",
+      skip_metadata: true,
+      skip_screenshots: true,
+      submit_for_review: false,
+      precheck_include_in_app_purchases: false
+    )
+  end
+
+  desc "Build and upload to TestFlight"
+  lane :release_testflight do
+    sh("cd ../.. && flutter build ipa --release")
+    upload_testflight
+  end
+
+  desc "Build and upload to App Store"
+  lane :release_appstore do
+    sh("cd ../.. && flutter build ipa --release")
+    upload_appstore
+  end
+
+end
+
+# ============================================
+# Android Platform
+# ============================================
+platform :android do
+
+  # Metadata path for all uploads
+  PLAYSTORE_METADATA = "store-automation/output/playstore"
+
+  desc "Upload screenshots to Play Store"
+  lane :upload_screenshots do
+    upload_to_play_store(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: false,
+      skip_upload_screenshots: false,
+      metadata_path: PLAYSTORE_METADATA
+    )
+  end
+
+  desc "Upload metadata to Play Store"
+  lane :upload_metadata do
+    upload_to_play_store(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: false,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      metadata_path: PLAYSTORE_METADATA
+    )
+  end
+
+  desc "Upload all metadata, screenshots, and images to Play Store"
+  lane :upload_all do
+    upload_to_play_store(
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      skip_upload_metadata: false,
+      skip_upload_changelogs: true,
+      skip_upload_images: false,
+      skip_upload_screenshots: false,
+      metadata_path: PLAYSTORE_METADATA
+    )
+  end
+
+  desc "Upload AAB to Internal Testing"
+  lane :upload_internal do
+    upload_to_play_store(
+      track: "internal",
+      aab: "build/app/outputs/bundle/release/app-release.aab",
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Upload AAB to Production"
+  lane :upload_production do
+    upload_to_play_store(
+      track: "production",
+      aab: "build/app/outputs/bundle/release/app-release.aab",
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true
+    )
+  end
+
+  desc "Build and upload to Internal Testing"
+  lane :release_internal do
+    sh("cd .. && flutter build appbundle --release")
+    upload_internal
+  end
+
+  desc "Build and upload to Production"
+  lane :release_production do
+    sh("cd .. && flutter build appbundle --release")
+    upload_production
+  end
+
+  desc "Full deploy: metadata + screenshots + build + internal"
+  lane :deploy_internal do
+    upload_all
+    sh("cd .. && flutter build appbundle --release")
+    upload_internal
+  end
+
+  desc "Full deploy: metadata + screenshots + build + production"
+  lane :deploy_production do
+    upload_all
+    sh("cd .. && flutter build appbundle --release")
+    upload_production
+  end
+
+end

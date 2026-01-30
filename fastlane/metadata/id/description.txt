@@ -4,22 +4,22 @@ Tingkatkan bahasa Inggris Anda sedikit demi sedikit setiap hari! Pelajari penguc
 
 Fitur Utama:
 
-📚 Pelajaran Terstruktur
+[Pelajaran Terstruktur]
 • Pembelajaran bertahap dari pemula hingga mahir
 • Berbagai topik: percakapan sehari-hari, bahasa Inggris bisnis, dll.
 • Ekspresi praktis untuk digunakan segera
 
-🎤 Umpan Balik Pengucapan AI
+[Umpan Balik Pengucapan AI]
 • Analisis pengucapan real-time
 • Panduan pengucapan yang akurat
 • Pengucapan alami melalui latihan berulang
 
-📊 Statistik Pembelajaran
+[Statistik Pembelajaran]
 • Catatan pembelajaran harian/mingguan/bulanan
 • Pelacakan streak
 • Grafik kemajuan
 
-🎯 Target Harian
+[Target Harian]
 • Tetapkan tujuan belajar Anda sendiri
 • Bangun kebiasaan belajar yang konsisten dengan pengingat
 • Sistem penghargaan yang memotivasi

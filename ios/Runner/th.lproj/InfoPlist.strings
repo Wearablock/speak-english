@@ -1,0 +1,5 @@
+/* Thai */
+"NSMicrophoneUsageDescription" = "จำเป็นต้องเข้าถึงไมโครโฟนสำหรับการรู้จำเสียง";
+"NSSpeechRecognitionUsageDescription" = "จำเป็นต้องใช้การรู้จำเสียงสำหรับการฝึกออกเสียง";
+"NSUserTrackingUsageDescription" = "ตัวระบุนี้จะใช้เพื่อแสดงโฆษณาที่ปรับให้เหมาะกับคุณ";
+"CFBundleDisplayName" = "พูดภาษาอังกฤษ";

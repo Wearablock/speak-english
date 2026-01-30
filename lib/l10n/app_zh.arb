@@ -41,6 +41,10 @@
   "themeSystem": "跟随系统",
   "removeAds": "移除广告",
   "restorePurchase": "恢复购买",
+  "premiumActivated": "已激活",
+  "loadingProduct": "加载中...",
+  "purchaseFailed": "购买失败",
+  "purchasesRestored": "购买已恢复",
   "about": "关于",
   "version": "版本",
   "privacyPolicy": "隐私政策",
@@ -80,5 +84,12 @@
   "confirm": "确认",
   "todayGoal": "今日",
   "goalCompleted": "目标完成！",
-  "goalCompletedMessage": "您已完成今日目标。要继续练习吗？"
+  "goalCompletedMessage": "您已完成今日目标。要继续练习吗？",
+  "microphonePermissionRequired": "需要麦克风权限",
+  "microphonePermissionMessage": "请在设置中允许麦克风访问以使用语音识别。",
+  "speechNotAvailable": "语音识别不可用",
+  "speechNotAvailableMessage": "此设备不支持语音识别。",
+  "error": "错误",
+  "speechErrorMessage": "初始化语音识别时出错。",
+  "openSettings": "打开设置"
 }

@@ -1,0 +1,5 @@
+/* Indonesian */
+"NSMicrophoneUsageDescription" = "Akses mikrofon diperlukan untuk pengenalan suara.";
+"NSSpeechRecognitionUsageDescription" = "Pengenalan suara diperlukan untuk latihan pengucapan.";
+"NSUserTrackingUsageDescription" = "Pengidentifikasi ini akan digunakan untuk menampilkan iklan yang dipersonalisasi kepada Anda.";
+"CFBundleDisplayName" = "Berbicara Inggris";

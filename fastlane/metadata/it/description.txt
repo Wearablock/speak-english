@@ -4,22 +4,22 @@ Migliora il tuo inglese poco a poco ogni giorno! Impara la pronuncia corretta co
 
 Funzionalità principali:
 
-📚 Lezioni strutturate
+[Lezioni strutturate]
 • Apprendimento graduale dal principiante all'avanzato
 • Vari argomenti: conversazione quotidiana, inglese commerciale, ecc.
 • Espressioni pratiche da usare subito
 
-🎤 Feedback sulla pronuncia con IA
+[Feedback sulla pronuncia con IA]
 • Analisi della pronuncia in tempo reale
 • Guida alla pronuncia precisa
 • Pronuncia naturale attraverso la pratica ripetuta
 
-📊 Statistiche di apprendimento
+[Statistiche di apprendimento]
 • Registri di apprendimento giornalieri/settimanali/mensili
 • Tracciamento delle serie consecutive
 • Grafici dei progressi
 
-🎯 Obiettivi giornalieri
+[Obiettivi giornalieri]
 • Imposta i tuoi obiettivi di apprendimento
 • Crea abitudini di studio costanti con promemoria
 • Sistema di ricompense motivante

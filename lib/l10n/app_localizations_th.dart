@@ -132,6 +132,18 @@ class AppLocalizationsTh extends AppLocalizations {
   String get restorePurchase => 'กู้คืนการซื้อ';
 
   @override
+  String get premiumActivated => 'เปิดใช้งานแล้ว';
+
+  @override
+  String get loadingProduct => 'กำลังโหลด...';
+
+  @override
+  String get purchaseFailed => 'การซื้อล้มเหลว';
+
+  @override
+  String get purchasesRestored => 'กู้คืนการซื้อสำเร็จ';
+
+  @override
   String get about => 'เกี่ยวกับ';
 
   @override
@@ -254,4 +266,27 @@ class AppLocalizationsTh extends AppLocalizations {
   @override
   String get goalCompletedMessage =>
       'คุณบรรลุเป้าหมายวันนี้แล้ว ต้องการฝึกต่อไหม?';
+
+  @override
+  String get microphonePermissionRequired => 'ต้องการสิทธิ์ไมโครโฟน';
+
+  @override
+  String get microphonePermissionMessage =>
+      'กรุณาอนุญาตการเข้าถึงไมโครโฟนในการตั้งค่าเพื่อใช้การรู้จำเสียง';
+
+  @override
+  String get speechNotAvailable => 'การรู้จำเสียงไม่พร้อมใช้งาน';
+
+  @override
+  String get speechNotAvailableMessage =>
+      'การรู้จำเสียงไม่พร้อมใช้งานบนอุปกรณ์นี้';
+
+  @override
+  String get error => 'ข้อผิดพลาด';
+
+  @override
+  String get speechErrorMessage => 'เกิดข้อผิดพลาดขณะเริ่มต้นการรู้จำเสียง';
+
+  @override
+  String get openSettings => 'เปิดการตั้งค่า';
 }

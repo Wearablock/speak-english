@@ -41,6 +41,10 @@
   "themeSystem": "System",
   "removeAds": "Werbung entfernen",
   "restorePurchase": "Kauf wiederherstellen",
+  "premiumActivated": "Aktiviert",
+  "loadingProduct": "Laden...",
+  "purchaseFailed": "Kauf fehlgeschlagen",
+  "purchasesRestored": "Käufe wiederhergestellt",
   "about": "Über",
   "version": "Version",
   "privacyPolicy": "Datenschutz",
@@ -80,5 +84,12 @@
   "confirm": "Bestätigen",
   "todayGoal": "Heute",
   "goalCompleted": "Ziel erreicht!",
-  "goalCompletedMessage": "Sie haben Ihr heutiges Ziel erreicht. Möchten Sie weiter üben?"
+  "goalCompletedMessage": "Sie haben Ihr heutiges Ziel erreicht. Möchten Sie weiter üben?",
+  "microphonePermissionRequired": "Mikrofonberechtigung erforderlich",
+  "microphonePermissionMessage": "Bitte erlauben Sie den Mikrofonzugriff in den Einstellungen, um die Spracherkennung zu nutzen.",
+  "speechNotAvailable": "Spracherkennung nicht verfügbar",
+  "speechNotAvailableMessage": "Die Spracherkennung ist auf diesem Gerät nicht verfügbar.",
+  "error": "Fehler",
+  "speechErrorMessage": "Bei der Initialisierung der Spracherkennung ist ein Fehler aufgetreten.",
+  "openSettings": "Einstellungen öffnen"
 }
