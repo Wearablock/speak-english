@@ -32,11 +32,22 @@ class _LessonListScreenState extends State<LessonListScreen> {
   @override
   void initState() {
     super.initState();
-    _loadData();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_lessons == null) {
+      _loadData();
+    }
   }
 
   Future<void> _loadData() async {
-    final lessons = await _lessonService.getLessonsByCategory(widget.category.id);
+    final locale = Localizations.localeOf(context).toString();
+    final lessons = await _lessonService.getLessonsByCategory(
+      widget.category.id,
+      locale: locale,
+    );
     final progress = await _progressService.getAllProgress();
 
     if (mounted) {

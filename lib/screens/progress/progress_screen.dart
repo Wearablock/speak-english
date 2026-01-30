@@ -23,11 +23,21 @@ class _ProgressScreenState extends State<ProgressScreen> {
   int _totalPracticeCount = 0;
   double _averageAccuracy = 0.0;
 
+  bool _isInitialized = false;
+
   @override
   void initState() {
     super.initState();
-    _loadStats();
     ProgressNotifier().addListener(_loadStats);
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (!_isInitialized) {
+      _isInitialized = true;
+      _loadStats();
+    }
   }
 
   @override
@@ -37,11 +47,12 @@ class _ProgressScreenState extends State<ProgressScreen> {
   }
 
   Future<void> _loadStats() async {
+    final locale = Localizations.localeOf(context).toString();
     final streak = await _progressService.getDailyStreak();
     final completed = await _progressService.getCompletedCount();
     final total = await _progressService.getTotalPracticeCount();
     final accuracy = await _progressService.getAverageAccuracy();
-    final lessons = await _lessonService.getLessons();
+    final lessons = await _lessonService.getLessons(locale: locale);
 
     if (mounted) {
       setState(() {

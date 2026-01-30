@@ -39,7 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Future<void> _checkForUpdates() async {
-    final result = await _lessonService.syncFromRemote();
+    final locale = PreferencesService.getLanguage() ?? 'en';
+    final result = await _lessonService.syncFromRemote(locale: locale);
 
     if (!mounted) return;
 

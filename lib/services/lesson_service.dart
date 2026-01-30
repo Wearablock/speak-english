@@ -43,49 +43,103 @@ class LessonService {
   LessonService._internal();
 
   static const String _lessonsKey = 'lessons_data';
+  static const String _translationsKeyPrefix = 'translations_';
   static const String _versionKey = 'lessons_version';
 
   List<Lesson>? _cachedLessons;
   List<LessonCategory>? _cachedCategories;
+  String? _cachedLocale;
 
-  /// 모든 레슨 조회
-  Future<List<Lesson>> getLessons() async {
-    if (_cachedLessons != null) return _cachedLessons!;
+  /// 지원 언어 목록
+  static const List<String> supportedLanguages = [
+    'en', 'ko', 'ja', 'zh_CN', 'zh_TW',
+    'es', 'fr', 'de', 'it', 'pt',
+    'ru', 'ar', 'hi', 'th', 'vi'
+  ];
 
-    final prefs = await SharedPreferences.getInstance();
-    final data = prefs.getString(_lessonsKey);
+  /// 로케일 코드를 파일명 형식으로 변환
+  String _normalizeLocale(String locale) {
+    // zh-TW, zh_TW, zh-Hant -> zh_TW
+    if (locale.startsWith('zh') &&
+        (locale.contains('TW') || locale.contains('Hant'))) {
+      return 'zh_TW';
+    }
+    // zh, zh-CN, zh_CN, zh-Hans -> zh_CN
+    if (locale.startsWith('zh')) {
+      return 'zh_CN';
+    }
+    // en-US, en_US -> en
+    final baseLanguage = locale.split(RegExp(r'[-_]')).first;
 
-    if (data != null) {
-      _parseData(data);
+    // 지원 언어 확인
+    if (supportedLanguages.contains(baseLanguage)) {
+      return baseLanguage;
+    }
+
+    return 'en'; // 기본값
+  }
+
+  /// 모든 레슨 조회 (현재 로케일 번역 포함)
+  Future<List<Lesson>> getLessons({String? locale}) async {
+    final targetLocale = _normalizeLocale(locale ?? 'en');
+
+    // 캐시 확인 (같은 로케일인 경우)
+    if (_cachedLessons != null && _cachedLocale == targetLocale) {
       return _cachedLessons!;
     }
 
-    // 로컬 데이터 없으면 assets에서 로드
-    return await _loadFromAssets();
+    final prefs = await SharedPreferences.getInstance();
+
+    // 1. 레슨 기본 데이터 로드
+    String? lessonsData = prefs.getString(_lessonsKey);
+    if (lessonsData == null) {
+      lessonsData = await rootBundle.loadString('assets/data/lessons.json');
+    }
+
+    // 2. 번역 데이터 로드
+    String? translationsData = prefs.getString('$_translationsKeyPrefix$targetLocale');
+    if (translationsData == null) {
+      try {
+        translationsData = await rootBundle.loadString(
+          'assets/data/translations/$targetLocale.json'
+        );
+      } catch (e) {
+        // 번역 파일 없으면 영어 사용
+        translationsData = await rootBundle.loadString(
+          'assets/data/translations/en.json'
+        );
+      }
+    }
+
+    // 3. 데이터 파싱 및 병합
+    _parseAndMergeData(lessonsData, translationsData, targetLocale);
+    _cachedLocale = targetLocale;
+
+    return _cachedLessons!;
   }
 
   /// 모든 카테고리 조회
   Future<List<LessonCategory>> getCategories() async {
     if (_cachedCategories != null) return _cachedCategories!;
-    await getLessons(); // 레슨 로드 시 카테고리도 함께 파싱됨
+    await getLessons();
     return _cachedCategories!;
   }
 
   /// 카테고리별 레슨 조회
-  Future<List<Lesson>> getLessonsByCategory(int categoryId) async {
-    final lessons = await getLessons();
+  Future<List<Lesson>> getLessonsByCategory(int categoryId, {String? locale}) async {
+    final lessons = await getLessons(locale: locale);
     return lessons.where((l) => l.categoryId == categoryId).toList();
   }
 
   /// 난이도별 레슨 조회
-  Future<List<Lesson>> getLessonsByDifficulty(int difficulty) async {
-    final lessons = await getLessons();
+  Future<List<Lesson>> getLessonsByDifficulty(int difficulty, {String? locale}) async {
+    final lessons = await getLessons(locale: locale);
     return lessons.where((l) => l.difficulty == difficulty).toList();
   }
 
   /// ID로 레슨 조회
-  Future<Lesson?> getLessonById(int id) async {
-    final lessons = await getLessons();
+  Future<Lesson?> getLessonById(int id, {String? locale}) async {
+    final lessons = await getLessons(locale: locale);
     try {
       return lessons.firstWhere((l) => l.id == id);
     } catch (_) {
@@ -94,10 +148,11 @@ class LessonService {
   }
 
   /// GitHub에서 새 데이터 동기화
-  Future<SyncResult> syncFromRemote() async {
+  Future<SyncResult> syncFromRemote({String? locale}) async {
     try {
       final prefs = await SharedPreferences.getInstance();
       final localVersion = prefs.getString(_versionKey) ?? '0.0.0';
+      final targetLocale = _normalizeLocale(locale ?? 'en');
 
       // 1. 버전 체크
       final versionResponse = await http.get(
@@ -128,26 +183,41 @@ class LessonService {
         return SyncResult(status: SyncStatus.upToDate);
       }
 
-      // 4. 새 데이터 다운로드
-      final dataResponse = await http.get(
+      // 4. 레슨 기본 데이터 다운로드
+      final lessonsResponse = await http.get(
         Uri.parse('${AppConfig.githubDataBaseUrl}/lessons.json'),
       ).timeout(const Duration(seconds: 30));
 
-      if (dataResponse.statusCode != 200) {
+      if (lessonsResponse.statusCode != 200) {
         return SyncResult(
           status: SyncStatus.failed,
-          errorMessage: 'Data download failed: ${dataResponse.statusCode}',
+          errorMessage: 'Lessons download failed: ${lessonsResponse.statusCode}',
         );
       }
 
-      // 5. 데이터 유효성 검사
+      // 5. 번역 데이터 다운로드 (현재 언어)
+      final translationsResponse = await http.get(
+        Uri.parse('${AppConfig.githubDataBaseUrl}/translations/$targetLocale.json'),
+      ).timeout(const Duration(seconds: 30));
+
+      if (translationsResponse.statusCode != 200) {
+        return SyncResult(
+          status: SyncStatus.failed,
+          errorMessage: 'Translations download failed: ${translationsResponse.statusCode}',
+        );
+      }
+
+      // 6. 데이터 유효성 검사
       int lessonCount = 0;
       try {
-        final testData = jsonDecode(dataResponse.body);
+        final testData = jsonDecode(lessonsResponse.body);
         if (testData['lessons'] == null || testData['categories'] == null) {
           throw const FormatException('Invalid data format');
         }
         lessonCount = (testData['lessons'] as List).length;
+
+        // 번역 데이터 검증
+        jsonDecode(translationsResponse.body);
       } catch (e) {
         return SyncResult(
           status: SyncStatus.failed,
@@ -155,13 +225,15 @@ class LessonService {
         );
       }
 
-      // 6. 로컬 저장
-      await prefs.setString(_lessonsKey, dataResponse.body);
+      // 7. 로컬 저장
+      await prefs.setString(_lessonsKey, lessonsResponse.body);
+      await prefs.setString('$_translationsKeyPrefix$targetLocale', translationsResponse.body);
       await prefs.setString(_versionKey, remoteVersion);
 
-      // 7. 캐시 무효화
+      // 8. 캐시 무효화
       _cachedLessons = null;
       _cachedCategories = null;
+      _cachedLocale = null;
 
       debugPrint('Data synced: v$localVersion -> v$remoteVersion ($lessonCount lessons)');
 
@@ -189,6 +261,35 @@ class LessonService {
     }
   }
 
+  /// 특정 언어 번역만 다운로드
+  Future<bool> downloadTranslation(String locale) async {
+    try {
+      final targetLocale = _normalizeLocale(locale);
+      final prefs = await SharedPreferences.getInstance();
+
+      final response = await http.get(
+        Uri.parse('${AppConfig.githubDataBaseUrl}/translations/$targetLocale.json'),
+      ).timeout(const Duration(seconds: 30));
+
+      if (response.statusCode != 200) {
+        return false;
+      }
+
+      await prefs.setString('$_translationsKeyPrefix$targetLocale', response.body);
+
+      // 현재 캐시된 로케일이면 무효화
+      if (_cachedLocale == targetLocale) {
+        _cachedLessons = null;
+        _cachedLocale = null;
+      }
+
+      return true;
+    } catch (e) {
+      debugPrint('Translation download failed: $e');
+      return false;
+    }
+  }
+
   /// 버전 비교 (semver)
   int _compareVersions(String v1, String v2) {
     final parts1 = v1.split('.').map((e) => int.tryParse(e) ?? 0).toList();
@@ -213,24 +314,38 @@ class LessonService {
     return prefs.getString(_versionKey) ?? '0.0.0';
   }
 
-  /// Assets에서 초기 데이터 로드
-  Future<List<Lesson>> _loadFromAssets() async {
-    final jsonString = await rootBundle.loadString('assets/data/lessons_v1.json');
-    _parseData(jsonString);
-    return _cachedLessons!;
-  }
+  /// JSON 파싱 및 번역 병합
+  void _parseAndMergeData(String lessonsJson, String translationsJson, String locale) {
+    final lessonsData = jsonDecode(lessonsJson);
+    final translationsData = jsonDecode(translationsJson) as Map<String, dynamic>;
 
-  /// JSON 파싱
-  void _parseData(String jsonString) {
-    final data = jsonDecode(jsonString);
-
-    _cachedLessons = (data['lessons'] as List)
-        .map((e) => Lesson.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-    _cachedCategories = (data['categories'] as List)
+    // 카테고리 파싱
+    _cachedCategories = (lessonsData['categories'] as List)
         .map((e) => LessonCategory.fromJson(e as Map<String, dynamic>))
         .toList();
+
+    // 레슨 파싱 및 번역 병합
+    _cachedLessons = (lessonsData['lessons'] as List).map((e) {
+      final lessonMap = e as Map<String, dynamic>;
+      final lessonId = lessonMap['id'].toString();
+
+      // 번역 데이터 병합
+      final translations = <String, String>{
+        'en': lessonMap['sentence'] as String,
+      };
+
+      if (translationsData.containsKey(lessonId)) {
+        translations[locale] = translationsData[lessonId] as String;
+      }
+
+      return Lesson(
+        id: lessonMap['id'] as int,
+        sentence: lessonMap['sentence'] as String,
+        translations: translations,
+        categoryId: lessonMap['category_id'] as int,
+        difficulty: lessonMap['difficulty'] as int? ?? 1,
+      );
+    }).toList();
 
     // 카테고리별 레슨 수 업데이트
     for (final category in _cachedCategories!) {
@@ -238,5 +353,12 @@ class LessonService {
           .where((l) => l.categoryId == category.id)
           .length;
     }
+  }
+
+  /// 캐시 초기화 (로케일 변경 시)
+  void clearCache() {
+    _cachedLessons = null;
+    _cachedCategories = null;
+    _cachedLocale = null;
   }
 }

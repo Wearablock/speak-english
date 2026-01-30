@@ -51,12 +51,17 @@ class SmartLessonService {
   final LessonService _lessonService = LessonService();
   final ProgressService _progressService = ProgressService();
 
+  /// 현재 언어 설정 가져오기
+  String _getCurrentLocale() {
+    return PreferencesService.getLanguage() ?? 'en';
+  }
+
   /// 오늘의 학습 레슨 목록 생성
   Future<List<SmartLesson>> getDailyLessons() async {
     final dailyGoal = PreferencesService.getDailyGoal();
     final targetCount = dailyGoal.sentenceCount;
 
-    final allLessons = await _lessonService.getLessons();
+    final allLessons = await _lessonService.getLessons(locale: _getCurrentLocale());
     final allProgress = await _progressService.getAllProgress();
     final today = DateTime.now();
 
@@ -179,7 +184,7 @@ class SmartLessonService {
   /// 학습 통계
   Future<LearningStats> getStats() async {
     final allProgress = await _progressService.getAllProgress();
-    final allLessons = await _lessonService.getLessons();
+    final allLessons = await _lessonService.getLessons(locale: _getCurrentLocale());
 
     final totalLessons = allLessons.length;
     final learnedCount = allProgress.length;
@@ -214,7 +219,7 @@ class SmartLessonService {
 
   /// 새로 학습할 레슨 수
   Future<int> getNewLessonCount() async {
-    final allLessons = await _lessonService.getLessons();
+    final allLessons = await _lessonService.getLessons(locale: _getCurrentLocale());
     final allProgress = await _progressService.getAllProgress();
     return allLessons.where((l) => !allProgress.containsKey(l.id)).length;
   }

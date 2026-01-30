@@ -1,0 +1,512 @@
+{
+  "version": "3.0.0",
+  "categories": [
+    {
+      "id": 1,
+      "name_key": "category_greetings",
+      "icon": "handshake"
+    },
+    {
+      "id": 2,
+      "name_key": "category_daily",
+      "icon": "sun"
+    },
+    {
+      "id": 3,
+      "name_key": "category_business",
+      "icon": "briefcase"
+    },
+    {
+      "id": 4,
+      "name_key": "category_travel",
+      "icon": "airplane"
+    },
+    {
+      "id": 5,
+      "name_key": "category_shopping",
+      "icon": "shopping_cart"
+    }
+  ],
+  "lessons": [
+    {
+      "id": 1,
+      "sentence": "Hello!",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 2,
+      "sentence": "Thank you.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "sentence": "Nice to meet you.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 4,
+      "sentence": "How are you?",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 5,
+      "sentence": "I'm fine, thank you.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 6,
+      "sentence": "What's your name?",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 7,
+      "sentence": "My name is John.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 8,
+      "sentence": "Nice to meet you too.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 9,
+      "sentence": "See you later.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 10,
+      "sentence": "Have a nice day!",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 11,
+      "sentence": "Excuse me.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 12,
+      "sentence": "I'm sorry.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 13,
+      "sentence": "No problem.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 14,
+      "sentence": "What time is it?",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 15,
+      "sentence": "Where is the restroom?",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 16,
+      "sentence": "Can you help me?",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 17,
+      "sentence": "I don't understand.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 18,
+      "sentence": "Could you repeat that?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 19,
+      "sentence": "Could you speak more slowly?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 20,
+      "sentence": "What does this mean?",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 21,
+      "sentence": "How much is this?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 22,
+      "sentence": "Can I try this on?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 23,
+      "sentence": "I'll take this one.",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 24,
+      "sentence": "Do you have this in a different size?",
+      "category_id": 5,
+      "difficulty": 2
+    },
+    {
+      "id": 25,
+      "sentence": "Can I pay by card?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 26,
+      "sentence": "I'd like to return this.",
+      "category_id": 5,
+      "difficulty": 2
+    },
+    {
+      "id": 27,
+      "sentence": "Could I have the check, please?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 28,
+      "sentence": "I have a reservation.",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 29,
+      "sentence": "Where is the nearest subway station?",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 30,
+      "sentence": "How do I get to the airport?",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 31,
+      "sentence": "Is this seat taken?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 32,
+      "sentence": "Can I have a menu, please?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 33,
+      "sentence": "I'd like to order.",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 34,
+      "sentence": "Could I have some water, please?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 35,
+      "sentence": "Nice to meet you. I'm the new employee.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 36,
+      "sentence": "I have a meeting at 10.",
+      "category_id": 3,
+      "difficulty": 1
+    },
+    {
+      "id": 37,
+      "sentence": "Could you send me the file?",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 38,
+      "sentence": "I'll get back to you soon.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 39,
+      "sentence": "Let me check my schedule.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 40,
+      "sentence": "Thank you for your time.",
+      "category_id": 3,
+      "difficulty": 1
+    },
+    {
+      "id": 41,
+      "sentence": "It's been a while since we last met.",
+      "category_id": 1,
+      "difficulty": 2
+    },
+    {
+      "id": 42,
+      "sentence": "Please give my regards to your family.",
+      "category_id": 1,
+      "difficulty": 3
+    },
+    {
+      "id": 43,
+      "sentence": "I'm looking forward to seeing you again.",
+      "category_id": 1,
+      "difficulty": 2
+    },
+    {
+      "id": 44,
+      "sentence": "Take care of yourself.",
+      "category_id": 1,
+      "difficulty": 1
+    },
+    {
+      "id": 45,
+      "sentence": "I really appreciate your kindness.",
+      "category_id": 1,
+      "difficulty": 2
+    },
+    {
+      "id": 46,
+      "sentence": "Would you mind if I asked you a question?",
+      "category_id": 1,
+      "difficulty": 3
+    },
+    {
+      "id": 47,
+      "sentence": "I didn't catch your name.",
+      "category_id": 1,
+      "difficulty": 2
+    },
+    {
+      "id": 48,
+      "sentence": "Congratulations on your promotion!",
+      "category_id": 1,
+      "difficulty": 2
+    },
+    {
+      "id": 49,
+      "sentence": "I need to make a phone call.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 50,
+      "sentence": "The weather is really nice today.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 51,
+      "sentence": "I'm running a bit late.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 52,
+      "sentence": "I'm not feeling well today.",
+      "category_id": 2,
+      "difficulty": 1
+    },
+    {
+      "id": 53,
+      "sentence": "Could you turn down the volume, please?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 54,
+      "sentence": "I think I left my wallet at home.",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 55,
+      "sentence": "Would you mind opening the window?",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 56,
+      "sentence": "I've been meaning to call you.",
+      "category_id": 2,
+      "difficulty": 3
+    },
+    {
+      "id": 57,
+      "sentence": "Let me know if you need anything.",
+      "category_id": 2,
+      "difficulty": 2
+    },
+    {
+      "id": 58,
+      "sentence": "I was wondering if you could help me with something.",
+      "category_id": 2,
+      "difficulty": 3
+    },
+    {
+      "id": 59,
+      "sentence": "We need to discuss this matter further.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 60,
+      "sentence": "I'll prepare the report by tomorrow.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 61,
+      "sentence": "Could we reschedule the meeting?",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 62,
+      "sentence": "I'd like to propose a new idea.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 63,
+      "sentence": "We're behind schedule on this project.",
+      "category_id": 3,
+      "difficulty": 3
+    },
+    {
+      "id": 64,
+      "sentence": "I'll follow up with you next week.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 65,
+      "sentence": "Could you elaborate on that point?",
+      "category_id": 3,
+      "difficulty": 3
+    },
+    {
+      "id": 66,
+      "sentence": "I completely agree with your suggestion.",
+      "category_id": 3,
+      "difficulty": 2
+    },
+    {
+      "id": 67,
+      "sentence": "I'd like to book a room for two nights.",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 68,
+      "sentence": "What time does the train depart?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 69,
+      "sentence": "Is breakfast included in the room rate?",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 70,
+      "sentence": "Could you recommend a good restaurant nearby?",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 71,
+      "sentence": "I'd like to extend my stay by one more night.",
+      "category_id": 4,
+      "difficulty": 3
+    },
+    {
+      "id": 72,
+      "sentence": "The flight has been delayed by two hours.",
+      "category_id": 4,
+      "difficulty": 2
+    },
+    {
+      "id": 73,
+      "sentence": "I'm allergic to peanuts.",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 74,
+      "sentence": "Could you take a photo of us, please?",
+      "category_id": 4,
+      "difficulty": 1
+    },
+    {
+      "id": 75,
+      "sentence": "Do you have this in a different color?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 76,
+      "sentence": "Is there a discount for buying in bulk?",
+      "category_id": 5,
+      "difficulty": 2
+    },
+    {
+      "id": 77,
+      "sentence": "Could I get a receipt, please?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 78,
+      "sentence": "I'm just looking, thank you.",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 79,
+      "sentence": "When does the sale end?",
+      "category_id": 5,
+      "difficulty": 1
+    },
+    {
+      "id": 80,
+      "sentence": "This product seems to be defective.",
+      "category_id": 5,
+      "difficulty": 3
+    }
+  ]
+}

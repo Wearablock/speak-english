@@ -72,7 +72,8 @@ void main() async {
 /// 백그라운드에서 레슨 데이터 동기화
 void _syncLessonData() {
   Future.microtask(() async {
-    final result = await LessonService().syncFromRemote();
+    final locale = PreferencesService.getLanguage() ?? 'en';
+    final result = await LessonService().syncFromRemote(locale: locale);
     debugPrint('Lesson sync: ${result.status.name}');
     if (result.status == SyncStatus.completed) {
       debugPrint('Updated to v${result.newVersion} (${result.newLessonCount} lessons)');
