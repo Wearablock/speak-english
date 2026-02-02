@@ -1,5 +1,5 @@
 /* Arabic */
-"NSMicrophoneUsageDescription" = "مطلوب الوصول إلى الميكروفون للتعرف على الكلام.";
+"NSMicrophoneUsageDescription" = "يتم تسجيل صوتك أثناء ممارسة النطق لتحليل دقة نطقك للإنجليزية وتقديم ملاحظات مخصصة. على سبيل المثال، يستمع التطبيق عندما تقرأ جملة بصوت عالٍ لتقييم نطقك.";
 "NSSpeechRecognitionUsageDescription" = "مطلوب التعرف على الكلام لممارسة النطق.";
 "NSUserTrackingUsageDescription" = "سيتم استخدام هذا المعرف لعرض إعلانات مخصصة لك.";
 "CFBundleDisplayName" = "تحدث الإنجليزية";

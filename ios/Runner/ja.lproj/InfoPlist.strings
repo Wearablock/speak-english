@@ -1,5 +1,5 @@
 /* Japanese */
-"NSMicrophoneUsageDescription" = "音声認識のためにマイクへのアクセスが必要です。";
+"NSMicrophoneUsageDescription" = "発音練習中に音声を録音し、英語のスピーキング精度を分析して個別のフィードバックを提供します。例えば、文章を声に出して読むと、アプリが発音を評価します。";
 "NSSpeechRecognitionUsageDescription" = "発音練習のために音声認識が必要です。";
 "NSUserTrackingUsageDescription" = "この識別子はパーソナライズされた広告を配信するために使用されます。";
 "CFBundleDisplayName" = "英語スピーキング";

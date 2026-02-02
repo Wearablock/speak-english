@@ -1,5 +1,5 @@
 /* Vietnamese */
-"NSMicrophoneUsageDescription" = "Cần truy cập micrô để nhận dạng giọng nói.";
+"NSMicrophoneUsageDescription" = "Giọng nói của bạn được ghi lại trong quá trình luyện phát âm để phân tích độ chính xác khi nói tiếng Anh và cung cấp phản hồi cá nhân hóa. Ví dụ, ứng dụng lắng nghe khi bạn đọc to một câu để đánh giá phát âm của bạn.";
 "NSSpeechRecognitionUsageDescription" = "Cần nhận dạng giọng nói để luyện phát âm.";
 "NSUserTrackingUsageDescription" = "Mã định danh này sẽ được sử dụng để cung cấp quảng cáo được cá nhân hóa cho bạn.";
 "CFBundleDisplayName" = "Nói Tiếng Anh";

@@ -1,5 +1,5 @@
 /* Portuguese (Brazil) */
-"NSMicrophoneUsageDescription" = "O acesso ao microfone é necessário para o reconhecimento de voz.";
+"NSMicrophoneUsageDescription" = "Sua voz é gravada durante a prática de pronúncia para analisar sua precisão ao falar inglês e fornecer feedback personalizado. Por exemplo, o aplicativo ouve quando você lê uma frase em voz alta para avaliar sua pronúncia.";
 "NSSpeechRecognitionUsageDescription" = "O reconhecimento de voz é necessário para a prática de pronúncia.";
 "NSUserTrackingUsageDescription" = "Este identificador será usado para exibir anúncios personalizados para você.";
 "CFBundleDisplayName" = "Falar Inglês";

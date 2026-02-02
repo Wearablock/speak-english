@@ -1,5 +1,5 @@
 /* Indonesian */
-"NSMicrophoneUsageDescription" = "Akses mikrofon diperlukan untuk pengenalan suara.";
+"NSMicrophoneUsageDescription" = "Suara Anda direkam selama latihan pengucapan untuk menganalisis akurasi berbicara bahasa Inggris Anda dan memberikan umpan balik yang dipersonalisasi. Misalnya, aplikasi mendengarkan saat Anda membaca kalimat dengan suara keras untuk mengevaluasi pengucapan Anda.";
 "NSSpeechRecognitionUsageDescription" = "Pengenalan suara diperlukan untuk latihan pengucapan.";
 "NSUserTrackingUsageDescription" = "Pengidentifikasi ini akan digunakan untuk menampilkan iklan yang dipersonalisasi kepada Anda.";
 "CFBundleDisplayName" = "Berbicara Inggris";

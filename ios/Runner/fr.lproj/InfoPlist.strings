@@ -1,5 +1,5 @@
 /* French */
-"NSMicrophoneUsageDescription" = "L'accès au microphone est nécessaire pour la reconnaissance vocale.";
+"NSMicrophoneUsageDescription" = "Votre voix est enregistrée pendant la pratique de la prononciation pour analyser votre précision en anglais et fournir des commentaires personnalisés. Par exemple, l'application écoute lorsque vous lisez une phrase à haute voix pour évaluer votre prononciation.";
 "NSSpeechRecognitionUsageDescription" = "La reconnaissance vocale est nécessaire pour la pratique de la prononciation.";
 "NSUserTrackingUsageDescription" = "Cet identifiant sera utilisé pour vous proposer des publicités personnalisées.";
 "CFBundleDisplayName" = "Parler Anglais";

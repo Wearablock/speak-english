@@ -1,5 +1,5 @@
 /* Traditional Chinese */
-"NSMicrophoneUsageDescription" = "語音辨識需要存取麥克風。";
+"NSMicrophoneUsageDescription" = "在發音練習時錄製您的語音，分析英語口說準確度並提供個人化回饋。例如，當您大聲朗讀句子時，應用程式會評估您的發音。";
 "NSSpeechRecognitionUsageDescription" = "發音練習需要語音辨識功能。";
 "NSUserTrackingUsageDescription" = "此識別碼將用於向您投放個人化廣告。";
 "CFBundleDisplayName" = "英語口說";

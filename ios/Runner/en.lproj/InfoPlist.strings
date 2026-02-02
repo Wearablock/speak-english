@@ -1,5 +1,5 @@
 /* English - Default */
-"NSMicrophoneUsageDescription" = "Microphone access is required for speech recognition.";
+"NSMicrophoneUsageDescription" = "Your voice is recorded during pronunciation practice to analyze your English speaking accuracy and provide personalized feedback. For example, the app listens when you read a sentence aloud to evaluate your pronunciation.";
 "NSSpeechRecognitionUsageDescription" = "Speech recognition is required for pronunciation practice.";
 "NSUserTrackingUsageDescription" = "This identifier will be used to deliver personalized ads to you.";
 "CFBundleDisplayName" = "Speak English";

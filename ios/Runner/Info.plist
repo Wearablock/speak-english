@@ -65,7 +65,7 @@
 		<true/>
 		<!-- Microphone Permission -->
 		<key>NSMicrophoneUsageDescription</key>
-		<string>Microphone access is required for speech recognition.</string>
+		<string>Your voice is recorded during pronunciation practice to analyze your English speaking accuracy and provide personalized feedback. For example, the app listens when you read a sentence aloud to evaluate your pronunciation.</string>
 		<!-- Speech Recognition Permission -->
 		<key>NSSpeechRecognitionUsageDescription</key>
 		<string>Speech recognition is required for pronunciation practice.</string>

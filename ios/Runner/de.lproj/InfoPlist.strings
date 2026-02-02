@@ -1,5 +1,5 @@
 /* German */
-"NSMicrophoneUsageDescription" = "Für die Spracherkennung ist ein Mikrofonzugriff erforderlich.";
+"NSMicrophoneUsageDescription" = "Ihre Stimme wird während der Ausspracheübung aufgezeichnet, um Ihre Englisch-Sprechgenauigkeit zu analysieren und personalisiertes Feedback zu geben. Zum Beispiel hört die App zu, wenn Sie einen Satz laut vorlesen, um Ihre Aussprache zu bewerten.";
 "NSSpeechRecognitionUsageDescription" = "Für das Aussprachetraining ist eine Spracherkennung erforderlich.";
 "NSUserTrackingUsageDescription" = "Diese Kennung wird verwendet, um Ihnen personalisierte Werbung anzuzeigen.";
 "CFBundleDisplayName" = "Englisch Sprechen";
