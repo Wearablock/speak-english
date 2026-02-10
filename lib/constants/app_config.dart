@@ -5,8 +5,8 @@ class AppConfig {
 
   // 앱 정보
   static const String appName = 'Speak English';
-  static const String appVersion = '1.0.0';
-  static const String appBuildNumber = '1';
+  static const String appVersion = '1.1.2';
+  static const String appBuildNumber = '7';
 
   // GitHub 데이터 저장소 (레슨 데이터 동기화용)
   static const String githubDataBaseUrl =

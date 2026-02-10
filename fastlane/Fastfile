@@ -82,13 +82,13 @@ platform :ios do
 
   desc "Build and upload to TestFlight"
   lane :release_testflight do
-    sh("cd ../.. && flutter build ipa --release")
+    sh("cd .. && flutter build ipa --release")
     upload_testflight
   end
 
   desc "Build and upload to App Store"
   lane :release_appstore do
-    sh("cd ../.. && flutter build ipa --release")
+    sh("cd .. && flutter build ipa --release")
     upload_appstore
   end
 
