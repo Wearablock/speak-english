@@ -1,6 +1,6 @@
 {
-  "version": "2.0.0",
+  "version": "3.0.1",
   "minAppVersion": "1.0.0",
-  "releaseDate": "2026-01-22",
-  "changelog": "Multi-language translations support (15 languages)"
+  "releaseDate": "2026-02-10",
+  "changelog": "Expanded to 80 lessons with 15 language translations"
 }

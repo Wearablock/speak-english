@@ -8,10 +8,33 @@ class SoundService {
   final AudioPlayer _player = AudioPlayer();
 
   static const String _recordStartSound = 'sounds/record_start.mp3';
+  static const String _correctSound = 'sounds/correct.mp3';
+  static const String _wrongSound = 'sounds/wrong.mp3';
 
   Future<void> playRecordStart() async {
     try {
+      await _player.stop();
       await _player.play(AssetSource(_recordStartSound));
+    } catch (e) {
+      // 효과음 파일이 없어도 앱 동작에 영향 없음
+    }
+  }
+
+  /// 정답 효과음 재생 (정확도 80% 이상)
+  Future<void> playCorrect() async {
+    try {
+      await _player.stop();
+      await _player.play(AssetSource(_correctSound));
+    } catch (e) {
+      // 효과음 파일이 없어도 앱 동작에 영향 없음
+    }
+  }
+
+  /// 오답 효과음 재생 (정확도 80% 미만)
+  Future<void> playWrong() async {
+    try {
+      await _player.stop();
+      await _player.play(AssetSource(_wrongSound));
     } catch (e) {
       // 효과음 파일이 없어도 앱 동작에 영향 없음
     }

@@ -181,6 +181,13 @@ class _PracticeScreenState extends State<PracticeScreen> {
       _isListening = false;
     });
 
+    // 정확도에 따라 효과음 재생
+    if (accuracy >= 0.8) {
+      _soundService.playCorrect();
+    } else {
+      _soundService.playWrong();
+    }
+
     // 라운드 결과 저장
     _currentLessonResults.add(RoundResult(
       round: _currentRound,

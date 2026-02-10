@@ -23,6 +23,9 @@ class AdService {
   bool _isInterstitialAdReady = false;
   DateTime? _lastInterstitialShowTime;
   int _completedLessonCount = 0;
+  int _loadRetryCount = 0;
+  static const int _maxRetryCount = 3;
+  static const List<int> _retryDelaySeconds = [5, 15, 30];
 
   bool get isInterstitialAdReady => _isInterstitialAdReady;
 
@@ -72,6 +75,7 @@ class AdService {
         onAdLoaded: (ad) {
           _interstitialAd = ad;
           _isInterstitialAdReady = true;
+          _loadRetryCount = 0;
           debugPrint('[AdService] 전면 광고 로드 성공');
 
           // 광고 닫힘 시 다음 광고 미리 로드
@@ -94,9 +98,29 @@ class AdService {
         onAdFailedToLoad: (error) {
           _isInterstitialAdReady = false;
           debugPrint('[AdService] 전면 광고 로드 실패: ${error.message}');
+          _retryLoadInterstitialAd();
         },
       ),
     );
+  }
+
+  /// 전면 광고 로드 실패 시 지연 재시도
+  void _retryLoadInterstitialAd() {
+    if (_loadRetryCount >= _maxRetryCount) {
+      debugPrint('[AdService] 전면 광고 최대 재시도 횟수 초과 ($_maxRetryCount회)');
+      _loadRetryCount = 0;
+      return;
+    }
+
+    final delay = _retryDelaySeconds[_loadRetryCount];
+    _loadRetryCount++;
+    debugPrint('[AdService] 전면 광고 $delay초 후 재시도 ($_loadRetryCount/$_maxRetryCount)');
+
+    Future.delayed(Duration(seconds: delay), () {
+      if (!_isInterstitialAdReady) {
+        loadInterstitialAd();
+      }
+    });
   }
 
   // ============================================================
