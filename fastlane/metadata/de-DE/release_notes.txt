@@ -1,0 +1,4 @@
+- Sound-Feedback für richtige/falsche Antworten hinzugefügt
+- Verbesserte Zuverlässigkeit beim Laden von Werbung
+- UI-Verbesserungen auf dem Startbildschirm
+- Lektionsdaten aktualisiert

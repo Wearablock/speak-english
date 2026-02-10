@@ -1,0 +1,4 @@
+- Ajout d'un retour sonore pour les réponses correctes/incorrectes
+- Amélioration de la fiabilité du chargement des publicités
+- Améliorations de l'interface de l'écran de démarrage
+- Mise à jour des données de leçons

@@ -1,0 +1,4 @@
+- Aggiunto feedback sonoro per risposte corrette/errate
+- Migliorata l'affidabilità del caricamento degli annunci
+- Miglioramenti UI nella schermata di avvio
+- Dati delle lezioni aggiornati

@@ -1,0 +1,4 @@
+- Menambahkan umpan balik suara untuk jawaban benar/salah
+- Peningkatan keandalan pemuatan iklan
+- Perbaikan UI pada layar pembuka
+- Data pelajaran diperbarui

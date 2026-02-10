@@ -1,0 +1,4 @@
+- Added sound feedback for correct/incorrect answers
+- Improved ad loading reliability
+- UI improvements on splash screen
+- Updated lesson data
