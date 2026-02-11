@@ -1,4 +1,4 @@
-- Thêm phản hồi âm thanh cho câu trả lời đúng/sai
-- Cải thiện độ ổn định tải quảng cáo
-- Cải thiện giao diện màn hình khởi động
-- Cập nhật dữ liệu bài học
+- Thêm 5 bài học mới (tổng cộng 85)
+- Tối ưu dung lượng ứng dụng với chiến lược dữ liệu từ xa
+- Cân bằng tỷ lệ ôn tập và bài mới (50/50)
+- Cải thiện giao diện

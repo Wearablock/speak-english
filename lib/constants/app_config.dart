@@ -5,8 +5,8 @@ class AppConfig {
 
   // 앱 정보
   static const String appName = 'Speak English';
-  static const String appVersion = '1.1.2';
-  static const String appBuildNumber = '7';
+  static const String appVersion = '1.1.3';
+  static const String appBuildNumber = '8';
 
   // GitHub 원격 데이터 저장소
   // - 로컬 assets: 최소 fallback 데이터만 유지 (카테고리당 3개)

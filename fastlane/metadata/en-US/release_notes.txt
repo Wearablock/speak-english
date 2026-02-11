@@ -1,4 +1,4 @@
-- Added sound feedback for correct/incorrect answers
-- Improved ad loading reliability
-- UI improvements on splash screen
-- Updated lesson data
+- Added 5 new lessons (85 total)
+- Optimized app size with remote-first data strategy
+- Balanced review and new lesson ratio (50/50)
+- UI improvements

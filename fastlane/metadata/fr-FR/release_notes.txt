@@ -1,4 +1,4 @@
-- Ajout d'un retour sonore pour les réponses correctes/incorrectes
-- Amélioration de la fiabilité du chargement des publicités
-- Améliorations de l'interface de l'écran de démarrage
-- Mise à jour des données de leçons
+- 5 nouvelles leçons ajoutées (85 au total)
+- Taille de l'app optimisée avec stratégie de données à distance
+- Ratio équilibré entre révision et nouvelles leçons (50/50)
+- Améliorations de l'interface

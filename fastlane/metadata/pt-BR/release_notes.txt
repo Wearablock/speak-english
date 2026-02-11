@@ -1,4 +1,4 @@
-- Adicionado feedback sonoro para respostas corretas/incorretas
-- Melhoria na confiabilidade do carregamento de anúncios
-- Melhorias de UI na tela de abertura
-- Dados das lições atualizados
+- 5 novas lições adicionadas (85 no total)
+- Tamanho do app otimizado com estratégia de dados remotos
+- Proporção equilibrada de revisão e novas lições (50/50)
+- Melhorias na interface

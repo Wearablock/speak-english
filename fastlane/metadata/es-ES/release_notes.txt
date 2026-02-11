@@ -1,4 +1,4 @@
-- Añadida respuesta sonora para respuestas correctas/incorrectas
-- Mejora en la fiabilidad de carga de anuncios
-- Mejoras de UI en la pantalla de inicio
-- Datos de lecciones actualizados
+- 5 nuevas lecciones añadidas (85 en total)
+- Tamaño de app optimizado con estrategia de datos remotos
+- Proporción equilibrada de repaso y nuevas lecciones (50/50)
+- Mejoras de UI

@@ -1,4 +1,4 @@
-- Menambahkan umpan balik suara untuk jawaban benar/salah
-- Peningkatan keandalan pemuatan iklan
-- Perbaikan UI pada layar pembuka
-- Data pelajaran diperbarui
+- 5 pelajaran baru ditambahkan (total 85)
+- Ukuran aplikasi dioptimalkan dengan strategi data jarak jauh
+- Rasio seimbang antara ulasan dan pelajaran baru (50/50)
+- Perbaikan UI

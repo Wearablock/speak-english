@@ -1,4 +1,4 @@
-- Sound-Feedback für richtige/falsche Antworten hinzugefügt
-- Verbesserte Zuverlässigkeit beim Laden von Werbung
-- UI-Verbesserungen auf dem Startbildschirm
-- Lektionsdaten aktualisiert
+- 5 neue Lektionen hinzugefügt (85 insgesamt)
+- App-Größe mit Remote-Datenstrategie optimiert
+- Ausgewogenes Verhältnis von Wiederholung und neuen Lektionen (50/50)
+- UI-Verbesserungen

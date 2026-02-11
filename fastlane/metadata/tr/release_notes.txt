@@ -1,4 +1,4 @@
-- Doğru/yanlış cevaplar için ses geri bildirimi eklendi
-- Reklam yükleme güvenilirliği iyileştirildi
-- Açılış ekranı arayüz iyileştirmeleri
-- Ders verileri güncellendi
+- 5 yeni ders eklendi (toplam 85)
+- Uzak veri stratejisiyle uygulama boyutu optimize edildi
+- Tekrar ve yeni ders oranı dengelendi (50/50)
+- Arayüz iyileştirmeleri
