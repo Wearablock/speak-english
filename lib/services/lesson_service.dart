@@ -91,6 +91,8 @@ class LessonService {
     final prefs = await SharedPreferences.getInstance();
 
     // 1. 레슨 기본 데이터 로드
+    // - 우선: SharedPreferences (GitHub 원격에서 동기화된 전체 데이터)
+    // - fallback: assets/data/lessons.json (최소 데이터, 오프라인 첫 실행용)
     String? lessonsData = prefs.getString(_lessonsKey);
     if (lessonsData == null) {
       lessonsData = await rootBundle.loadString('assets/data/lessons.json');

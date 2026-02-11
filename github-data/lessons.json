@@ -1,5 +1,5 @@
 {
-  "version": "3.0.1",
+  "version": "3.0.2",
   "categories": [
     {
       "id": 1,
@@ -1866,6 +1866,121 @@
         "vi": "Sản phẩm này có vẻ bị lỗi.",
         "zh-CN": "这个产品好像有问题。",
         "zh-TW": "這個產品好像有問題。"
+      }
+    },
+    {
+      "id": 81,
+      "sentence": "It was lovely talking to you.",
+      "category_id": 1,
+      "difficulty": 2,
+      "translations": {
+        "ar": "كان من الجميل التحدث معك.",
+        "de": "Es war schön, mit Ihnen zu sprechen.",
+        "en": "It was lovely talking to you.",
+        "es": "Fue un placer hablar contigo.",
+        "fr": "C'était un plaisir de discuter avec vous.",
+        "hi": "आपसे बात करके अच्छा लगा।",
+        "it": "È stato un piacere parlare con lei.",
+        "ja": "お話しできて楽しかったです。",
+        "ko": "이야기 나눠서 즐거웠어요.",
+        "pt": "Foi um prazer conversar com você.",
+        "ru": "Было приятно с вами поговорить.",
+        "th": "ดีใจที่ได้คุยกัน",
+        "vi": "Rất vui được nói chuyện với bạn.",
+        "zh-CN": "和你聊天很开心。",
+        "zh-TW": "和你聊天很開心。"
+      }
+    },
+    {
+      "id": 82,
+      "sentence": "I'm going to grab a coffee. Would you like one?",
+      "category_id": 2,
+      "difficulty": 2,
+      "translations": {
+        "ar": "سأحضر قهوة. هل تريد واحدة؟",
+        "de": "Ich hole mir einen Kaffee. Möchten Sie auch einen?",
+        "en": "I'm going to grab a coffee. Would you like one?",
+        "es": "Voy a tomar un café. ¿Quieres uno?",
+        "fr": "Je vais prendre un café. En voulez-vous un ?",
+        "hi": "मैं कॉफ़ी लेने जा रहा हूँ। आपको चाहिए?",
+        "it": "Vado a prendere un caffè. Ne vuole uno?",
+        "ja": "コーヒーを買ってきます。いかがですか？",
+        "ko": "커피 사러 가는데, 하나 드릴까요?",
+        "pt": "Vou pegar um café. Quer um?",
+        "ru": "Я пойду за кофе. Вам тоже принести?",
+        "th": "ฉันจะไปซื้อกาแฟ เอาด้วยไหม?",
+        "vi": "Tôi đi mua cà phê. Bạn có muốn một ly không?",
+        "zh-CN": "我去买杯咖啡，要帮你带一杯吗？",
+        "zh-TW": "我去買杯咖啡，要幫你帶一杯嗎？"
+      }
+    },
+    {
+      "id": 83,
+      "sentence": "Let's schedule a conference call for this afternoon.",
+      "category_id": 3,
+      "difficulty": 2,
+      "translations": {
+        "ar": "لنحدد موعدا لمكالمة جماعية هذا المساء.",
+        "de": "Lassen Sie uns für heute Nachmittag eine Telefonkonferenz ansetzen.",
+        "en": "Let's schedule a conference call for this afternoon.",
+        "es": "Programemos una conferencia telefónica para esta tarde.",
+        "fr": "Planifions une conférence téléphonique cet après-midi.",
+        "hi": "आज दोपहर के लिए कॉन्फ्रेंस कॉल रखते हैं।",
+        "it": "Fissiamo una conferenza telefonica per questo pomeriggio.",
+        "ja": "今日の午後に電話会議を設定しましょう。",
+        "ko": "오늘 오후에 전화 회의를 잡읍시다.",
+        "pt": "Vamos agendar uma teleconferência para esta tarde.",
+        "ru": "Давайте назначим конференц-звонок на сегодня после обеда.",
+        "th": "มาจัดประชุมทางโทรศัพท์บ่ายนี้กัน",
+        "vi": "Hãy lên lịch họp qua điện thoại chiều nay.",
+        "zh-CN": "我们安排今天下午开个电话会议吧。",
+        "zh-TW": "我們安排今天下午開個電話會議吧。"
+      }
+    },
+    {
+      "id": 84,
+      "sentence": "Excuse me, is this the right platform for the downtown train?",
+      "category_id": 4,
+      "difficulty": 2,
+      "translations": {
+        "ar": "عفوا، هل هذا الرصيف الصحيح لقطار وسط المدينة؟",
+        "de": "Entschuldigung, ist das der richtige Bahnsteig für den Zug in die Innenstadt?",
+        "en": "Excuse me, is this the right platform for the downtown train?",
+        "es": "Disculpe, ¿es este el andén correcto para el tren al centro?",
+        "fr": "Excusez-moi, est-ce le bon quai pour le train vers le centre-ville ?",
+        "hi": "सुनिए, क्या यह शहर जाने वाली ट्रेन का सही प्लेटफॉर्म है?",
+        "it": "Mi scusi, è questo il binario giusto per il treno verso il centro?",
+        "ja": "すみません、市内行きの電車はこのホームで合っていますか？",
+        "ko": "실례합니다, 시내행 열차 플랫폼이 여기 맞나요?",
+        "pt": "Com licença, esta é a plataforma certa para o trem ao centro?",
+        "ru": "Извините, это правильная платформа для поезда в центр?",
+        "th": "ขอโทษครับ ชานชาลานี้ถูกไหมสำหรับรถไฟเข้าเมือง?",
+        "vi": "Xin lỗi, đây có phải sân ga đúng cho tàu vào trung tâm không?",
+        "zh-CN": "请问，这是去市中心的列车站台吗？",
+        "zh-TW": "請問，這是去市中心的列車月台嗎？"
+      }
+    },
+    {
+      "id": 85,
+      "sentence": "Can I get a gift receipt for this?",
+      "category_id": 5,
+      "difficulty": 1,
+      "translations": {
+        "ar": "هل يمكنني الحصول على إيصال هدية؟",
+        "de": "Kann ich dafür einen Geschenkbeleg bekommen?",
+        "en": "Can I get a gift receipt for this?",
+        "es": "¿Puedo obtener un recibo de regalo?",
+        "fr": "Puis-je avoir un ticket cadeau pour ceci ?",
+        "hi": "क्या इसकी गिफ्ट रसीद मिल सकती है?",
+        "it": "Posso avere uno scontrino regalo?",
+        "ja": "ギフト用のレシートをいただけますか？",
+        "ko": "선물용 영수증 받을 수 있나요?",
+        "pt": "Posso ter um recibo de presente?",
+        "ru": "Можно чек для подарка?",
+        "th": "ขอใบเสร็จสำหรับของขวัญได้ไหม?",
+        "vi": "Cho tôi xin hóa đơn quà tặng được không?",
+        "zh-CN": "能给我一张礼品收据吗？",
+        "zh-TW": "能給我一張禮品收據嗎？"
       }
     }
   ]

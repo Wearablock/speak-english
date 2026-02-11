@@ -65,8 +65,8 @@ class SmartLessonService {
     final allProgress = await _progressService.getAllProgress();
     final today = DateTime.now();
 
-    // 1. 복습 필요 레슨 (60%)
-    final reviewCount = (targetCount * 0.6).round();
+    // 1. 복습 필요 레슨 (50%)
+    final reviewCount = (targetCount * 0.5).round();
     final reviewLessons = _getReviewLessons(
       allLessons,
       allProgress,
@@ -74,7 +74,7 @@ class SmartLessonService {
       reviewCount,
     );
 
-    // 2. 새로운 레슨 (40%)
+    // 2. 새로운 레슨 (50%)
     final newCount = targetCount - reviewLessons.length;
     final newLessons = _getNewLessons(
       allLessons,

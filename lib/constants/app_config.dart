@@ -8,7 +8,9 @@ class AppConfig {
   static const String appVersion = '1.1.2';
   static const String appBuildNumber = '7';
 
-  // GitHub 데이터 저장소 (레슨 데이터 동기화용)
+  // GitHub 원격 데이터 저장소
+  // - 로컬 assets: 최소 fallback 데이터만 유지 (카테고리당 3개)
+  // - 전체 레슨 데이터는 이 URL에서 앱 시작 시 자동 동기화
   static const String githubDataBaseUrl =
       'https://raw.githubusercontent.com/Wearablock/speak-english/main/github-data';
 

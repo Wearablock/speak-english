@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _startPractice() async {
-    // 스마트 레슨 선택 (복습 60% + 새 레슨 40%)
+    // 스마트 레슨 선택 (복습 50% + 새 레슨 50%)
     final smartLessons = await _smartLessonService.getDailyLessonsSimple();
     if (smartLessons.isEmpty || !mounted) return;
 
@@ -122,13 +122,13 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text(l10n.goalCompleted),
         content: Text(l10n.goalCompletedMessage),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context, false),
-            child: Text(l10n.cancel),
-          ),
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
             child: Text(l10n.continuePractice),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: Text(l10n.cancel),
           ),
         ],
       ),
